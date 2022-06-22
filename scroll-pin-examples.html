@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ScrollPin Examples - Layout-UI</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/layout-ui.css" type="text/css">
+		<script src="js/jquery-2.1.4/jquery-2.1.4.min.js"></script>
+		<script src="js/layout-ui.js"></script>
+		<style>
+			body {
+				padding: 1rem 2rem;
+				margin: auto;
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#pin1").scrollPin({topSpacing: 10});
+				$("#pin2").scrollPin({
+					topSpacing: 10,
+					bottomSpacing: 10,
+					parentGuide: true
+				});
+				$("#pin3").scrollPin({topSpacing: 10, bottomSpacing: 10, parentGuide: true});
+				$("#pin4").scrollPin({topSpacing: 10, bottomSpacing: 10, sticky: true});
+			});
+		</script>
+		<style>
+			.pin {
+				padding: 20px;
+				color: #FFF;
+				background: #27AE60;
+			}
+
+			#pin2 {
+				min-height: 140vh;
+			}
+
+			.pin3-container,
+			.pin4-container {
+				background: #2980b9;
+				height: 100vh;
+			}
+
+			.pin4-container {
+				margin-top: 100vh;
+			}
+		</style>
+<div class="centered h1">Scroll the page to see the scrollPin element behaviour. View example one after the other to understand it.</div>
+		<div class="menu fillable">
+			<h1 class="item">Scroll Pin Demos</h1>
+			<div class="item xhover"><a href="./scroll-pin.html" class="primary fancy button">BACK TO SCROLL PIN DETAILS</a></div>
+		</div>
+
+		<div class="grid">
+			<div class="padded 10-width col grid 4-cols">
+				<div class="padded col" style="background: red;">
+					<div class="fluid pin" id="pin1" style="margin-top: 20px;">
+						<h4>scroll-Pin #pin1</h4>
+						<p>I become pinned when I am at 10px from the window's top and I'll scroll with the document from that point onwards.</p>
+					</div>
+				</div>
+
+				<div class="padded col" style="background: blue;">
+					<div class="pin" id="pin2" style="margin-top: 20px; margin-bottom: 20px;">
+						<h4>Independent scroll-Pin #pin2</h4>
+						<p>Because I am longer that my viewport height, I scroll independently ie. When you scroll down, I scroll down until i reach my bottom and when you scroll up, I scroll up until I reach my top. Note: I can also be guided by my parent, ie. even after I have reach my bottom I continue to scroll with the page when the scroll reach the bottom of my parent.</p><br><br><br><br>
+						<p>Lorem ipsum dolor sit amet. Vero justo autem. Dolor autem commodo luptatum ut quod id. Amet dolore amet sanctus odio et. Et sit amet euismod sit et justo. Diam magna ut lobortis. Diam sanctus facer magna amet vero dolore est. Elit clita hendrerit suscipit diam nulla ea ipsum. Labore ea invidunt. No exerci amet labore. Exerci et aliquyam labore tempor ea sed. Ut in ut ipsum. Consequat delenit lobortis dolores sed clita. Ut voluptua lorem vero amet nonumy consetetur. </p>
+					</div>
+				</div>
+
+				<div class="pin3-container padded col">
+					<div class="fluid pin" id="pin3">
+						<h4>parentGuide scroll-Pin #pin3</h4>
+						<p>I become pinned when I am at 10px from the window's top *and* I am constrained to my parent element's height.</p>
+					</div>
+				</div>
+		  
+				<div class="pin4-container padded col">
+					<div class="fluid pin" id="pin4" style="margin-top: 20px; margin-bottom: 25px;">
+						<h4>sticky scroll-Pin #pin4</h4>
+						<p>The viewport pushes me depending on the scroll direction. When scrolling down, I will become pinned to the top of the viewport, but in the opposite direction, I will be stuck to the bottom of the viewport. (Note: my power is in the box of my parent.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="2-width col">
+				<p>Lorem takimata exerci eirmod placerat magna est. Molestie imperdiet qui molestie elitr invidunt dolor. Facilisis nonumy ut blandit. Ad voluptua dolor eos. Takimata ut dignissim. Diam sea consetetur sadipscing duis tempor soluta. Et ipsum aliquyam at. Nonumy sed qui erat magna eirmod nulla. Wisi nostrud rebum consetetur dolores gubergren dolore et. </p>
+				<p>Takimata hendrerit et wisi magna dolor. No duis aliquyam kasd. Eirmod lorem takimata elit facilisis est at aliquip. Eu ut et tempor magna. Hendrerit quis accusam tempor et amet et. Minim et quis eirmod cum. Amet consectetuer invidunt kasd sadipscing. Sed accusam suscipit lorem elit luptatum ipsum sit. Feugiat voluptua eos nulla zzril lorem ipsum sea. Et aliquyam invidunt sed. Eirmod consetetur wisi rebum sit takimata sit ut. Aliquyam et nonumy dolore duo clita volutpat vel. No feugait dolores vero nonumy dolor. Esse molestie ipsum eleifend stet in vel. Et nonumy sit sanctus takimata esse. Sit erat aliquyam elitr sit. Labore iusto enim. Ea voluptua commodo est. Et justo diam nonumy ipsum consequat wisi sadipscing. Amet duo dignissim sit dolores amet ut minim.</p> 
+				<p>Vero aliquip et liber ea dolore. Duis labore lorem facilisis ea ipsum sed. Lorem odio diam nulla. Sadipscing laoreet diam. Invidunt ullamcorper et delenit sed sanctus. Et duis iusto dolores ut velit. Sit duo tempor duo dolore eros. Nostrud takimata lorem nulla labore duo veniam duo. Dolor takimata justo zzril consetetur autem. </p>
+				<p>Imperdiet takimata labore et. Vero elit sea duis dolor consequat amet sed. Feugait eu nonumy. Ipsum dolore et clita sea dolore voluptua. Praesent vero tempor ipsum. Aliquyam ipsum eu. Vero lorem dolore accumsan sit labore elitr. Vero ea clita blandit et in. Vel nulla diam praesent. </p>
+				<p>Eirmod esse diam nulla dolores ea nonumy. Blandit sadipscing consectetuer vulputate rebum velit vero. Lorem duis soluta. Autem dolore vero iriure. Justo dolore tempor at euismod diam. Ipsum voluptua et. Dolore sadipscing erat diam magna hendrerit at takimata. Ipsum duo euismod. Ut amet takimata et soluta ea lorem. Ut invidunt praesent suscipit. Iusto duo gubergren augue ipsum. Takimata delenit nonumy sed in voluptua luptatum ut. Vero erat facilisis et. </p>
+				<p>Magna stet no invidunt. Aliquyam vero congue duo eirmod feugait est. Doming gubergren cum kasd molestie et. Sed et laoreet amet takimata nulla. Ut takimata et facer option amet commodo no. Iusto feugait nonummy quod. Tempor soluta feugait erat. Erat eirmod ea facilisis stet et. Et odio ipsum.</p> 
+				<p>Praesent ex takimata iusto ut placerat et duo. Sea in amet eu. Ad kasd sit no sea erat duo et. Labore magna autem labore at accumsan ea euismod. Te sit adipiscing eirmod et ut lorem dolore. Eu aliquip ullamcorper te diam. Sea vel ipsum facilisis dolore adipiscing sadipscing. Hendrerit tincidunt doming magna. Ea ipsum lorem consequat lorem. Lorem et lorem et nonumy. No takimata gubergren consectetuer iusto minim illum. Lorem iriure nam et ullamcorper. Kasd diam luptatum no nonumy. Magna dolor congue lorem dolore accumsan at eum. Delenit in diam accusam facer lorem consetetur. Nonummy et rebum laoreet aliquyam accusam. Kasd et minim nonummy sea labore erat. Duis ea ut dolor gubergren wisi tempor est. Amet facilisis et consetetur lobortis lorem duis stet. In takimata at accusam.</p>
+				<p>Voluptua sanctus ipsum praesent. Nonumy sed kasd. Te tation velit vel nam in. Sanctus elitr nibh takimata. Sanctus dolores et hendrerit erat quod et iusto. Rebum adipiscing nonummy dolore labore placerat est tation. Accusam sit ut ipsum dolores amet. No qui justo duo consectetuer vel invidunt. Lorem congue dolor. Takimata dolores sed magna amet. Dolor molestie nulla euismod dolor lorem odio. Ad sit stet nostrud duis.</p>
+			</div>
+		</div>
+		<p>Vero aliquip et liber ea dolore. Duis labore lorem facilisis ea ipsum sed. Lorem odio diam nulla. Sadipscing laoreet diam. Invidunt ullamcorper et delenit sed sanctus. Et duis iusto dolores ut velit. Sit duo tempor duo dolore eros. Nostrud takimata lorem nulla labore duo veniam duo. Dolor takimata justo zzril consetetur autem. </p>
+		<p>Imperdiet takimata labore et. Vero elit sea duis dolor consequat amet sed. Feugait eu nonumy. Ipsum dolore et clita sea dolore voluptua. Praesent vero tempor ipsum. Aliquyam ipsum eu. Vero lorem dolore accumsan sit labore elitr. Vero ea clita blandit et in. Vel nulla diam praesent. </p>
+		<p>Eirmod esse diam nulla dolores ea nonumy. Blandit sadipscing consectetuer vulputate rebum velit vero. Lorem duis soluta. Autem dolore vero iriure. Justo dolore tempor at euismod diam. Ipsum voluptua et. Dolore sadipscing erat diam magna hendrerit at takimata. Ipsum duo euismod. Ut amet takimata et soluta ea lorem. Ut invidunt praesent suscipit. Iusto duo gubergren augue ipsum. Takimata delenit nonumy sed in voluptua luptatum ut. Vero erat facilisis et. </p>
+		<p>Magna stet no invidunt. Aliquyam vero congue duo eirmod feugait est. Doming gubergren cum kasd molestie et. Sed et laoreet amet takimata nulla. Ut takimata et facer option amet commodo no. Iusto feugait nonummy quod. Tempor soluta feugait erat. Erat eirmod ea facilisis stet et. Et odio ipsum.</p> 
+		<p>Praesent ex takimata iusto ut placerat et duo. Sea in amet eu. Ad kasd sit no sea erat duo et. Labore magna autem labore at accumsan ea euismod. Te sit adipiscing eirmod et ut lorem dolore. Eu aliquip ullamcorper te diam. Sea vel ipsum facilisis dolore adipiscing sadipscing. Hendrerit tincidunt doming magna. Ea ipsum lorem consequat lorem. Lorem et lorem et nonumy. No takimata gubergren consectetuer iusto minim illum. Lorem iriure nam et ullamcorper. Kasd diam luptatum no nonumy. Magna dolor congue lorem dolore accumsan at eum. Delenit in diam accusam facer lorem consetetur. Nonummy et rebum laoreet aliquyam accusam. Kasd et minim nonummy sea labore erat. Duis ea ut dolor gubergren wisi tempor est. Amet facilisis et consetetur lobortis lorem duis stet. In takimata at accusam.</p>
+		
+	</body>
+</html>
+

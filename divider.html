@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Divider - Layout-UI</title>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/layout-ui.css" type="text/css">
+		<script src="js/jquery-2.1.4/jquery-2.1.4.min.js"></script>
+		<script src="js/layout-ui.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<div class="container" data-level="1">
+				<div class="heading">Divider</div>
+				<p class="big">Easily divide, underline and overline your content with nice looking divders.</p>
+			</div>
+			<hr />
+		</header>
+
+		<article>
+			<div class="no-gutter container grid">
+				<div id="mainContent" class="padded 12-width md-10-width col">
+					<section data-level="3">
+						<div class="heading">Introduction</div>
+						<p>A divider visually segement content into group. A typical divider is created with a block element like <code>div</code>, classed with <code>divider</code>.</p>
+
+						<div class="preview-box">
+							<img class="image" src="../images/wireframe/short-paragraph.png">
+							<div class="divider"></div>
+							<img class="image" src="../images/wireframe/short-paragraph.png">
+						</div>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Divider with content</div>
+						<p>A divider can contain content within it.</p>
+
+						<div class="preview-box">
+							<div class="centered form">
+								<div class="expandable left-icon input-box">
+									<input type="text" class="subject" placeholder="Order #">
+									<i class="i-magnify icon"></i>
+									<div class="addon blue button">Search</div>
+								</div>
+								<div class="horizontal divider">Or</div>
+								<div class="teal labeled button">Create New Order <i class="label icon i-plus
+									"></i></div>
+							</div>
+						</div>
+
+						<p>Dividers can also be used in combination with heading and icons to create different styles of dividers.</p>
+
+						<div class="preview-box">
+							<h1 class="divider"><i class="icon i-tag"></i> HEADER</h1>
+						</div>
+
+						<div class="markup-box">
+							<code>&lt;h1 class="divider"&gt; <br>
+								&nbsp;&nbsp;&lt;i class="icon i-tag"&gt;&lt;/i&gt; HEADER <br>
+							&lt;/h1&gt;</code>
+						</div>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Vertical Divider</div>
+						<p>A vertical divider can segment content vertically.</p>
+
+						<div class="note">Vertical dividers requires that its parent container has a style of <code>position: relative</code></div>
+
+						<div class="caution note">Vertical dividers have an absolute position. You will need to specify the <code>left</code> value for it in css to position the divider. Eg. <code>left: 40px;</code></div>
+
+						<div class="info note">We provide you with some predefined classes to position a vertical divider. Those classes can only be applied on the dividers' container in form of dividing it to a number(a number from 2 - 12) of equal part as desired. The classes are in the following format: <code>divided-to-x</code> where <strong>x</strong> in the format is a number form 2 to 12. </div>
+
+						<div class="caution note">Note that to use the predefined classes provided to posiiton your divider, the vertical divider(s)' element name must be unique from it siblings element. Ie. all dividers should have same element name and all other siblings element should have another element name. For instance if the dividers' siblings element is <code>div</code> the divider(s) can be <code>span</code>.</div>
+
+						<div class="preview-box">
+							<div class="grid guttered 2-cols divided-to-2">
+								<div class="padded col">
+									<form>
+										<div class="field">
+											<label>Username</label>
+											<div class="left-icon input-box">
+												<input type="text" class="subject" placeholder="Username">
+												<i class="i-account icon"></i>
+											</div>
+										</div>
+										<div class="field">
+											<label>Password</label>
+											<div class="left-icon input-box">
+												<input class="subject" type="password">
+												<i class="i-lock icon"></i>
+											</div>
+										</div>
+										<div class="ui blue submit button">Login</div>
+									</form>
+								</div>
+								<span class="vertical divider">Or</span>
+								<div class="d-flex flex-middle col">
+									<div class="big green left-labeled icon button"><i class="i-login icon label"></i>Sign Up</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="markup-box">
+							<code>
+								&lt;div class="grid divided-to-2"&gt; <br>
+								&nbsp;&nbsp;&lt;div class="col"&gt; <br>
+								&nbsp;&nbsp;&nbsp;&nbsp;... content in first column ... <br>
+								&nbsp;&nbsp;&lt;/div&gt; <br>
+								&nbsp;&nbsp;&lt;span class="vertical divider"&gt;OR&lt;/span&gt; <br>
+								&nbsp;&nbsp;&lt;div class="col"&gt; <br>
+								&nbsp;&nbsp;&nbsp;&nbsp;... content in second column ... <br>
+								&nbsp;&nbsp;&lt;/div&gt;
+							</code>
+						</div>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Stackable Divider</div>
+						<p>A stackable divider appears as a vertical divider from any screen size larger that 730px (medium screen) and as horizontal divider from a screen size below 730px. It can also be positioned by the predefined classes provided for vertical dividers only that when it get to screen width of 730px and below, it changes to horizontal divider.</p>
+
+
+						<div class="padded preview-box">
+							<div class="stackable grid guttered divided-to-3 3-cols">
+								<div class="col">
+									<img class="image" src="../images/wireframe/short-paragraph.png">
+									<img class="image" src="../images/wireframe/short-paragraph.png">
+									<img class="image" src="../images/wireframe/short-paragraph.png">
+									<img class="image" src="../images/wireframe/short-paragraph.png">
+								</div>
+								<span class="stackable divider">not</span>
+								<div class="col">
+									<img class="image" src="../images/wireframe/short-paragraph.png">
+									<img class="image" src="../images/wireframe/short-paragraph.png">
+									<img class="image" src="../images/wireframe/short-paragraph.png">
+									<img class="image" src="../images/wireframe/short-paragraph.png">
+								</div>
+								<span class="stackable divider">and</span>
+								<div class="col">
+									<img class="image" src="../images/wireframe/short-paragraph.png">
+									<img class="image" src="../images/wireframe/short-paragraph.png">
+									<img class="image" src="../images/wireframe/short-paragraph.png">
+									<img class="image" src="../images/wireframe/short-paragraph.png">
+								</div>
+							</div>
+						</div>
+
+						<div class="markup-box">
+							<code>
+								&lt;div class="stackable grid divided-to-3 3-col"&gt;<br>
+								&nbsp;&nbsp;&lt;div class="col"&gt; <br>
+								&nbsp;&nbsp;&nbsp;&nbsp;... content in first column ... <br>
+								&nbsp;&nbsp;&lt;/div&gt; <br>
+								&nbsp;&nbsp;&lt;span class="stackable divider"&gt;NOT&lt;/div&gt; <br>
+								&nbsp;&nbsp;&lt;div class="col"&gt; <br>
+								&nbsp;&nbsp;&nbsp;&nbsp;... content in second column ... <br>
+								&nbsp;&nbsp;&lt;/div&gt; <br>
+								&nbsp;&nbsp;&lt;span class="stackable divider"&gt;AND&lt;/div&gt; <br>
+								&nbsp;&nbsp;&lt;div class="col"&gt; <br>
+								&nbsp;&nbsp;&nbsp;&nbsp;... content in third column ... <br>
+								&nbsp;&nbsp;&lt;/div&gt; <br>
+								&lt;/div&gt;
+							</code>
+						</div>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Variations</div>
+						<section>
+							<div class="heading">Inverted divider</div>
+							<p>A divider can have it colours inverted. Just add the <code>inverted</code> class to the divider to get it done.</p>
+
+							<div class="preview-box">
+								<div class="inverted padded panel">
+									<img class="image" src="../images/wireframe/short-paragraph.png">
+									<div class="inverted divider"></div>
+									<img class="image" src="../images/wireframe/short-paragraph.png">
+									<h4 class="inverted divider">Horizontal</h4>
+								</div>
+							</div>
+						</section>
+
+						<section>
+							<div class="heading">Compact and Loose Divider</div>
+							<p>A divider can apear compact (ie. fitted without any space above or below it) or loose (ie. with large margins to divide sections of content). Add the <code>compact</code> or <code>loose</code> class to a divider as either to produce a compact or a loose divider.</p>
+
+							<div class="preview-box">
+								<h6>Compact divider example</h6>
+								<div class="panel padded">
+									Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+									<div class="compact divider"></div>
+									Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+								</div>
+
+								<h6>Loose divider example</h6>
+								<div class="padded panel">
+									<img class="image" src="../images/wireframe/short-paragraph.png">
+									<div class="loose divider"></div>
+									<img class="image" src="../images/wireframe/short-paragraph.png">
+								</div>
+							</div>
+						</section>
+
+						<section>
+							<div class="heading">Transparent Divider</div>
+							<p>A transparent divider divide contents without creating a dividing line. Just add the transparent class to a divider to produce one.</p>
+
+							<div class="preview-box">
+								<div class="padded panel">
+									<img class="image" src="../images/wireframe/short-paragraph.png">
+									<div class="transparent divider"></div>
+									<img class="image" src="../images/wireframe/short-paragraph.png">
+								</div>
+							</div>
+						</section>
+
+						<section>
+							<div class="heading">Clearing Divider</div>
+							<p>A divider clear or balance a floated content above it. Just add the <code>clearing</code> class to a divider to produce one.</p>
+
+							<div class="preview-box">
+								<div class="padded panel">
+									<h2 class="r-floated heading">Floated Content</h2>
+									<div class="ui clearing divider"></div>
+									<img class="ui wireframe image" src="../images/wireframe/short-paragraph.png">
+								</div>
+							</div>
+						</section>
+					</section>
+				</div>

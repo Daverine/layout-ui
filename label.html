@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Label - Layout-UI</title>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/layout-ui.css" type="text/css">
+    <script src="js/jquery-2.1.4/jquery-2.1.4.min.js"></script>
+    <script src="js/layout-ui.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="container" data-level="1">
+        <div class="heading">Label</div>
+        <p class="big">Easily create nicely looking labels to label and highlight your content.</p>
+      </div>
+      <hr />
+    </header>
+
+    <article>
+      <div class="no-gutter grid container">
+        <div id="mainContent" class="padded 12-width md-10-width col">
+          <section data-level="3">
+            <div class="heading">Definition</div>
+            <p>A label displays content classification or show short information about a content.</p>
+            <p>A label is simply created with a text container (eg. span, div, a, etc.) and you then add the <code>label</code> class to the text container previously created. See example below.</p>
+    
+            <div class="preview-box">
+              <div class="label">a typical label</div>
+              <a class="label">a link as a label</a>
+            </div><br>
+
+            <div class="markup-box">
+              <code>&lt;div class="label"&gt;a typical label&lt;/div&gt; <br>
+                &lt;a class="label"&gt;a link as a label&lt;/a&gt;
+              </code>
+            </div>
+          </section>
+
+          <section data-level="3">
+            <div class="heading">Image Label</div>
+            <p>A label can be formated to emphasize or wear an image as barge at its left side.</p>
+
+            <div class="preview-box">
+              <div class="image label"><img src="../images/avatar/small/joe.jpg"> Joe</div>
+              <div class="image label"><img src="../images/avatar/small/veronika.jpg"> Veronika</div>
+            </div><br>
+
+            <div class="markup-box">
+              <code>
+                &lt;div class="<strong>image</strong> label"&gt;&lt;img src="<em>&lt;link your image here&gt;</em>"&gt; Joe&lt;/div&gt;<br>
+                &lt;div class="<strong>image</strong> label"&gt;&lt;img src="<em>&lt;link your image here&gt;</em>"&gt; Veronika&lt;/div&gt;
+              </code>
+            </div>
+          </section>
+
+          <section data-level="3">
+            <div class="heading">Color Variation</div>
+            <p>A label can have different colors. Add a color name from the labels listed below as a class to the label to have the color on your label.</p>
+
+            <div class="preview-box">
+              <div class="red label">Red</div>
+              <div class="orange label">Orange</div>
+              <div class="yellow label">Yellow</div>
+              <div class="olive label">Olive</div>
+              <div class="green label">Green</div>
+              <div class="teal label">Teal</div>
+              <div class="blue label">Blue</div>
+              <div class="violet label">Violet</div>
+              <div class="purple label">Purple</div>
+              <div class="pink label">Pink</div>
+              <div class="brown label">Brown</div>
+              <div class="grey label">Grey</div>
+              <div class="black label">Black</div>
+            </div><br>
+
+            <div class="markup-box">
+              <code>&lt;div class="<strong><em>&lt;color name&gt;</em></strong> label"&gt;your label content&lt;/div&gt;</code>
+            </div>
+
+            <div class="note">Note that the <strong><em>&lt;color name&gt;</em></strong> placeholder used in the code above could be any color used in the example above.</div>
+          </section>
+
+          <section data-level="3">
+            <div class="heading">Tag label</div>
+            <p>A label can appear as tag. This is done by adding the <code>tag</code> or <code>alt-tag</code> to the label as shown in the example below.</p>
+
+            <div class="preview-box">
+              <div class="violet tag label">tag label</div>
+              <div class="teal alt-tag label">alt-tag label</div>
+            </div>
+          </section>
+
+          <section>
+            <div class="heading">Ribbon label</div>
+            <p>A label can appear as a ribbon attaching itself to an element. This is done by create the label inside the element you want to attach it to and adding the <code>ribbon</code> or <code>alt-ribbon</code> class to the label as shown in the example below.</p>
+
+            <div class="note">If the element that a ribbon label is attached to has padding, then a <code>margin-left</code> or <code>margin-right</code> that is equivalent to the element <code>padding-left</code> or <code>padding-right</code> size <strong>negatively</strong> should be added to the label style depending on either it is a <code>ribbon</code> or an <code>alt-ribbon</code> respectively.</div>
+
+            <div class="preview-box">
+              <div class="grid xs-2">
+                <div class="col">
+                  <div class="padded panel">
+                    <div class="red ribbon label" style="margin-left: -1em;">ribbon</div>
+                    <span>Account Details</span>
+                    <img class="wireframe image fluid" src="../images/wireframe/paragraph.png">
+                  </div>
+                </div>
+              <div class="col">
+                <div class="padded panel">
+                  <div class="blue alt-ribbon label" style="margin-right: -1em;">alt-ribbon</div>
+                  <span>Review the account</span>
+                  <img class="wireframe image fluid" src="../images/wireframe/paragraph.png">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="markup-box">
+            <code>
+              &lt;div class="panel" style="padding: 1em;"&gt;<br>
+              &nbsp;&nbsp;&lt;div class="ribbon label" style="margin-left: -1em;"&gt;a ribbon label&lt;/div&gt;<br>
+              &nbsp;&nbsp;...........<br>
+              &lt;/div&gt;
+            </code>
+          </div>
+        </section>
+
+        <section data-level="3">
+          <div class="heading">Compact and loose label</div>
+          <p>A label can have it padding reduced or increased to fit a particular enviroment. To reduce a label padding, add the <code>compact</code> class to the label. And to increase a label padding, add the <code>loose</code> class to the label. See example below.</p>
+
+          <div class="preview-box">
+            <div class="compact label">Compact label</div>
+            <div class="loose label">Loose label</div>
+          </div>
+        </section>
+
+        <section data-level="3">
+          <div class="heading">Circular Label</div>
+          <p>A label can be circular. This is done by adding the <code>circular</code> class to a label.</p>
+
+          <div class="caution note">Note that cicular labels have a square size. and it will not increase even if the content span out. Alternavely, you can use the <code>fully-rounded</code> class to attain a round edge for the label that will increase it size as the content increases.</div>
+          <div class="preview-box">
+            <div class="circular label">2</div>
+            <div class="circular label">22</div>
+            <div class="circular label">222</div>
+          </div>
+        </section>
+    
+        <section data-level="3">
+          <div class="heading">Label sizes</div>
+          <p>A label can be small or large in size. The below examples' content shows the class for each sizes ie. add one  of the below examples' content as class to a label to atain the same size as seen in the examples.</p>
+
+          <div class="preview box">
+            <div class="mini label">mini</div>
+            <div class="small label">small</div>
+            <div class="label">medium</div>
+            <div class="big label">big</div>
+            <div class="huge label">huge</div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </article>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image - Layout-UI</title>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/layout-ui.css" type="text/css">
+    <script src="js/jquery-2.1.4/jquery-2.1.4.min.js"></script>
+    <script src="js/layout-ui.js"></script>
+    <script src="js/component/dropdown.js"></script>
+  </head>
+  
+  <body>
+    <header>
+      <div class="container" data-level="1">
+        <div class="heading">Image</div>
+        <p class="big">Easily Style, size and position an image with our provided predefined classes.</p>
+      </div>
+      <hr />
+    </header>
+
+    <article>
+      <div class="no-gutter container grid">
+        <div id="mainContent" class="padded 12-width md-10-width col">
+          <section data-level="3">
+            <div class="heading">Introduction</div>
+            <p>An image is a graphic representation of something. We create the <code>image</code> class to enable the use of our predefined classes to style an image. You can specify an <code>img</code> or <code>svg</code> as an image or use them as a child element of an image classed element.</p>
+          </section>
+
+          <section data-level="3">
+            <div class="heading">Variations</div>
+            <p>A image can be formated to appear in various form.</p>
+
+            <section>
+              <div class="heading">Avatar</div>
+              <p>An image may be formatted to appear inline with text as an avatar. To create an avater, add the <code>avatar</code> class to an image.</p>
+
+              <div class="preview-box">
+                <img class="avatar image" src="../images/wireframe/square-image.png"> Username
+              </div>
+            </section>
+            
+            <section>
+              <div class="heading">Bordered</div>
+              <p>An image may include a border to emphasize the edges of white or transparent content. Add the <code>bordered</code> class to an image to give it a border.</p>
+
+              <div class="preview-box">
+                <img class="small bordered image" src="../images/wireframe/white-image.png">
+              </div>
+            </section>
+
+            <section>
+              <div class="heading">Rounded</div>
+              <p>An image can have round edge. Add the <code>rounded</code> class to an image to make it edge round.</p>
+
+              <div class="preview-box">
+                <img class="small rounded image" src="../images/wireframe/square-image.png">
+              </div>
+            </section>
+
+            <section>
+              <div class="heading">Circular</div>
+              <p>An image may appear circular. Add the <code>cicular</code> class to an image to make it circular.</p>
+
+              <div class="preview-box">
+                <img class="small circular image" src="../images/wireframe/square-image.png">
+              </div>
+            </section>
+          </section>
+
+          <section data-level="3">
+            <div class="heading">Image positioning</div>
+            <p>Image can be formated to appear in different positions.</p>
+
+            <section>
+              <div class="heading">Vertical Aligning</div>
+              <p>We provide some utility classes to vertically position an image specifically. The classes are shown in example below.</p>
+
+              <div class="preview-box">
+                <figure>
+                  <img class="top mini image" src="../images/wireframe/square-image.png">
+                  <caption>Top aligned (class: <code>top</code>)</caption>
+                </figure>
+                <figure>
+                  <img class="middle mini image" src="../images/wireframe/square-image.png">
+                  <caption>Middle aligned (class: <code>middle</code>)</caption>
+                </figure>
+                <figure>
+                  <img class="bottom mini image" src="../images/wireframe/square-image.png">
+                  <caption>Bottom aligned (class: <code>bottom</code>)</caption>
+                </figure>
+              </div>
+            </section>
+
+            <section>
+              <div class="heading">Centered</div>
+              <p>An image can appear centered in a content block. Just add the <code>centered</code> class to the image.</p>
+
+              <div class="preview-box">
+                <div class="padded bordered panel">
+                  <img class="centered small image" src="../images/wireframe/image.png">
+                  <p>Te eum doming eirmod, nominati pertinacia argumentum ad his. Ex eam alia facete scriptorem, est autem aliquip detraxit at. Usu ocurreret referrentur at, cu epicurei appellantur vix. Cum ea laoreet recteque electram, eos choro alterum definiebas in. Vim dolorum definiebas an. Mei ex natum rebum iisque.</p>
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <div class="heading">Floated</div>
+              <p>An image can sit to the left or right of other content. Add the <code>l-floated</code> class to an image to float it to the left and the <code>r-floated</code> class to float it to the right.</p>
+
+              <div class="preview-box">
+                <div class="clearfix bordered padded panel">
+                  <img class="small padded l-floated image" src="../images/wireframe/text-image.png">
+                  <p>Te eum doming eirmod, nominati pertinacia argumentum ad his. Ex eam alia facete scriptorem, est autem aliquip detraxit at. Usu ocurreret referrentur at, cu epicurei appellantur vix. Cum ea laoreet recteque electram, eos choro alterum definiebas in. Vim dolorum definiebas an. Mei ex natum rebum iisque.</p>
+                  <img class="small padded r-floated image" src="../images/wireframe/text-image.png">
+                  <p>Audiam quaerendum eu sea, pro omittam definiebas ex. Te est latine definitiones. Quot wisi nulla ex duo. Vis sint solet expetenda ne, his te phaedrum referrentur consectetuer. Id vix fabulas oporteat, ei quo vide phaedrum, vim vivendum maiestatis in.</p>
+                </div>
+              </div>
+            </section>
+          </section>
+
+                    <section data-level="3">
+            <div class="heading">Image size</div>
+            <p>Unless a size if specified, images classed with the <code>image</code> class will use the original dimensions of the image, with a maximum width of its container size <code>max-width: 100%</code>.</p>
+            <p>We provide some predefined size to size an image. See it in the below table and example.</p>
+
+            <div class="note">Note that the height of an image is set to <strong>auto</strong> making the height change in relation to the image width. So the image width is the size specified in the table.</div>
+
+            <table class="ui definition table">
+              <thead>
+              <tr>
+                <th>Class Name</th>
+                <th>Size</th>
+              </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Mini</td>
+                  <td>100px</td>
+                </tr>
+                  <td>Small</td>
+                  <td>200px</td>
+                </tr>
+                <tr>
+                  <td>Medium</td>
+                  <td>400px</td>
+                </tr>
+                <tr>
+                  <td>Big</td>
+                  <td>600px</td>
+                </tr>
+                <tr>
+                  <td>Huge</td>
+                  <td>800px</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="preview-box">
+              <figure>
+                <img class="mini image" src="../images/wireframe/image.png">
+                <caption>Mini image</caption>
+              </figure>
+              <figure>
+                <img class="ui small image" src="../images/wireframe/image.png">
+                <caption>Small image</caption>
+              </figure>
+              <figure>
+                <img class="ui medium image" src="../images/wireframe/image.png">
+                <caption>Medium image</caption>
+              </figure>
+              <figure>
+                <img class="ui big image" src="../images/wireframe/image.png">
+                <caption>Big image</caption>
+              </figure>
+              <figure>
+                <img class="ui huge image" src="../images/wireframe/image.png">
+                <caption>Huge image</caption>
+              </figure>
+            </div>
+          </section>
+        </div>
+      </div>
+    </article>
+  </body>
+  </html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Button - Layout-UI</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/layout-ui.css" type="text/css">
+		<script src="js/jquery-2.1.4/jquery-2.1.4.min.js"></script>
+		<script src="js/layout-ui.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<div class="container" data-level="1">
+			<div class="heading">Button</div>
+			<p class="big">Easily create nicely looking buttons, which come in different styles.</p>
+			</div>
+			<hr />
+		</header>
+
+		<article class="container">
+			<div class="no-gutter row container">
+				<div id="mainContent" class="padded 12-width md-10-width col">
+					<section data-level="3">
+						<div class="heading">Definition</div>
+						<p>A button indicates a possible user action.</p>
+					</section>
+					
+					<section data-level="3">
+						<div class="heading">Button Usage</div>
+						<p>To apply this component, add the <code>button</code> class to any element. Now you have a button. Add the <code>disabled</code> class or attribute to the created button to disable it.</p>
+
+						<div class="caution note">Although any tag can be used for a button, it will only be keyboard focusable if you use a <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> tag or you add the property <code>tabindex="0"</code>. Keyboard accessible buttons will preserve focus styles after click, which may be visually jarring.</div>
+
+						<div class="preview-box">
+							<a class="button">Link</a>
+							<button class="button">Button</button>
+							<a class="disabled button">Link disabled</a>
+							<button class="button" disabled>Button disabled</button>
+						</div>
+
+						<div class="markup-box">
+							<code>&lt;a class="button"&gt;...&lt;/a&gt; <br>
+								&lt;button class="button"&gt;...&lt;/button&gt; <br>
+								&lt;a class="disabled button"&gt;...&lt;/a&gt; <br>
+								&lt;button class="button" disabled&gt;...&lt;/button&gt; <br>
+							</code>
+						</div>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Button Emphasis</div>
+						<p>A button can be formated to show different level of emphasis. Just add the different <code>namespace</code> class where <code>namespace</code> is any of the button content shown in the example below.</p>
+
+						<div class="preview-box">
+							<button class="primary button">primary</button>
+							<button class="secondary button">secondary</button>
+							<button class="positive button">positive</button>
+							<button class="caution button">caution</button>
+							<button class="negative button">negative</button>
+							<button class="basic button">basic</button>
+						</div>
+
+						<div class="markup-box">
+							<code>&lt;button class="<em>primary</em> button"&gt;...&lt;/button&gt;
+							</code>
+						</div>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Color Variation</div>
+						<p>A button can have different colors. Add a color name from the buttons listed below as a class to a button to give that color.</p>
+
+						<div class="info note">The color buttons shown below are the available color provided. You can a button your custom color.</div>
+
+						<div class="preview-box">
+							<button class="red button">Red</button>
+							<button class="orange button">Orange</button>
+							<button class="yellow button">Yellow</button>
+							<button class="olive button">Olive</button>
+							<button class="green button">Green</button>
+							<button class="teal button">Teal</button>
+							<button class="blue button">Blue</button>
+							<button class="violet button">Violet</button>
+							<button class="purple button">Purple</button>
+							<button class="pink button">Pink</button>
+							<button class="brown button">Brown</button>
+							<button class="grey button">Grey</button>
+							<button class="black button">Black</button>
+						</div>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Animated Button</div>
+						<p>A button can animate to show hidden content. .It is a button that has a class of one of the below button namespace. It contains a <code>&lt;div&gt;</code> with class <code>visible-content</code> and another <code>&lt;div&gt;</code> with class <code>hidden-content</code>.</p>
+
+						<div class="note">The button will automatically sized according to the widest content of the button.</div>
+
+						<div class="preview-box">
+							<button class="animated button">
+							<div class="visible-content">horizontal-right</div>
+							<div class="hidden-content">hidden</div>
+							</button>
+							<button class="horizontal-left-animated button">
+							<div class="visible-content">horizontal-left</div>
+							<div class="hidden-content">hidden</div>
+							</button>
+							<button class="vertical-animated button">
+							<div class="visible-content">vertical-up</div>
+							<div class="hidden-content">hidden</div>
+							</button>
+							<button class="vertical-down-animated button">
+							<div class="visible-content">vertical-down</div>
+							<div class="hidden-content">hidden</div>
+							</button>
+							<button class="fade-animated button">
+							<div class="visible-content">fade-in</div>
+							<div class="hidden-content">hidden</div>
+							</button>
+							<button class="fade-out-animated button">
+							<div class="visible-content">fade-out</div>
+							<div class="hidden-content">hidden</div>
+							</button>
+						</div>
+
+						<div class="markup-box">
+							<code>&lt;button class="<em>namespace</em> button"&gt; <br>
+							&nbsp;&nbsp; &lt;div class="visible-content"&gt;...&lt;/div&gt; <br>
+							&nbsp;&nbsp; &lt;div class="hidden-content"&gt;...&lt;/div&gt; <br>
+							&lt;/button&gt;
+							</code>
+						</div>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Icon and Labeled Icon</div>
+						<p>A button can be formated to contain an icon or labeled with an icon.</p>
+
+						<div class="preview-box">
+							<a class="icon button"><i class="i-widgets icon"></i></a>
+							<a class="icon button"><i class="i-taxi icon"></i></a>
+							<a class="labeled button"><i class="label icon i-security"></i> Security</a>
+							<a class="right-labeled button"><i class="label icon i-settings"></i> Settings</a>
+						</div>
+
+						<p>Add the <code>icon</code> class to a button to create an icon button.</p>
+
+						<div class="markup-box">
+							<code>&lt;a class="icon button"&gt;...&lt;/a&gt;</code>
+						</div>
+
+						<p>Add a <code>label icon</code> classed element to a button and give the button a <code><em>side</em>-labeled</code> class where side is either left or right.</p>
+
+						<div class="markup-box">
+							<code>&lt;a class="left-labeled button"&gt; <br>
+							&nbsp;&nbsp;&lt;i class="icon label"&gt;&lt;/&gt; <br>
+							&nbsp;&nbsp;... <br>
+							&lt;/a&gt;
+							</code> <br>
+							or <br>
+							<code>&lt;a class="right-labeled button"&gt; <br>
+							&nbsp;&nbsp;&lt;i class="icon label"&gt;&lt;/&gt; <br>
+							&nbsp;&nbsp;... <br>
+							&lt;/a&gt;
+							</code>
+						</div>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Compact and Loose Button</div>
+						<p>A button can either reduce it padding to fit into tighter space or increase it. Just add the <code>compact</code> or the <code>loose</code> classs to adjust the padding respectfully.</p>
+
+						<div class="preview-box">
+							<a class="compact button">Hold</a>
+							<a class="compact icon button"><i class="i-pause icon"></i></a>
+							<a class="compact left-labeled button"><i class="i-pause label icon"></i> Pause</a>
+							<br><br>
+							<a class="loose button">Hold</a>
+							<a class="loose icon button"><i class="i-pause icon"></i></a>
+							<a class="loose left-labeled button"><i class="i-pause label icon"></i> Pause</a>
+						</div>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Fancy Button</div>
+						<p>A button can be formated to have shadow arround it. Just add the <code>fancy</code> class to the button.</p>
+
+						<div class="preview-box">
+						<a class="fancy button">Fancy</a>
+						<a class="fancy primary button">Primay Fancy</a>
+						<a class="fancy positive icon button"><i class="icon i-soccer"></i></a>
+						</div>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Circular Button</div>
+						<p>A button can be formated to be circular. You just add the <code>circular</code> class to the button.</p>
+
+						<div class="caution note">Cicular button is best used with icons becaused it has a fixed size, i.e <code>2.2em X 2.2em.</code></div>
+
+						<div class="preview-box">
+							<a class="circular button"><i class="i-twitter icon"></i></a>
+							<a class="circular button"><i class="i-facebook icon"></i></a>
+							<a class="circular button"><i class="i-google-plus icon"></i></a>
+							<a class="circular button"><i class="i-linkedin icon"></i></a>
+						</div>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Fluid Button</div>
+						<p>A button can take up the width of it container. You just add the <code>fluid</code> class to a button.</p>
+
+						<div class="preview-box">
+						<a class="fluid button">Fill Container's Width</a>
+						</div>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Attached Button</div>
+						<p>A button can be <a href="attachment.html">attached</a> to a box or any other element.</p>
+
+						<div class="preview-box">
+							<a class="fluid button" data-attached="top">Top</a>
+							<div class="padded panel" data-attached>
+							<img class="ui wireframe image" src="../images/wireframe/paragraph.png">
+							</div>
+							<a class="fluid button" data-attached="bottom">Bottom</a>
+						</div>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Sizes</div>
+						<p>A button can have different sizes. Add the <code>namespace</code> as class to a button where namespace is any of the below button content.</p>
+
+						<div class="preview-box">
+							<button class="mini button">mini</button>
+							<button class="small button">small</button>
+							<button class="button">normal</button>
+							<button class="big button">big</button>
+							<button class="huge button">huge</button>
+						</div>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Buttons</div>
+						<p>Buttons can share the same styles. <code>buttons</code> is a container class for two or more buttons. Buttons can share all the availiable format for a button except the button emphasis, color variation, animation and labeled icon button. You add the format class to the <code>buttons</code> class container.</p>
+
+						<div class="sub heading">Disabled Butttons</div>
+						<div class="preview-box">
+							<div class="disabled buttons">
+								<a class="button">disabled</a>
+								<a class="button">disabled</a>
+								<a class="button">disabled</a>
+							</div>
+						</div>
+
+						<div class="sub heading">Icon Butttons</div>
+						<div class="preview-box">
+							<div class="icon buttons">
+								<a class="button"><i class="icon i-soccer"></i></a>
+								<a class="button"><i class="icon i-tree"></i></a>
+								<a class="button"><i class="icon i-tennis"></i></a>
+							</div>
+						</div>
+
+						<div class="sub heading">Compact and Loose Butttons</div>
+						<div class="preview-box">
+							<div class="compact buttons">
+								<a class="button">compact</a>
+								<a class="button">compact</a>
+								<a class="button">compact</a>
+							</div>
+							<br><br>
+							<div class="loose buttons">
+								<a class="button">loose</a>
+								<a class="button">loose</a>
+								<a class="button">loose</a>
+							</div>
+						</div>
+
+						<div class="sub heading">Circular Butttons</div>
+						<div class="preview-box">
+							<div class="circular buttons">
+								<a class="button"><i class="icon i-soccer"></i></a>
+								<a class="button"><i class="icon i-tree"></i></a>
+								<a class="button"><i class="icon i-tennis"></i></a>
+							</div>
+						</div>
+
+						<div class="sub heading">Fancy Butttons</div>
+						<div class="preview-box">
+							<div class="fancy buttons">
+								<a class="button">fancy</a>
+								<a class="button">fancy</a>
+								<a class="button">fancy</a>
+							</div>
+						</div>
+
+						<div class="sub heading">Butttons Sizes</div>
+						<div class="preview-box">
+							<div class="huge buttons">
+								<a class="button">huge</a>
+								<a class="button">huge</a>
+								<a class="button">huge</a>
+							</div>
+						</div>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Combined Buttons</div>
+						<p>Buttons can be tightly joined together to show as if it is a button. Add the <code>combined</code> class to a <code>buttons</code> classed element to combine it horizontally and the <code>v-combined</code> to combine it vertically.</p>
+
+						<div class="preview-box">
+							<div class="combined buttons">
+								<a class="button"><i class="icon i-soccer"></i></a>
+								<a class="button"><i class="icon i-tree"></i></a>
+								<a class="button"><i class="icon i-tennis"></i></a>
+							</div>
+							<br><br>
+							<div class="v-combined buttons">
+								<a class="button"><i class="icon i-soccer"></i></a>
+								<a class="button"><i class="icon i-tree"></i></a>
+								<a class="button"><i class="icon i-tennis"></i></a>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</article>
+	</body>
+</html>

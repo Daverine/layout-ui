@@ -1,0 +1,75 @@
+/*** TOOLTIP ***/
+
+.tooltipper {
+	position: relative;
+}
+
+.tooltip {
+	padding: 0.65em 0.53em;
+	display: block;
+	font-size: 0.8rem;
+	z-index: 2000;
+	background-color: transparent;
+	border-radius: 2px;
+	color: #fff;
+	margin: 0;
+	overflow: hidden;
+	line-height: 1;
+	position: absolute;
+	pointer-events: none;
+
+	&::before {
+		content: "";
+		pointer-events: none;
+		position: absolute;
+		background: #323232;
+		font-size: 1rem;
+		z-index: -1;
+		transform-origin: 50% 50%;
+		transform: scale(100);
+		animation: tScale 500ms ease-in 1;
+	}
+
+	&[data-position=bottom]::before,
+	&[data-position=top]::before {
+		height: 7.5px;
+		width: 15px;
+		left: calc(50% - 7.5px);
+	}
+
+	&[data-position=left]::before,
+	&[data-position=right]::before {
+		height: 15px;
+		width: 15px;
+		top: calc(50% - 7.5px);
+	}
+
+	&[data-position=bottom]::before {
+		border-radius: 0 0 14px 14px;
+		transform-origin: 50% 5%;
+		top: 0;
+	}
+
+	&[data-position=top]::before {
+		border-radius: 14px 14px 0 0;
+		transform-origin: 50% 95%;
+		bottom: 0;
+	}
+
+	&[data-position=left]::before {
+		transform-origin: 95% 50%;
+		border-radius: 14px 0 0 14px;
+		right: 0;
+	}
+	
+	&[data-position=right]::before {
+		border-radius: 0 14px 14px 0;
+		transform-origin: 5% 50%;
+		left: 0;
+	}
+}
+
+@keyframes tScale {
+	from { transform: scale(1) }
+	to { transform: scale(100) }
+}

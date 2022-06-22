@@ -1,0 +1,256 @@
+/* --- LABEL ---*/
+
+.label {
+	display: inline-block;
+	position: relative;
+	line-height: 1.1;
+	background-color: $label-bg;
+	padding: $label-padding;
+	margin: 0;
+	color: rgb(0, 0, 0);
+	text-align: center;
+	font-family: $root-font;
+	font-weight: $semibold-weight;
+	font-size: $label-font-size*1rem;
+	border-radius: $radius-default;
+	transition: all 0.1s ease;
+	vertical-align: middle;
+
+	&.#{$emd} { font-size: $label-font-size*1em; }
+
+	& > .close.icon {
+		opacity: 0.7;
+
+		&:hover, &:focus {
+			opacity: 1;
+		}
+	}
+
+	&:empty { display: none; }
+	&.active { background: darken($label-bg, 10%); }
+	&.rounded { border-radius: $round-radius !important; }
+
+	& > a,
+	& > .link {
+		color: inherit;
+	}
+
+	& > img,
+	& > .image {
+		display: inline-block;
+		width: auto !important;
+		line-height: 1;
+		vertical-align: baseline;
+
+		&:not(.free) {
+			max-height: 1.5em !important;
+			margin: -0.35em 0em;
+		}
+	}
+
+	// disabled label
+
+	&.disabled {
+		opacity: 0.5;
+	}
+
+	// compact label
+
+	&.compact {
+		padding: $label-compact-padding;
+	}
+
+	// loose label
+
+	&.loose {
+		padding: $label-loose-padding;
+	}
+
+	// label sizes
+
+	&.mini {font-size: $label-font-size*$mini*1em !important;}
+	&.small {font-size: $label-font-size*$small*1em !important;}
+	&.big {font-size: $label-font-size*$big*1em !important;}
+	&.huge {font-size: $label-font-size*$huge*1em !important;}
+
+	&.#{$remd} {
+		&.mini {font-size: $label-font-size*$mini*1rem !important;}
+		&.small {font-size: $label-font-size*$small*1rem !important;}
+		&.big {font-size: $label-font-size*$big*1rem !important;}
+		&.huge {font-size: $label-font-size*$huge*1rem !important;}
+	}
+
+	&.basic {
+		color: #111;
+		background-color: #fff;
+		border: 1px solid #111;
+	}
+}
+
+// tag label
+
+.label[class*=tag] {
+	position: relative;
+	padding-left: 1.55em;
+	padding-right: 1.55em;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		background-color: inherit;
+		background-image: none;
+		width: 1.285em;
+		height: 1.285em;
+		border: inherit;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: calc(50% - 0.23em);
+		background-color: #fff !important;
+		width: 0.45em;
+		height: 0.45em;
+		box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, 0.3);
+		border-radius: $radius-full;
+		border: inherit;
+	}
+
+	&.compact {
+		&::before {
+			width: 1.1em;
+			height: 1.1em;
+		}
+
+		&::after {
+			width: 0.4em;
+			height: 0.4em;
+		}
+	}
+
+	&.loose {
+		&::before {
+			width: 1.6em;
+			height: 1.6em;
+		}
+
+		&::after {
+			width: 0.55em;
+			height: 0.55em;
+		}
+	}
+}
+
+.label[class*=tag]:not(.alt-tag) {
+	margin-left: 1em;
+	border-top-left-radius: 0em;
+	border-bottom-left-radius: 0em;
+
+	&::before {
+		right: 100%;
+		transform: translate(51%, -50%) rotate(-45deg);
+		border-bottom: 0px none !important;
+		border-right: 0px none !important;
+	}
+
+	&::after {
+		left: -0.2em;
+	}
+}
+
+.label.alt-tag {
+	margin-right: 1em;
+	border-top-right-radius: 0em;
+	border-bottom-right-radius: 0em;
+
+	&::before {
+		left: 100%;
+		transform: translate(-51%, -50%) rotate(45deg);
+		border-bottom: 0px none transparent !important;
+		border-left: 0px none transparent !important;
+	}
+
+	&::after {
+		right: -0.2em;
+	}
+}
+
+// Ribbon Label
+
+.label[class*=ribbon] {
+	margin: 0em;
+	min-width: max-content;
+
+	&::before, &::after {
+		position: absolute;
+		content: '';
+		top: 100%;
+		background-color: transparent !important;
+		border-style: solid;
+		border-color: transparent;
+		width: 0em;
+		height: 0em;
+	}
+}
+
+.label[class*=ribbon]:not(.alt-ribbon) {
+	border-radius: 0em $radius-default $radius-default 0em;
+	left: -(1em/$label-font-size);
+	padding-left: 2em;
+	padding-right: 1em;
+	float: left;
+
+	&::before, &::after {
+		right: auto;
+		left: 0%;
+		border-width: 0em 1em 1em 0em;
+	 	border-right-color: inherit;
+	}
+
+	&::after {
+		border-right-color: rgba(0,0,0,.2) !important;
+	}
+}
+
+.label.alt-ribbon {
+	border-radius: $radius-default 0em 0em $radius-default;
+	right: -(1em/$label-font-size);
+	padding-right: 2em;
+	padding-left: 1em;
+	float: right;
+
+  &::before, &::after {
+		left: auto;
+		right: 0%;
+		border-width: 1em 1em 0em 0em;
+		border-top-color: inherit;
+	}
+
+	&::after {
+		border-top-color: rgba(0,0,0,.2) !important;
+	}
+}
+
+// circular label
+
+.label.circular {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 1;
+	border-radius: $radius-full;
+	height: $label-height;
+	width: $label-height;
+	padding: 0em;
+
+	&.compact {
+		height: $label-compact;
+		width: $label-compact;
+	}
+
+	&.loose {
+		height: $label-loose;
+		width: $label-loose;
+	}
+}

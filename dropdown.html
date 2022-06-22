@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Dropdown - Layout-UI</title>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/layout-ui.css" type="text/css">
+		<script src="js/require/jquery-2.1.4.min.js"></script>
+		<script src="js/require/anime.min.js"></script>
+		<script src="js/layout-ui.js"></script>
+		<script>
+			var url = './images/slides/1.jpg',
+    xhttp = new XMLHttpRequest();
+
+xhttp.open('HEAD', url);
+xhttp.onreadystatechange = function () {
+    if (this.readyState == this.DONE) {
+        console.log(this.getResponseHeader('Content-Type'));
+    }
+};
+xhttp.send();
+		</script>
+	</head>
+
+
+	<body>
+		<header>
+			<div class="container" data-level="1">
+				<div class="heading">Dropdown</div>
+				<p class="big">Defines different styles for toggleable dropdown.</p>
+			</div>
+			<hr />
+		</header>
+
+		<article>
+			<div class="no-gutter row container">
+				<div id="mainContent" class="padded 12-width md-10-width col">
+					<section data-level="3">
+						<div class="heading">Definition</div>
+						<p>A dropdown allows a user to select a value from a series of options. View example below.</p>
+
+						<div class="preview-box">
+							<div class="dropdown">
+								simple dropdown <i class="indicator icon i-menu-down r-floated" data-icon="arrow_drop_up"></i>
+								<div class="ui drop menu">
+									<div class="item">New</div>
+									<div class="item">Open... <span class="auxiliary r-floated">ctr + o</span></div>
+									<div class="item">Save as... <span class="auxiliary r-floated">ctr + s</span></div>
+									<div class="item">Rename <span class="auxiliary r-floated">ctr + r</span></div>
+									<div class="item">Make a copy</div>
+									<div class="item"><i class="r-spaced icon i-folder" data-icon="i-folder"></i> Move to folder</div>
+									<div class="item"><i class="r-spaced icon i-delete" data-icon="i-delete"></i> Move to trash</div>
+									<hr />
+									<div class="item">Download as...</div>
+									<div class="item sub dropdown">
+										Publish to web <i class="indicator icon i-menu-right r-floated" data-icon="arrow_drop_up"></i>
+										<div class="ui drop menu">
+											<div class="item">Google Docs</div>
+											<div class="item">Google Drive</div>
+											<div class="item">Dropbox</div>
+											<div class="item">Adobe Creative Cloud</div>
+											<div class="item sub dropdown">
+												Another Service... <i class="indicator icon i-menu-right r-floated"></i>
+												<div class="ui drop menu">
+													<div class="item">Search online</div>
+													<div class="item">Custom Select</div>
+													<div class="disabled item">No more option.</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="item">Email Collaborators</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Usage</div>
+						<p>Dropdown is created by a <code>div</code> element that has the <code>dropdown</code> class and a menu created with a div that has the <code>ui drop menu</code> classes.</p>
+						<p>To link the dropdown with the menu, The menu should be created inside the dropdown div created earlier or give the dropdown a <code>browse</code> class and the <code>data-target</code> or <code>href</code> attribute that correspond with the <code>id</code> attribute of the menu. <strong>Note:</strong>href value should be prefixed with "#".</p>
+						<p>The menu can contain items as a <a href="menu.html">normal menu</a> or any desired content. An example markup is below.</p>
+
+						<div id="example1">
+							<div class="heading">Example 1</div>
+							<p>An example of a dropdown linked together with it menu by placing the drop menu in the dropdown div itself.</p>
+							<div class="preview-box">
+								<div class="dropdown">
+									ddexample1
+									<i class="indicator icon i-menu-down"></i>
+									<div class="ui drop menu">
+										<div class="item">one</div>
+										<div class="item">two</div>
+										<div class="item">three</div>
+										<div class="item">four</div>
+										<div class="item">five</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="markup-box">
+								<code>&lt;div class="dropdown"&gt; <br>
+									&nbsp;&nbsp; dropdown example <br>
+									&nbsp;&nbsp; &lt;i class="indicator icon i-menu-down"&gt;&lt;/i&gt; <br>
+									&nbsp;&nbsp; &lt;div class="ui drop menu"&gt; <br>
+									&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class="item"&gt;one&lt;/div&gt; <br>
+									&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class="item"&gt;two&lt;/div&gt; <br>
+									&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class="item"&gt;three&lt;/div&gt; <br>
+									&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class="item"&gt;four&lt;/div&gt; <br>
+									&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class="item"&gt;five&lt;/div&gt; <br>
+									&nbsp;&nbsp; &lt;/div&gt; <br>
+									&lt;/div&gt;
+								</code>
+							</div>
+						</div>
+						
+						<div id="example2">
+							<div class="heading">Example 2</div>
+							<p>An example of a dropdown linked together with it menu <code>id</code> attribute. Note that the dropdown must have the <code>browse</code> class for it to work.</p>
+							<div class="preview-box">
+								<div data-target="example2test" class="browse dropdown">
+									ddexample2
+									<i class="indicator icon i-menu-down"></i>
+								</div>
+								<div id="example2test" class="ui drop menu">
+									<div class="item">one</div>
+									<div class="item">two</div>
+									<div class="item">three</div>
+									<div class="item">four</div>
+									<div class="item">five</div>
+								</div>
+							</div>
+
+							<div class="markup-box">
+								<code>
+									&lt;div data-target="example2test" class="browse dropdown"&gt; <br>
+									&nbsp;&nbsp; dropdown example <br>
+									&nbsp;&nbsp; &lt;i class="indicator icon i-menu-down"&gt;&lt;/i&gt; <br>
+									&lt;/div&gt;
+								</code>
+								<div class="horizontal divider">or</div>
+								<code>
+									&lt;a href="#example2test" class="browse dropdown"&gt; <br>
+									&nbsp;&nbsp; dropdown example <br>
+									&nbsp;&nbsp; &lt;i class="indicator icon i-menu-down"&gt;&lt;/i&gt; <br>
+									&lt;/a&gt;
+								</code>
+								<div class="horizontal divider">then</div>
+								<code>
+									&lt;div id="example2test" class="ui drop menu"&gt; <br>
+									&nbsp;&nbsp; &lt;div class="item"&gt;one&lt;/div&gt; <br>
+									&nbsp;&nbsp; &lt;div class="item"&gt;two&lt;/div&gt; <br>
+									&nbsp;&nbsp; &lt;div class="item"&gt;three&lt;/div&gt; <br>
+									&nbsp;&nbsp; &lt;div class="item"&gt;four&lt;/div&gt; <br>
+									&nbsp;&nbsp; &lt;div class="item"&gt;five&lt;/div&gt; <br>
+									&lt;/div&gt; <br>
+								</code>
+							</div>
+						</div>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Trigger Type</div>
+						<p>Dropdown can be triggered in two different ways. It could either be by click or hover. The default way a dropdown is triggered is by the click trigger. To trigger the hover trigger, the <code>data-hover</code> attribute should be added to the dropdown. It can be given a value <code>true</code> or no value at all.</p>
+
+						<div class="preview-box">
+							<div class="horizontal divider">click trigger</div>
+							<div class="dropdown">
+								click trigger
+								<i class="indicator icon i-menu-down"></i>
+								<div class="ui drop menu">
+									<div class="item">one</div>
+									<div class="item">two</div>
+									<div class="item">three</div>
+									<div class="item">four</div>
+									<div class="item">five</div>
+								</div>
+							</div>
+						</div>
+						<div class="markup-box">
+							<code>&lt;div class="dropdown"&gt; <br>
+								&nbsp;&nbsp; click trigger <br>
+								&nbsp;&nbsp; &lt;i class="indicator icon i-menu-down"&gt;&lt;/i&gt; <br>
+								&nbsp;&nbsp; &lt;div class="ui drop menu"&gt; <br>
+								&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class="item"&gt;one&lt;/div&gt; <br>
+								&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class="item"&gt;two&lt;/div&gt; <br>
+								&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class="item"&gt;three&lt;/div&gt; <br>
+								&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class="item"&gt;four&lt;/div&gt; <br>
+								&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class="item"&gt;five&lt;/div&gt; <br>
+								&nbsp;&nbsp; &lt;/div&gt; <br>
+								&lt;/div&gt;
+							</code>
+						</div>
+						<div class="preview-box">
+							<div class="horizontal divider">hover trigger</div>
+							<div class="dropdown" data-hover>
+								hover trigger
+								<i class="indicator icon i-menu-down"></i>
+								<div class="ui drop menu">
+									<div class="item">one</div>
+									<div class="item">two</div>
+									<div class="item">three</div>
+									<div class="item">four</div>
+									<div class="item">five</div>
+								</div>
+							</div>
+						</div>
+						<div class="markup-box">
+							<code>&lt;div class="dropdown" data-hover&gt; <br>
+								&nbsp;&nbsp; hover trigger <br>
+								&nbsp;&nbsp; &lt;i class="indicator icon i-menu-down"&gt;&lt;/i&gt; <br>
+								&nbsp;&nbsp; &lt;div class="ui drop menu"&gt; <br>
+								&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class="item"&gt;one&lt;/div&gt; <br>
+								&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class="item"&gt;two&lt;/div&gt; <br>
+								&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class="item"&gt;three&lt;/div&gt; <br>
+								&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class="item"&gt;four&lt;/div&gt; <br>
+								&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class="item"&gt;five&lt;/div&gt; <br>
+								&nbsp;&nbsp; &lt;/div&gt; <br>
+								&lt;/div&gt;
+							</code>
+						</div>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Specify a Trigger for dropdown</div>
+						<p>The dropdown can be asked to find it trigger in itself. To do so, you have to create an element that has the <code>trigger</code> class in the dropdown container and add the <code>data-findTrigger</code> attribute to the dropdown. See example and markup below.</p>
+
+						<div class="preview-box">
+							<div class="dropdown" data-findtrigger>
+								just a text in dropdown
+								<span class="red trigger"> i am trigger</span>
+								<div class="ui drop menu">
+									<div class="item">Green</div>
+									<div class="item">Blue</div>
+									<div class="item">Red</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="markup-box">
+							<code>
+								&lt;div class="dropdown" data-findTrigger&gt;<br>
+								&nbsp;&nbsp;just a text in dropdown<br>
+								&nbsp;&nbsp;&lt;span class="red trigger"&gt;i am trigger&lt;/span&gt;<br>
+								&nbsp;&nbsp;&lt;div class="ui drop menu"&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="item"&gt;Green&lt;/div&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="item"&gt;Blue&lt;/div&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="item"&gt;Red&lt;/div&gt;<br>
+								&nbsp;&nbsp;&lt;/div&gt;<br>
+								&lt;/div&gt;
+							</code>
+						</div>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Sub Dropdown</div>
+						<p>A sub dropdown is a dropdown that is meant to exist in a drop menu as an item. It is created with the normal dropdown syntax only that it has the <code>sub</code> class. The default way a sub dropdown works is that it is triggered by the hover trigger (you can easily change that by adding the <code>data-hover=false</code> attribute to the sub dropdown). It display either to the left or right. See example below.</p>
+
+						<div class="preview-box">
+							<div class="dropdown">
+								dropdown
+								<i class="indicator icon i-menu-down"></i>
+								<div class="ui drop menu">
+									<div class="item">one</div>
+									<div class="item">two</div>
+									<div class="item">three</div>
+									<div class="item sub dropdown">
+										sub dropdown
+										<i class="indicator icon i-menu-right"></i>
+										<div class="ui drop menu">
+											<div class="item">sub one</div>
+											<div class="item">sub two</div>
+											<div class="item">sub three</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="markup-box">
+							<code>&lt;div class="dropdown"&gt;<br>
+								&nbsp;&nbsp;dropdown<br>
+								&nbsp;&nbsp;&lt;i class="indicator icon i-menu-down"&gt;&lt;/i&gt;<br>
+								&nbsp;&nbsp;&lt;div class="ui drop menu"&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="item"&gt;one&lt;/div&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="item"&gt;two&lt;/div&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="item"&gt;three&lt;/div&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="item sub dropdown"&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sub dropdown<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i class="indicator icon i-menu-right"&gt;&lt;/i&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="ui drop menu"&gt;<br>
+					 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="item"&gt;sub one&lt;/div&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="item"&gt;sub two&lt;/div&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="item"&gt;sub three&lt;/div&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+								&nbsp;&nbsp;&lt;/div&gt;<br>
+								&lt;/div&gt;
+							</code>
+						</div>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Page Dropdown</div>
+						<p>A page dropdown make the drop menu of a dropdown to start it display at the positon of the mouse when the click event was triggered. To create a page dropdown, the <code>page</code> option of a dropdown should set to <code>true</code>. See example below of how a page dropdown works.</p>
+
+						<div class="preview-box">
+							<div class="blue dropdown" data-options="page: true;" style="width: 50px; height: 50px;">
+								<div class="ui drop menu">
+									<div class="item">View</div>
+									<div class="item">Sort by</div>
+									<div class="item">Refresh</div>
+									<hr />
+									<div class="disabled item">Paste</div>
+									<div class="disabled item">Paste shortcut</div>
+									<div class="item">Undo delete <span class="auxiliary r-floated">Ctrl + Z</span></div>
+									<hr />
+									<div class="item">Next desktop background</div>
+									<div class="item">New</div>
+									<hr />
+									<div class="item">Display settings</div>
+									<div class="item">Personalize</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="markup-box">
+							<code>&lt;div class="dropdown" <strong>data-option="page: true;"</strong>&gt;<br>
+								&nbsp;&nbsp;... ... ...<br>
+								&lt;/div&gt;
+							</code>
+						</div>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Board Drop Menu</div>
+						<p>The drop menu of a dropdown can take the width of it container. Add the <code>board</code> class to a drop menu created outside its dropdown and linked to the dropdown with it id. To ensure a good display, the parent of the board drop menu must have a <code>relative</code> position. See example below.</p>
+
+						<div class="preview-box">
+							<div class="browse dropdown" data-target="board1em">
+								Board Dropdown example.
+							</div>
+
+							<div class="ui drop board menu" id="board1em">
+								<div class="grid 3-col">
+									<div class="col">
+										<div class="heading">Business</div>
+										<div class="vertical text menu">
+											<div class="item">Design &amp; Urban Ecologies</div>
+											<div class="item">Fashion Design</div>
+											<div class="item">Fine Art</div>
+											<div class="item">Strategic Design</div>
+										</div>
+									</div>
+									<div class="col">
+										<div class="heading">Liberal Arts</div>
+										<div class="vertical text menu">
+											<div class="item">Anthropology</div>
+											<div class="item">Economics</div>
+											<div class="item">Media Studies</div>
+											<div class="item">Philosophy</div>
+										</div>
+									</div>
+									<div class="col">
+										<div class="heading">Social Sciences</div>
+										<div class="vertical text menu">
+											<div class="item">Food Studies</div>
+											<div class="item">Journalism</div>
+											<div class="item">Non Profit Management</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="markup-box">
+							<code>
+								&lt;div class="browse dropdown" data-target="board1em"&gt;<br>
+								&nbsp;&nbsp;Board Dropdown example<br>
+								&lt;/div&gt;
+							</code>
+							<br><br>
+							<code>
+								&lt;div class="board ui drop menu" id="board1em"&gt;<br>
+								&nbsp;&nbsp;&lt;div class="grid 3-col"&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col"&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="heading"&gt;Business&lt;/div&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="text menu"&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="item"&gt;Design &amp; Urban Ecologies&lt;/div&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="item"&gt;Fashion Design&lt;/div&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="item"&gt;Fine Art&lt;/div&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="item"&gt;Strategic Design&lt;/div&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col"&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="heading"&gt;Liberal Arts&lt;/div&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="text menu"&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="item"&gt;Anthropology&lt;/div&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="item"&gt;Economics&lt;/div&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="item"&gt;Media Studies&lt;/div&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="item"&gt;Philosophy&lt;/div&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col"&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="heading"&gt;Social Sciences&lt;/div&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="text menu"&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="item"&gt;Food Studies&lt;/div&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="item"&gt;Journalism&lt;/div&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="item"&gt;Non Profit Management&lt;/div&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+								&nbsp;&nbsp;&lt;/div&gt;<br>
+								&lt;/div&gt;
+							</code>
+						</div>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Dropdown Options</div>
+						<p>You can customize the behavior of a dropdown using the following options. Options is passed to a dropdown as a value to the <code>data-options</code> attribute of the dropdown in a <strong>name:value</strong> pair seperated with colon (;). eg <code>data-options ="option1: value1; option2: value2; ..."</code></p>
+
+						<table class="definition table">
+							<thead>
+								<tr>
+									<th>Options</th>
+									<th>Default Value</th>
+									<th>Description</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>delay</td>
+									<td>0</td>
+									<td>This specify the delay time in showing or hiding the dropdown (in miliseconds) NB: value should be a number</td>
+								</tr>
+								<tr>
+									<td>duration</td>
+									<td>300</td>
+									<td>This is the duration of drop menu animation (in miliseconds) NB: value should be a number</td>
+								</tr>
+								<tr>
+									<td>view</td>
+									<td></td>
+									<td>This determine the view position of the dropdown either to be <code>vertical</code> or <code>horizontal</code>. The default value for a normal dropdown is <code>vertical</code> while the default value for a sub dropdown is <code>horizontal</code></td>
+								</tr>
+								<tr>
+									<td>page</td>
+									<td>false</td>
+									<td>It is used to set a dropdown be either a page dropdown or not. If set true, it will make the dropdown menu position to be decided by the mouse position.</td>
+								</tr>
+								<tr>
+									<td>contrainWidth</td>
+									<td>false</td>
+									<td>This tell whether to contrain the width of the drop menu to the dropdown width or not.</td>
+								</tr>
+								<tr>
+									<td>fluidMinWidth</td>
+									<td>false</td>
+									<td>This tell whether to give the drop menu a minimum with that correspond to the dropdown width or not.</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<th>Options</th>
+									<th>Default Value</th>
+									<th>Description</th>
+								</tr>
+							</tfoot>
+						</table>
+					</section>
+				</div>
+			</div>
+		</article>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+.callout {
+  margin: 1rem 0;
+  padding: 1em 1em 1em 1.2em;
+  background-color: #fff;
+  border-left: 3px solid #a7a7a7;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+
+  &.info {
+    background-color: #f4f8fa;
+    border-color: #73a2bf;
+
+    & .callout-color {color: #4caf50;}
+  }
+
+  &.positive {
+     background-color: #f5ffed;
+     border-color: #4caf50;
+
+     & .callout-color {color: #4caf50;}
+  }
+
+  &.caution {
+    background-color: #fff4cc;
+    border-color: #ffe070;
+
+    & .callout-color {color: #f0ad4e;}
+  }
+
+  &.negative {
+    background-color: #fdf7f7;
+    border-color: #d9534f;
+
+    & .callout-color {color: #d9534f;}
+  }
+}

@@ -1,0 +1,109 @@
+
+.image {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  background-color: transparent;
+  vertical-align: middle;
+  
+  & img,
+  & svg {
+    width: 100%;
+    height: auto;
+    border-radius: inherit;
+  }
+}
+// rounded image and images
+.image.rounded,
+.image.rounded * {
+  border-radius: $round-radius;
+}
+
+// circular images and image
+.image.circular,
+.image.circular * {
+  border-radius: 50%;
+}
+
+.image.circular {
+  overflow: hidden;
+}
+
+// bordered image
+.image.bordered {
+  border: 1px solid #d2d2d2;
+}
+
+// centered image
+.image.centered {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// image and images sizes
+.image.mini {
+  width: 100px;
+}
+
+.image.small {
+  width: 200px;
+}
+
+.image.medium,
+.images.medium .image,
+.images.medium img,
+.images.medium svg {
+  width: 400px;
+}
+
+.image.big,
+.images.big .image,
+.images.big img,
+.images.big svg {
+  width: 600px;
+}
+
+.image.huge,
+.images.huge .image,
+.images.huge img,
+.images.huge svg {
+  width: 800px;
+}
+
+.image.mingle,
+.images.mingle .image,
+.images.mingle img,
+.images.mingle svg {
+  height: 2em;
+  width: auto;
+  margin-right: 0.25em;
+}
+
+.image.avatar,
+.images.avatar .image,
+.images.avatar img,
+.images.avatar svg {
+  max-height: 2em;
+  max-width: 2em;
+}
+
+// fluid image and images
+.image.fluid,
+.image.fluid *,
+.images.fluid .image,
+.images.fluid .image > *,
+.images.fluid img,
+.images.fluid svg {
+  width: 100%;
+}
+
+// images
+.images {
+  & .image,
+  & img,
+  & svg {
+    vertical-align: middle;
+  }
+}

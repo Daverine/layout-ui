@@ -1,0 +1,49 @@
+/* --- ICONS --- */
+
+i.icon.fixed-width,
+i.icons.fixed-width i.icon {
+	width: 2em;
+	text-align: center;
+}
+
+i.icon.bordered,
+i.icons.stacked.bordered {
+	border-width: 0.08em;
+	border-style: solid;
+	border-radius: 0.1em;
+	min-height: 1.2em;
+	min-width: 1.2em;
+}
+
+i.icons {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+
+	&.stacked {
+		display: inline-flex;
+		align-items: center;
+		line-height: 1em;
+
+		& .icon,
+		& .icons {
+			text-align: center;
+
+			&.main {
+				position: relative;
+				left: 0;
+			}
+
+			&.aux {
+				position: absolute;
+				font-size: 0.5em;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+	}
+}
+
+// @import "fontAwesome/font-awesome";
+@import "layout-icons/nucleo";

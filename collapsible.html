@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Collapsible - Layout UI</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/layout-ui.css" type="text/css">
+
+	<script src="js/require/jquery-2.1.4.min.js"></script>
+	<script src="js/require/velocity.min.js"></script>
+	<script src="js/layout-ui.js"></script>
+</head>
+
+<body>
+	<header>
+		<div class="container" data-level="1">
+			<div class="heading">Collapsible</div>
+			<p class="big">A collapsible allows user to toggle the display of sections of content.</p>
+		</div>
+		<hr />
+	</header>
+
+	<article>
+		<div class="no-gutter container grid">
+			<div id="mainContent" class="padded 12-width md-10-width col">
+				<section data-level="3">
+					<div class="heading">A typical collapsible</div>
+					<p>A typical collapsible consist of a <code>collapsible</code> classed element filled with <code>c-toggler</code> and <code>c-item</code> classed elements.</p>
+
+					<div class="preview-box">
+						<div class="collapsible">
+							<div class="c-toggler">Lorem ipsum dolor sit amet consectetuer</div>
+							<div class="c-item">Lorem ipsum dolor sit amet consectetuer facilisis lacinia sapien ac et. Quis hendrerit neque congue pretium iaculis justo laoreet orci elit condimentum. Eros natoque Curabitur accumsan eget quis porttitor Sed Vestibulum amet sed.
+							</div>
+							<div class="c-toggler">Lorem ipsum dolor sit amet consectetuer</div>
+							<div class="c-item">Lorem ipsum dolor sit amet consectetuer facilisis lacinia sapien ac et. Quis hendrerit neque congue pretium iaculis justo laoreet orci elit condimentum. Eros natoque Curabitur accumsan eget quis porttitor Sed Vestibulum amet sed.
+							</div>
+							<div class="c-toggler">Lorem ipsum dolor sit amet consectetuer</div>
+							<div class="c-item">Lorem ipsum dolor sit amet consectetuer facilisis lacinia sapien ac et. Quis hendrerit neque congue pretium iaculis justo laoreet orci elit condimentum. Eros natoque Curabitur accumsan eget quis porttitor Sed Vestibulum amet sed.
+							</div>
+							<div class="c-toggler">Lorem ipsum dolor sit amet consectetuer</div>
+							<div class="c-item">Lorem ipsum dolor sit amet consectetuer facilisis lacinia sapien ac et. Quis hendrerit neque congue pretium iaculis justo laoreet orci elit condimentum. Eros natoque Curabitur accumsan eget quis porttitor Sed Vestibulum amet sed.
+							</div>
+						</div>
+					</div>
+
+					<div class="markup-box">
+						<code>&lt;div class="collapsible"&gt;<br>
+							&nbsp;&nbsp;&lt;div class="c-toggler"&gt;Collpasible Toggler&lt;/div&gt;<br>
+							&nbsp;&nbsp;&lt;div class="c-item"&gt;Collapsible content&lt;/div&gt;<br>
+							&nbsp;&nbsp;&lt;div class="c-toggler"&gt;Collpasible Toggler&lt;/div&gt;<br>
+							&nbsp;&nbsp;&lt;div class="c-item"&gt;Collapsible content&lt;/div&gt;<br>
+							&lt;/div&gt;	
+						</code>
+					</div>
+				</section>
+				
+				<section data-level="3">
+					<div class="heading">Accordion Collapsible</div>
+					<p>An accordion collapsible previews one content at a time. It is created like a normal collapsible. Just that the <code>accordion</code> class will be added to the collpasible.</p>
+					
+					<div class="preview-box">
+						<div class="accordion collapsible">
+							<div class="c-toggler">Lorem ipsum dolor sit amet consectetuer</div>
+							<div class="c-item">Lorem ipsum dolor sit amet consectetuer facilisis lacinia sapien ac et. Quis hendrerit neque congue pretium iaculis justo laoreet orci elit condimentum. Eros natoque Curabitur accumsan eget quis porttitor Sed Vestibulum amet sed.
+							</div>
+							<div class="c-toggler">Lorem ipsum dolor sit amet consectetuer</div>
+							<div class="c-item">Lorem ipsum dolor sit amet consectetuer facilisis lacinia sapien ac et. Quis hendrerit neque congue pretium iaculis justo laoreet orci elit condimentum. Eros natoque Curabitur accumsan eget quis porttitor Sed Vestibulum amet sed.
+							</div>
+							<div class="c-toggler">Lorem ipsum dolor sit amet consectetuer</div>
+							<div class="c-item">Lorem ipsum dolor sit amet consectetuer facilisis lacinia sapien ac et. Quis hendrerit neque congue pretium iaculis justo laoreet orci elit condimentum. Eros natoque Curabitur accumsan eget quis porttitor Sed Vestibulum amet sed.
+							</div>
+							<div class="c-toggler">Lorem ipsum dolor sit amet consectetuer</div>
+							<div class="c-item">Lorem ipsum dolor sit amet consectetuer facilisis lacinia sapien ac et. Quis hendrerit neque congue pretium iaculis justo laoreet orci elit condimentum. Eros natoque Curabitur accumsan eget quis porttitor Sed Vestibulum amet sed.
+							</div>
+						</div>
+					</div>
+					
+					<div class="markup-box">
+						<code>&lt;div class="<strong>accordion</strong> collapsible"&gt;<br>
+							&nbsp;&nbsp;&lt;div class="c-toggler"&gt;Collpasible Toggler&lt;/div&gt;<br>
+							&nbsp;&nbsp;&lt;div class="c-item"&gt;Collapsible content&lt;/div&gt;<br>
+							&nbsp;&nbsp;&lt;div class="c-toggler"&gt;Collpasible Toggler&lt;/div&gt;<br>
+							&nbsp;&nbsp;&lt;div class="c-item"&gt;Collapsible content&lt;/div&gt;<br>
+							&lt;/div&gt;	
+						</code>
+					</div>
+				</section>
+				
+				<section data-level="3">
+					<div class="heading">Preselect (a) section(s) in a collapsible</div>
+					<p>If you want a collapsible with a preoped section just add the <code>active</code> class to the <code>c-toggler</code> classed element.</p>
+					
+					<div class="preview-box">
+						<div class="collapsible">
+							<div class="c-toggler">Lorem ipsum dolor sit amet consectetuer</div>
+							<div class="c-item">Lorem ipsum dolor sit amet consectetuer facilisis lacinia sapien ac et. Quis hendrerit neque congue pretium iaculis justo laoreet orci elit condimentum. Eros natoque Curabitur accumsan eget quis porttitor Sed Vestibulum amet sed.
+							</div>
+							<div class="active c-toggler">Lorem ipsum dolor sit amet consectetuer</div>
+							<div class="c-item">Lorem ipsum dolor sit amet consectetuer facilisis lacinia sapien ac et. Quis hendrerit neque congue pretium iaculis justo laoreet orci elit condimentum. Eros natoque Curabitur accumsan eget quis porttitor Sed Vestibulum amet sed.
+							</div>
+							<div class="c-toggler">Lorem ipsum dolor sit amet consectetuer</div>
+							<div class="c-item">Lorem ipsum dolor sit amet consectetuer facilisis lacinia sapien ac et. Quis hendrerit neque congue pretium iaculis justo laoreet orci elit condimentum. Eros natoque Curabitur accumsan eget quis porttitor Sed Vestibulum amet sed.
+							</div>
+							<div class="c-toggler">Lorem ipsum dolor sit amet consectetuer</div>
+							<div class="c-item">Lorem ipsum dolor sit amet consectetuer facilisis lacinia sapien ac et. Quis hendrerit neque congue pretium iaculis justo laoreet orci elit condimentum. Eros natoque Curabitur accumsan eget quis porttitor Sed Vestibulum amet sed.
+							</div>
+						</div>
+					</div>
+					
+					<div class="markup-box">
+						<code>&lt;div class="<strong>accordion</strong> collapsible"&gt;<br>
+							&nbsp;&nbsp;&lt;div class="<strong>active</strong> c-toggler"&gt;Collpasible Toggler&lt;/div&gt;<br>
+							&nbsp;&nbsp;&lt;div class="c-item"&gt;Collapsible content&lt;/div&gt;<br>
+							&nbsp;&nbsp;&lt;div class="c-toggler"&gt;Collpasible Toggler&lt;/div&gt;<br>
+							&nbsp;&nbsp;&lt;div class="c-item"&gt;Collapsible content&lt;/div&gt;<br>
+							&lt;/div&gt;	
+						</code>
+					</div>
+				</section>
+
+				<section data-level="3">
+					<div class="heading">Adding a pointer to a collapsible</div>
+					<p>A pointer can be used with collapsible to indicate wether a c-togger is active or not. We provide some two utilities which are <code>aview</code> and <code>nview</code> classes. See the <a href="utilities.html">utilities</a> on how to use it. See example below.</p>
+
+					<div class="preview-box">
+						<div class="collapsible">
+							<div class="c-toggler"><i class="icon aview i-menu-down"></i><i class="icon nview i-menu-right"></i>Lorem ipsum dolor sit amet consectetuer</div>
+							<div class="c-item">Lorem ipsum dolor sit amet consectetuer facilisis lacinia sapien ac et. Quis hendrerit neque congue pretium iaculis justo laoreet orci elit condimentum. Eros natoque Curabitur accumsan eget quis porttitor Sed Vestibulum amet sed.
+							</div>
+							<div class="c-toggler"><i class="icon aview i-menu-down"></i><i class="icon nview i-menu-right"></i>Lorem ipsum dolor sit amet consectetuer</div>
+							<div class="c-item">Lorem ipsum dolor sit amet consectetuer facilisis lacinia sapien ac et. Quis hendrerit neque congue pretium iaculis justo laoreet orci elit condimentum. Eros natoque Curabitur accumsan eget quis porttitor Sed Vestibulum amet sed.
+							</div>
+							<div class="c-toggler"><i class="icon aview i-menu-down"></i><i class="icon nview i-menu-right"></i>Lorem ipsum dolor sit amet consectetuer</div>
+							<div class="c-item">Lorem ipsum dolor sit amet consectetuer facilisis lacinia sapien ac et. Quis hendrerit neque congue pretium iaculis justo laoreet orci elit condimentum. Eros natoque Curabitur accumsan eget quis porttitor Sed Vestibulum amet sed.
+							</div>
+							<div class="c-toggler"><i class="icon aview i-menu-down"></i><i class="icon nview i-menu-right"></i>Lorem ipsum dolor sit amet consectetuer</div>
+							<div class="c-item">Lorem ipsum dolor sit amet consectetuer facilisis lacinia sapien ac et. Quis hendrerit neque congue pretium iaculis justo laoreet orci elit condimentum. Eros natoque Curabitur accumsan eget quis porttitor Sed Vestibulum amet sed.
+							</div>
+						</div>
+					</div>
+
+					<div class="markup-box">
+						<code>&lt;div class="<strong>accordion</strong> collapsible"&gt;<br>
+							&nbsp;&nbsp;&lt;div class="<strong>active</strong> c-toggler"&gt;Collpasible Toggler&lt;/div&gt;<br>
+							&nbsp;&nbsp;&lt;div class="c-item"&gt;Collapsible content&lt;/div&gt;<br>
+							&nbsp;&nbsp;&lt;div class="c-toggler"&gt;Collpasible Toggler&lt;/div&gt;<br>
+							&nbsp;&nbsp;&lt;div class="c-item"&gt;Collapsible content&lt;/div&gt;<br>
+							&lt;/div&gt;	
+						</code>
+					</div>
+				</section>
+
+
+
+				<section data-level="3">
+					<div class="heading">Places where you can use collapsible</div>
+					<p>Collapsible can be used with any component. The main thing is understanding that a collapsible contain pairs of toggles (<code>c-toggler</code>) and contents (<code>c-item</code>). You can use a collapsible with panel. See <a href="panel.html">panel</a>.</p>
+
+					<div class="preview-box">
+						<div class="panel collapsible">
+							<div class="item c-toggler">Lorem ipsum dolor sit amet consectetuer</div>
+							<div class="item c-item">Lorem ipsum dolor sit amet consectetuer facilisis lacinia sapien ac et. Quis hendrerit neque congue pretium iaculis justo laoreet orci elit condimentum. Eros natoque Curabitur accumsan eget quis porttitor Sed Vestibulum amet sed.
+							</div>
+							<div class="item c-toggler">Lorem ipsum dolor sit amet consectetuer</div>
+							<div class="item c-item">Lorem ipsum dolor sit amet consectetuer facilisis lacinia sapien ac et. Quis hendrerit neque congue pretium iaculis justo laoreet orci elit condimentum. Eros natoque Curabitur accumsan eget quis porttitor Sed Vestibulum amet sed.
+							</div>
+							<div class="item c-toggler">Lorem ipsum dolor sit amet consectetuer</div>
+							<div class="item c-item">Lorem ipsum dolor sit amet consectetuer facilisis lacinia sapien ac et. Quis hendrerit neque congue pretium iaculis justo laoreet orci elit condimentum. Eros natoque Curabitur accumsan eget quis porttitor Sed Vestibulum amet sed.
+							</div>
+						</div>
+
+						<div class="panel collapsible">
+							<div class="item">
+								<div class="c-toggler">Lorem ipsum dolor sit amet consectetuer</div>
+								<div class="c-item">Lorem ipsum dolor sit amet consectetuer facilisis lacinia sapien ac et. Quis hendrerit neque congue pretium iaculis justo laoreet orci elit condimentum. Eros natoque Curabitur accumsan eget quis porttitor Sed Vestibulum amet sed.</div>
+							</div>
+							<div class="item">
+								<div class="c-toggler">Lorem ipsum dolor sit amet consectetuer</div>
+								<div class="c-item">Lorem ipsum dolor sit amet consectetuer facilisis lacinia sapien ac et. Quis hendrerit neque congue pretium iaculis justo laoreet orci elit condimentum. Eros natoque Curabitur accumsan eget quis porttitor Sed Vestibulum amet sed.</div>
+							</div>
+							<div class="item">
+								<div class="c-toggler">Lorem ipsum dolor sit amet consectetuer</div>
+								<div class="c-item">Lorem ipsum dolor sit amet consectetuer facilisis lacinia sapien ac et. Quis hendrerit neque congue pretium iaculis justo laoreet orci elit condimentum. Eros natoque Curabitur accumsan eget quis porttitor Sed Vestibulum amet sed.</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+			</div>
+		</div>
+	</article>
+</body>
+</html>

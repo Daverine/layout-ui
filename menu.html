@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Menu - Layout-UI</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/layout-ui.css" type="text/css">
+		<script src="js/require/jquery-2.1.4.min.js"></script>
+		<script src="js/layout-ui.js"></script>
+		<style>
+			#main-content-nav {
+				height: 100vh;
+				overflow-x: hidden;
+				overflow-y: auto;
+			}
+
+			body {
+				max-width: 1200px;
+				margin: auto;
+				width: 100%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<article id="main-doc" class="grid">
+			<header data-level="1" class="fluid">
+				<div class="heading">Menu</div>
+				<p class="big">Defines different styles and layout for a menu.</p>
+				<hr />
+			</header>
+			<div class="grid no-gutter">
+				<div id="main-content" class="padded col 12-width md-10-width">
+					<section data-level="3" id="introduction">
+						<div class="heading">Introduction</div>
+						<p>A menu use to display items for navigation actions. All versions of a menu are a <code>menu</code> classed element filled with <code>item</code> classed elements.</p>
+
+						<div class="info note">You can add the <code>active</code> class to any item to denote an active item.</div>
+						
+						<div class="preview-box">
+							<div class="menu">
+								<div class="item">One</div>
+								<div class="item">Two</div>
+								<div class="item">Three</div>
+								<div class="item">Four</div>
+								<div class="active item">Five</div>
+							</div>
+						</div>
+
+						<div class="markup-box">
+							<code>
+								&lt;div class="menu"&gt; <br />
+										&nbsp;&nbsp; &lt;div class="item"&gt;...&lt;/div&gt; <br />
+										&nbsp;&nbsp; &lt;div class="active item"&gt;...&lt;/div&gt; <br />
+								&lt;/div&gt; <br />  
+							</code>
+							<code>&lt;div class="menu"&gt; <br />
+										&nbsp;&nbsp; &lt;div class="item"&gt;...&lt;/div&gt; <br />
+										&nbsp;&nbsp; &lt;div class="active item"&gt;...&lt;/div&gt; <br />
+						 &lt;/div&gt;
+							</code>
+						</div>
+
+							<section data-level="4">
+							<div class="heading">Vertical Menu</div>
+							<p>By default, a Menu is horizontally oriented. To switch the orientation to vertical, add the <code>vertical</code> class to the menu.</p>
+
+							<div class="preview-box">
+								<div class="vertical menu">
+									<div class="item">One</div>
+									<div class="item">Two</div>
+									<div class="active item">Three</div>
+									<div class="item">Four</div>
+									<div class="item">Five</div>
+								</div>
+							</div>
+						</section>
+					</section>
+		
+					<section data-level="3" id="alignment">
+						<div class="heading">Menu and Items Alignment</div>
+						<p>By default, each item in the menu aligns to the left. They can also be aligned to the right with the <code>r-aligned</code> class or to the middle with the <code>centered</code> class added to the <code>menu</code> classed element.</p>
+						
+						<div class="preview-box">
+							<div class="r-aligned menu">
+								<div class="item">One</div>
+								<div class="item">Two</div>
+								<div class="item">Three</div>
+								<div class="item">Four</div>
+								<div class="item">Five</div>
+							</div>
+						
+							<div class="centered menu">
+								<div class="item">One</div>
+								<div class="item">Two</div>
+								<div class="item">Three</div>
+								<div class="item">Four</div>
+								<div class="item">Five</div>
+							</div>
+						</div>
+						
+						<section data-level="4">
+							<div class="heading">Items alignment</div>
+							<p>Menu items can also be given different alignment to oppose the direction of the menu. Also the <code>items</code> classed element can be used to group items inside a menu and be assigned a different direction.</p>
+
+							<div class="info note">In a right aligned menu enviroment the <code>l-aligned</code> class can also be used to oppose an item or items direction to the left.</div>
+
+							<div class="preview-box">
+								<div class="r-aligned menu">
+									<div class="active l-aligned item">One</div>
+									<div class="item">Two</div>
+									<div class="item">Three</div>
+									<div class="item">Four</div>
+									<div class="item">Five</div>
+								</div>
+							</div>
+							
+							<div class="preview-box">
+								<div class="menu">
+									<div class="item">One</div>
+									<div class="item">Two</div>
+									<div class="item">Three</div>
+									<div class="r-aligned items">
+										<div class="item">Four</div>
+										<div class="active item">Five</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="markup-box">
+								<code>&lt;div class="r-aligned menu"&gt; <br />
+											&nbsp;&nbsp; &lt;div class="active l-aligned item"&gt;One&lt;/div&gt; <br />
+											&nbsp;&nbsp; &lt;div class="item"&gt;Two&lt;/div&gt; <br />
+											&nbsp;&nbsp; &lt;div class="item"&gt;Three&lt;/div&gt; <br />
+											&nbsp;&nbsp; &lt;div class="item"&gt;Four&lt;/div&gt; <br />
+											&nbsp;&nbsp; &lt;div class="item"&gt;Five&lt;/div&gt; <br />
+											&lt;/div&gt;
+								</code>
+								<br /><br />
+								<code>&lt;div class="menu"&gt; <br />
+											&nbsp;&nbsp; &lt;div class="item"&gt;One&lt;/div&gt; <br />
+											&nbsp;&nbsp; &lt;div class="item"&gt;Two&lt;/div&gt; <br />
+											&nbsp;&nbsp; &lt;div class="item"&gt;Three&lt;/div&gt; <br />
+											&nbsp;&nbsp; &lt;div class="r-aligned items"&gt; <br />
+											&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class="item"&gt;Four&lt;/div&gt; <br />
+											&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class="active item"&gt;Five&lt;/div&gt; <br />
+											&nbsp;&nbsp; &lt;/div&gt; <br />
+											&lt;/div&gt;
+								</code>
+							</div>
+						</section>
+
+						<div class="info callout">Note the provided alignment can also be used on a vertical menu and its items, just that in a vertical menu, the alignment given to it only affect the menu items contents.</div>
+
+					</section>
+		
+					<section data-level="3" id="fillable">
+						<div class="heading">Fillable Menu and Adaptable Items</div>
+						<p>Items can also be set to expand out and take up an even amount of space, with the <code>fillable</code> class added to its menu. The items will automatically size themselves equally inside the menu. Using the <code>adaptable</code> class on an item or items will make them take up the available space in the menu.</p>
+
+						<div class="preview-box">
+							<p>Example of fillable menu</p>
+							<div class="menu fillable">
+								<div class="item">One</div>
+								<div class="item">Two</div>
+								<div class="active item">Three</div>
+								<div class="item">Four</div>
+								<div class="item">Five</div>
+							</div>
+							<p>Example of adaptable item</p>
+							<div class="menu">
+								<div class="item">One</div>
+								<div class="item">Two</div>
+								<div class="active item">Three</div>
+								<div class="item">Four</div>
+								<div class="adaptable item">adaptable item</div>
+							</div>
+							<p>Example of adaptable items that is also fillable</p>
+							<div class="menu">
+								<div class="item">One</div>
+								<div class="item">Two</div>
+								<div class="adaptable fillable items">
+									<div class="active item">Three</div>
+									<div class="item">Four</div>
+									<div class="item">Five</div>
+								</div>
+							</div>
+						</div>
+					</section>
+		
+					<section data-level="3" id="bordered">
+						<div class="heading">Bordered Menu</div>
+						<p>A menu can have border around it. Just add the <code>bordered</code> class to the menu.</p>
+
+						<div class="caution note">
+							The first and last item of a bordered menu depend on its parent left and right border respectively. The <code>bordered</code> class can be added to the item to give it a left or a right border.
+						</div>
+
+						<div class="preview-box">
+							<div class="menu bordered">
+								<div class="item">One</div>
+								<div class="active item">Two</div>
+								<div class="item">Three</div>
+							</div>
+						
+							<div class="vertical menu bordered">
+								<div class="item">One</div>
+								<div class="active item">Two</div>
+								<div class="item">Three</div>
+							</div>
+						</div>
+					</section>
+					
+					<section data-level="3" id="basic">
+						<div class="heading">Basic Menu</div>
+						<p>An horizontal menu can be under-rail or hover-rail with the <code>.rail</code> or <code>.alt-rail</code> class respectively.</p>
+						
+						<div class="preview-box">
+							<div class="menu basic">
+								<div class="active item">One</div>
+								<div class="item">Two</div>
+								<div class="item">Three</div>
+								<div class="item">Four</div>
+								<div class="item">Five</div>
+							</div>
+							
+							<div class="menu alt-basic">
+								<div class="active item">One</div>
+								<div class="item">Two</div>
+								<div class="item">Three</div>
+								<div class="item">Four</div>
+								<div class="item">Five</div>
+							</div>
+						</div>
+						
+						<section data-level="4">
+							<div class="heading">Vertical Basic Menu.</div>
+							<p>
+								A vertical menu can also be rightside-rail or leftside-rail with the <code>.rail</code> or <code>.alt-rail</code> class respectively.
+							</p>
+
+							<div class="preview-box guttered grid xs-2">
+								<div class="col">
+									<div class="vertical menu basic">
+										<div class="item">One</div>
+										<div class="active item">Two</div>
+										<div class="item">Three</div>
+										<div class="item">Four</div>
+										<div class="item">Five</div>
+									</div>
+								</div>
+								<div class="col">
+									<div class="vertical menu alt-basic">
+										<div class="item">One</div>
+										<div class="active item">Two</div>
+										<div class="item">Three</div>
+										<div class="item">Four</div>
+										<div class="item">Five</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</section>
+
+					<section data-level="3" id="rail">
+						<div class="heading">Rail Menu</div>
+						<p>An horizontal menu can be under-rail or hover-rail with the <code>.rail</code> or <code>.alt-rail</code> class respectively.</p>
+						
+						<div class="preview-box">
+							<div class="menu rail">
+								<div class="active item">One</div>
+								<div class="item">Two</div>
+								<div class="item">Three</div>
+								<div class="item">Four</div>
+								<div class="item">Five</div>
+							</div>
+							
+							<div class="menu alt-rail">
+								<div class="active item">One</div>
+								<div class="item">Two</div>
+								<div class="item">Three</div>
+								<div class="item">Four</div>
+								<div class="item">Five</div>
+							</div>
+						</div>
+						
+						<section data-level="4">
+							<div class="heading">Vertical Rail Menu.</div>
+							<p>
+								A vertical menu can also be rightside-rail or leftside-rail with the <code>.rail</code> or <code>.alt-rail</code> class respectively.
+							</p>
+
+							<div class="preview-box guttered grid xs-2">
+								<div class="col">
+									<div class="vertical menu rail">
+										<div class="item">One</div>
+										<div class="active item">Two</div>
+										<div class="item">Three</div>
+										<div class="item">Four</div>
+										<div class="item">Five</div>
+									</div>
+								</div>
+								<div class="col">
+									<div class="vertical menu alt-rail">
+										<div class="item">One</div>
+										<div class="active item">Two</div>
+										<div class="item">Three</div>
+										<div class="item">Four</div>
+										<div class="item">Five</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</section>
+		
+					<section data-level="3" id="tabular">
+						<div class="heading">Tabular Menu</div>
+						<p>An horizontal menu can be tabular facing down or up with the <code>.tabular</code> or <code>.alt-tabular</code> class respectively.</p>
+						
+						<div class="preview-box">
+							<div class="menu tabular">
+								<div class="item">One</div>
+								<div class="item">Two</div>
+								<div class="active item">Three</div>
+								<div class="item">Four</div>
+								<div class="item">Five</div>
+							</div>
+
+							<div class="menu alt-tabular">
+								<div class="item">One</div>
+								<div class="item">Two</div>
+								<div class="active item">Three</div>
+								<div class="item">Four</div>
+								<div class="item">Five</div>
+							</div>
+						</div>
+						
+						<section data-level="4">
+							<div class="heading">Vertical tabular menu.</div>
+							<p>A vertical menu can be tabular facing right or left with the <code>.tabular</code> or <code>.alt-tabular</code> class respectively.</p>
+
+							<div class="preview-box guttered grid xs-2">
+								<div class="col">
+									<div class="vertical menu tabular">
+										<div class="item">One</div>
+										<div class="active item">Two</div>
+										<div class="item">Three</div>
+										<div class="item">Four</div>
+										<div class="item">Five</div>
+									</div>
+								</div>
+								<div class="col">
+									<div class="vertical menu alt-tabular">
+										<div class="item">One</div>
+										<div class="active item">Two</div>
+										<div class="item">Three</div>
+										<div class="item">Four</div>
+										<div class="item">Five</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</section>
+
+					<section data-level="3" id="tweak">
+						<div class="heading">Menu Tweaks</div>
+						
+						<section>
+							<div class="sub heading">xhover</div>
+							<p>An item can be given the <code>xhover</code> class to make it unhoverable, that is can not be hovered or active</p>
+
+							<div class="preview-box">
+								<div class="bordered menu">
+									<div class="xhover item">xhover item</div>
+									<div class="item">item</div>
+									<div class="item">item</div>
+								</div>
+							</div>
+						</section>
+
+						<section>
+							<div class="sub heading">inline</div>
+							<p>Menu is a block element. So to make it an inline element it should be given the <code>inline</code> class. This is visible when used with the <code>auto-width</code> class. See <strong>auto-width</strong> example.</p>
+						</section>
+
+						<section>
+							<div class="sub heading">auto-width</div>
+							<p>The <code>auto-width</code> class allows the menu to fit it content size. It must be used with the <code>inline</code> class.</p>
+
+							<div class="preview-box">
+								<div class="inline auto-width bordered menu">
+									<div class="item">item 1</div>
+									<div class="item">item 2</div>
+									<div class="item">item 3</div>
+								</div>
+
+								<div class="inline auto-width vertical bordered menu">
+									<div class="item">item 1</div>
+									<div class="item">item 2</div>
+									<div class="item">item 3</div>
+								</div>
+							</div>
+						</section>
+					</section>
+
+					<section data-level="3" id="menu-content">
+						<div class="heading">Menu's Content</div>
+						<div class="sub heading">Header Item</div>
+						<p>A menu item can conatain a header or may be itself a header.</p>
+						<div class="caution note">An header item cannot be hovered or set active.</div>
+
+						<div class="preview-box">
+							<div class="bordered menu">
+								<div class="header item">Our Company</div>
+								<a class="item">About Us</a>
+								<a class="item">Jobs</a>
+								<a class="item">Locations</a>
+							</div>
+							<br />
+						</div>
+
+						<div class="markup-box">
+							<code>&lt;div class="bordered menu"&gt; <br />
+									&nbsp;&nbsp;&lt;div class="header item"&gt;Our Company&lt;/div&gt; <br />
+									&nbsp;&nbsp;&lt;div class="item"&gt;...&lt;/div&gt; <br />
+									&nbsp;&nbsp;&lt;div class="item"&gt;...&lt;/div&gt; <br />
+									&lt;/div&gt; <br />
+							</code>
+						</div>
+
+						<div class="sub heading">Sub Items</div>
+						<p>A vertical menu can indicate an "items" as its children.</p>
+
+						<div class="preview-box">
+							<div class="bordered vertical menu menu">
+								<div class="item">Item 1</div>
+								<div class="item">Item 2</div>
+								<div class="sub items">
+									<div class="item">Item 1 in sub Items</div>
+									<div class="item">Item 2 in sub Items</div>
+								</div>
+								<div class="item">Item 3</div>
+							</div>
+						</div>
+
+						<div class="markup-box">
+							<code>
+								&lt;div class="bordered vertical menu menu"&gt; <br />
+								&nbsp;&nbsp;&lt;div class="item"&gt;Item 1&lt;/div&gt; <br />
+								&nbsp;&nbsp;&lt;div class="item"&gt;Item 2&lt;/div&gt; <br />
+								&nbsp;&nbsp;&lt;div class="sub items"&gt; <br />
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="item"&gt;Item 1 in sub Items&lt;/div&gt; <br />
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="item"&gt;Item 2 in sub Items&lt;/div&gt; <br />
+								&nbsp;&nbsp;&lt;/div&gt; <br />
+								&nbsp;&nbsp;&lt;div class="item"&gt;Item 3&lt;/div&gt; <br />
+								&lt;/div&gt;
+							</code>
+						</div>
+
+						<div class="sub heading">Header in Item and Text Menu</div>
+						<p>A menu item can contain a header and a text menu.</p>
+
+						<div class="preview-box">
+							<div class="auto-width vertical bordered menu">
+								<div class="xhover item">
+									<div class="header">Products</div>
+									<div class="text menu">
+										<a class="item">Enterprise</a>
+										<a class="item">Consumer</a>
+									</div>
+								</div>
+								<div class="xhover item">
+									<div class="header">CMS Solutions</div>
+									<div class="text vertical menu">
+										<a class="item">Rails</a>
+										<a class="item">Python</a>
+										<a class="item">PHP</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="markup-box">
+								<code>&lt;div class="bordered auto-width vertical menu"&gt; <br />
+									&nbsp;&nbsp;&lt;div class="xhover item"&gt; <br />
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="header"&gt;Products&lt;/div&gt; <br />
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="text menu"&gt; <br />
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="item">Enterprise&lt;/a&gt; <br />
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="item">Consumer&lt;/a&gt; <br />
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt; <br />
+									&nbsp;&nbsp;&lt;/div&gt; <br />
+									&nbsp;&nbsp;&lt;div class="xhover item"&gt; <br />
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="header"&gt;CMS Solutions&lt;/div&gt; <br />
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="vertical text menu"&gt; <br />
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="item">Rail&lt;/a&gt; <br />
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="item">Python&lt;/a&gt; <br />
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="item">PHP&lt;/a&gt; <br />
+									&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt; <br />
+									&nbsp;&nbsp;&lt;/div&gt; <br />
+									&lt;/div&gt;
+							</code>
+						</div>
+
+						<div class="sub heading">Logo</div>
+						<p>A menu can contain logos. Insert the logo in a menu item and give a class <code>logo</code>.</p>
+						<div class="info note">A logo in a menu is given <code>max-height: 2.5em</code>. ie. 2.5 of the menu's font-size.</div>
+						<div class="preview-box">
+							<div class="bordered menu">
+								<div class="item">
+									<img class="logo" src="images/logo.png">
+								</div>
+								<a class="item">Features</a>
+								<a class="item">Testimonials</a>
+								<a class="item">Sign-in</a>
+							</div>
+						</div>
+
+						<div class="sub heading">Input</div>
+						<p>A menu item can contain an <a href="input.html">input</a> inside of it.</p>
+
+						<div class="preview-box">
+							<div class="bordered menu">
+								<div class="xhover item">
+									<div class="icon input-box">
+										<input type="text" class="subject" placeholder="Search...">
+										<i class="icon i-magnify"></i>
+									</div>
+								</div>
+								<div class="r-aligned xhover item">
+									<div class="expandable input-box">
+										<input type="text" class="subject" placeholder="Navigate to...">
+										<div class="addon button">Go</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="bordered menu">
+								<div class="xhover bordered item">
+									<div class="text-fit icon input-box">
+										<input type="text" class="subject" placeholder="Search..." />
+										<i class="icon i-magnify"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="sub heading">Button</div>
+						<p>A menu item can contain a <a href="button.html">button</a> inside of it</p>
+
+						<div class="preview-box">
+							<div class="bordered menu">
+								<div class="xhover item"><div class="primary button">Sign up</div></div>
+								<div class="xhover item"><div class="button">Log-in</div></div>
+							</div>
+						</div>
+
+						<div class="sub heading">Dropdown</div>
+						<p>A menu can contain a <a href="dropdown.html">dropdown</a> menu.</p>
+
+						<div class="preview-box" style="position: relative;">
+							<div class="bordered menu">
+								<div class="item browse dropdown" data-target = "board1" title="Get to know our products.">Products <i class="indicator icon i-menu-down"></i></div>
+								<div class="item dropdown">Account <i class="indicator icon i-menu-down"></i>
+									<div class="drop menu">
+										<div class="xhover item">Have an account before?</div>
+										<a class="item">Yes - Sign In</a>
+										<a class="item">No - Sign Up</a>
+									</div>
+								</div>
+								<a class="item">Postroom</a>
+								<a class="item">Downloads <span class="l-spaced fit compact label">8</span></a>
+							</div>
+							<div class="drop board menu" id="board1">
+								<div class="items grid 3-cols">
+									<div class="col">
+										<div class="heading">Business</div>
+										<div class="vertical text menu">
+											<div class="item">Design &amp; Urban Ecologies</div>
+											<div class="item">Fashion Design</div>
+											<div class="item">Fine Art</div>
+											<div class="item">Strategic Design</div>
+										</div>
+									</div>
+									<div class="col">
+										<div class="heading">Liberal Arts</div>
+										<div class="vertical text menu">
+											<div class="item">Anthropology</div>
+											<div class="item">Economics</div>
+											<div class="item">Media Studies</div>
+											<div class="item">Philosophy</div>
+										</div>
+									</div>
+									<div class="col">
+										<div class="heading">Social Sciences</div>
+										<div class="vertical text menu">
+											<div class="item">Food Studies</div>
+											<div class="item">Journalism</div>
+											<div class="item">Non Profit Management</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section data-level="3" id="stackable">
+						<h4 class="heading">Stackable Menu</h4>
+						<p>A menu can stack at mobile resolutions. Just add the <code>stackable</code> class to the menu.</p>
+						<div class="info note">Stackable menus are intended to be used with only simple and bordered menu content. Stacked menus will not replicate all additional stylings for vertical menus like adjusting dropdown position.</div>
+
+						<div class="preview-box">
+							<div class="bordered stackable menu">
+								<div class="item">
+									<img class="logo" src="images/logo.png">
+								</div>
+								<a class="item">Features</a>
+								<a class="item">Testimonials</a>
+								<a class="item">Sign-in</a>
+							</div>
+						</div>
+					</section>
+
+					<section data-level="3" id="attachable">
+						<div class="heading">Attachable Menu</div>
+						<p>A menu can be <a href="attachment.html">attached</a> to a box or any other element.</p>
+
+						<div class="preview-box">
+							<div class="tabular menu" data-attached="top" style="z-index:3;">
+								<a class="active item">Home</a>
+								<a class="item">Messages</a>
+								<a class="item">Friends</a>
+									<a class="xhover r-aligned item">Logout</a>
+							</div>
+							<div class="padded panel" data-attached="bottom">
+								<img class="wireframe image" src="images/wireframe/media-paragraph.png">
+							</div>
+
+							<div class="bordered menu" data-attached="top">
+								<a class="active item">Section 1</a>
+								<a class="item">Section 2</a>
+							</div>
+							<div class="padded panel" data-attached="top bottom">
+								There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+							</div>
+							<div class="bordered menu" data-attached="bottom">
+								<a class="active item">Section 1</a>
+								<a class="item">Section 2</a>
+							</div>
+						</div>
+					</section>
+
+					<section data-level="3" id="coloring">
+						<div class="heading">Menu Color Variation</div>
+						<p>We designed this menu to work with different color backgrounds. Depending on the background you chose, you can switch from the litral text-color, item-hover background and item-active background appearance to an inverted text-color, item-hover background and item-active background appearence. The inverted menu appearance is switched to by adding the <code>inverted</code> class to the menu. See the inverted menu appearance example below.</p>
+
+						<div class="preview-box">
+							<div class="inverted menu">
+								<div class="item">One</div>
+								<div class="item">Two</div>
+								<div class="item">Three</div>
+								<div class="item">Four</div>
+								<div class="active item">Five</div>
+							</div>
+						</div>
+
+						<div class="info note">You can set any background for your menu, be it either the litral appearance or the inverted appearance.</div>
+					</section>
+
+					<section data-level="3" id="menu-size">
+						<div class="heading">Menu Size</div>
+						<p>A menu can vary in size. We already provide some predefined sizes to size a menu. The example of those sizes is shown below with the class needed on them.</p>
+
+						<div class="info note">
+							<ul>
+								<li>All component of a menu are sized relative to the menu's font size. So when the font size of the menu is changed, it affect the whole size of the menu and it components.</li>
+								<li>The default font size is <code>1rem</code>. You can make the menu font size to be directly relative to it parent (ie. <code>em</code> instead of <code>rem</code> font unit.) by giving it the <code>emd</code> class.</li>
+							</ul>
+						</div> 
+
+						<div class="preview-box">
+							<div class="sub heading"><code>mini</code> classed menu</div>
+							<div class="mini bordered menu">
+								<a class="active item">Home</a>
+								<a class="item">Messages</a>
+								<div class="r-aligned items">
+									<div class="dropdown item">
+										Language 
+										<i class="icon indicator i-menu-down"></i>
+										<div class="drop menu">
+											<a class="item">English</a>
+											<a class="item">Russian</a>
+											<a class="item">Spanish</a>
+										</div>
+									</div>
+									<div class="item">
+										<div class="primary button">Sign Up</div>
+									</div>
+								</div>
+							</div>
+							<div class="sub heading"><code>small</code> classed menu</div>
+							<div class="small bordered menu">
+								<a class="active item">Home</a>
+								<a class="item">Messages</a>
+								<div class="r-aligned items">
+									<div class="dropdown item">Language <i class="icon indicator i-menu-down"></i>
+										<div class="drop menu">
+											<a class="item">English</a>
+											<a class="item">Russian</a>
+											<a class="item">Spanish</a>
+										</div>
+									</div>
+									<div class="item"><div class="primary button">Sign Up</div></div>
+								</div>
+							</div>
+							<div class="sub heading">The default size of a menu</div>
+							<div class="bordered menu">
+								<a class="active item">Home</a>
+								<a class="item">Messages</a>
+								<div class="r-aligned items">
+									<div class="dropdown item">Language <i class="icon indicator i-menu-down"></i>
+										<div class="drop menu">
+											<a class="item">English</a>
+											<a class="item">Russian</a>
+											<a class="item">Spanish</a>
+										</div>
+									</div>
+									<div class="item">
+										<div class="primary button">Sign Up</div>
+									</div>
+								</div>
+							</div>
+							<div class="sub heading"><code>big</code> classed menu</div>
+							<div class="big bordered menu">
+								<a class="active item">Home</a>
+								<a class="item">Messages</a>
+								<div class="r-aligned items">
+									<div class="dropdown item">Language <i class="icon indicator i-menu-down"></i>
+										<div class="drop menu">
+											<a class="item">English</a>
+											<a class="item">Russian</a>
+											<a class="item">Spanish</a>
+										</div>
+									</div>
+									<div class="item">
+										<div class="primary button">Sign Up</div>
+									</div>
+								</div>
+							</div>
+							<div class="sub heading"><code>huge</code> classed menu</div>
+							<div class="huge bordered menu">
+								<a class="active item">Home</a>
+								<a class="item">Messages</a>
+								<div class="r-aligned items">
+									<div class="dropdown item">
+										Language 
+										<i class="icon indicator i-menu-down"></i>
+										<div class="drop menu">
+											<a class="item">English</a>
+											<a class="item">Russian</a>
+											<a class="item">Spanish</a>
+										</div>
+									</div>
+									<div class="item">
+										<div class="primary button">Sign Up</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+				<div id="main-content-nav" class=" col 2-width md-and-down-hidden auto-l-bordered">
+					<div class="vertical menu">
+						<a href="#introduction" class="item">Introduction</a>
+						<a href="#alignment" class="item">Menu and Items Alignment</a>
+						<a href="#fillable" class="item">Fillable Menu</a>
+						<a href="#bordered" class="item">Bordered Menu</a>
+						<a href="#rail" class="item">Rail Menu</a>
+						<a href="#tabular" class="item">Tabular Menu</a>
+						<a href="#tweak" class="item">Menu Tweaks</a>
+						<a href="#menu-content" class="item">Menu's Content</a>
+						<a href="#stackable" class="item">Stackable Menu</a>
+						<a href="#attachable" class="item">Attachable Menu</a>
+						<a href="#coloring" class="item">Menu Color Variation</a>
+						<a href="#menu-size" class="item">Menu Size</a>
+					</div>
+				</div>
+			</div>
+		</article>
+	</body>
+	<script>
+		$("#main-content-nav").scrollPin({topSpacing: 0});
+	</script>
+
+</html>

@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/materialIcons/MaterialIcons-Regular.eot");
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url("../fonts/materialIcons/MaterialIcons-Regular.woff2") format("woff2"), url("../fonts/materialIcons/MaterialIcons-Regular.woff") format("woff"), url("../fonts/materialIcons/MaterialIcons-Regular.ttf") format("truetype");
+}
+
+i.icon {
+  font-family: 'Material Icons';
+  display: inline-block;
+  font-size: inherit;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 0.65em !important;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+}
+
+i.icon::before {
+  content: attr(data-icon);
+  display: inline-block;
+  font-size: 1.3em;
+  line-height: 0.65em;
+  text-decoration: none !important;
+  text-align: center;
+  white-space: normal;
+  direction: ltr;
+  vertical-align: middle;
+  border-radius: inherit;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-feature-settings: 'liga';
+          font-feature-settings: 'liga';
+}
+
+i.icon.r45::before {
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+}
+
+i.icon.r90::before {
+  -webkit-transform: rotateZ(90deg);
+          transform: rotateZ(90deg);
+}
+
+i.icon.r135::before {
+  -webkit-transform: rotateZ(135deg);
+          transform: rotateZ(135deg);
+}
+
+i.icon.r180::before {
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
+}
+
+i.icon.r225::before {
+  -webkit-transform: rotateZ(225deg);
+          transform: rotateZ(225deg);
+}
+
+i.icon.r270::before {
+  -webkit-transform: rotateZ(270deg);
+          transform: rotateZ(270deg);
+}
+
+i.icon.r315::before {
+  -webkit-transform: rotateZ(315deg);
+          transform: rotateZ(315deg);
+}
+/*# sourceMappingURL=icon.css.map */

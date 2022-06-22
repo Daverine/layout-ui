@@ -1,0 +1,744 @@
+
+/* --- BUTTONS --- */
+
+.button {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	margin: 0 0.2em 1em 0;
+	padding: $button-padding;
+	font-family: $root-font;
+	font-size: 1em;
+	font-weight: $semibold-weight;
+	line-height: $button-line-height;
+	vertical-align: middle;
+	text-align: center;
+	border-radius: $radius-default;
+	box-shadow: inset 0px 0px 7px rgba(0, 0, 0, 0.05);
+	transition: background 0.2s ease-out;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+
+	&.#{$remd} {
+		font-size: 1rem;
+	}
+
+	&.rounded {
+		border-radius: $round-radius !important;
+	}
+
+	&.fluid {
+		width: 100%;
+		margin: 0;
+	}
+
+	&.compact {
+		@extend %compact-button;
+	}
+
+	&.loose {
+		@extend %loose-button;
+	}
+
+	&.icon {
+		@extend %icon-button;
+
+		.icon {
+			margin: 0em;
+		}
+
+		&.compact {
+			@extend %compact-icon-button;
+		}
+
+		&.loose {
+			@extend %loose-icon-button;
+		}
+	}
+
+	&.fancy {
+		@extend %fancy-button;
+
+		&:hover {
+			@extend %fancy-button-hover;
+		}
+	}
+
+	& .emphasized {
+		background: rgba(0, 0, 0, 0.06) !important;
+	}
+}
+
+// button and buttons states
+
+// default button
+.button {
+	color: $button-default;
+	background: $button-default-bg;
+	border: 0px none;
+	outline: 0px none;
+	text-decoration: none;
+	text-transform: none;
+	text-shadow: none;
+
+	&:hover,
+	&:focus {
+		background-color: $button-default-hf-bg;
+		outline: none;
+		text-decoration: none;
+	}
+
+	&:active,
+	&.active {
+		box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.2);
+		outline: none;
+		text-decoration: none;
+	}
+}
+
+// primary button
+.button.primary {
+	color: $button-primary;
+	background-color: $button-primary-bg;
+
+	&:hover,
+	&:focus {
+		background-color: $button-primary-hf-bg;
+	}
+}
+
+// secondary button
+.button.secondary {
+	color: $button-secondary;
+	background-color: $button-secondary-bg;
+
+	&:hover,
+	&:focus {
+		background-color: $button-secondary-hf-bg;
+	}
+}
+
+// positive button
+.button.positive {
+	color: $button-positive;
+	background-color: $button-positive-bg;
+
+	&:hover,
+	&:focus {
+		background-color: $button-positive-hf-bg;
+	}
+}
+
+// caution button
+.button.caution {
+	color: $button-caution;
+	background-color: $button-caution-bg;
+
+	&:hover,
+	&:focus {
+		background-color: $button-caution-hf-bg;
+	}
+}
+
+// negative button
+.button.negative {
+	color: $button-negative;
+	background-color: $button-negative-bg;
+
+	&:hover,
+	&:focus {
+		background-color: $button-negative-hf-bg;
+	}
+}
+
+// Basic button
+.button.basic {
+	color: $link-color;
+	background-color: transparent;
+	border: 0px none;
+
+	&:hover,
+	&:focus,
+	&:active,
+	&.active {
+		text-decoration: underline;
+	}
+}
+
+// Transparent button
+.button.transparent,
+.button.transparent:hover,
+.button.transparent:focus,
+.button.transparent:active,
+.button.transparent.active {
+	color: inherit;
+	background-color: transparent;
+	border-color: transparent;
+	box-shadow: none;
+}
+
+.button.transparent:focus {
+	outline: 1px dotted #888;
+}
+
+// disabled button
+.button:disabled,
+.button.disabled,
+.buttons:disabled .button,
+.buttons.disabled .button {
+	opacity: $button-disabled-opacity !important;
+	background-image: none !important;
+	pointer-events: none !important;
+}
+
+// animated button
+
+.button {
+	&[class*=animated] {
+		overflow: hidden;
+		position: relative;
+		height: $button-height;
+
+		&.loose {
+			height: $button-loose;
+		}
+
+		&.compact {
+			height: $button-compact;
+		}
+
+		[class*=content] {
+			position: relative;
+			display: block;
+			width: 100% !important;
+			line-height: 1;
+			margin: 0;
+			backface-visibility: hidden;
+			will-change: transform, opacity, left;
+		}
+	}
+
+	// default and horizontal right animated button
+	&.animated,
+	&.right-animated,
+	&.horizontal-right-animated {
+		& .visible-content,
+		& .hidden-content {
+			transition: left 0.3s ease;
+		}
+
+		& .visible-content {
+			left: 0%;
+			right: auto;
+		}
+
+		& .hidden-content {
+			left: -200%;
+			top: -$button-line-height;
+			right: auto;
+		}
+
+		&:focus .visible-content,
+		&:hover .visible-content {
+			left: 200%;
+			right: auto;
+		}
+
+		&:focus .hidden-content,
+		&:hover .hidden-content {
+			left: 0%;
+			right: auto;
+		}
+	}
+
+	// horizontal left and horizontal alternative animated button
+	&.left-animated,
+	&.horizontal-left-animated {
+		& .visible-content,
+		& .hidden-content {
+			transition: right 0.3s ease 0s;
+		}
+
+		& .visible-content {
+			right: 0%;
+			left: auto;
+		}
+
+	& .hidden-content {
+		right: -200%;
+		top: -$button-line-height;
+		left: auto;
+		}
+
+		&:focus .visible-content,
+		&:hover .visible-content {
+			right: 200%;
+			left: auto;
+		}
+
+		&:focus .hidden-content,
+		&:hover .hidden-content {
+			right: 0%;
+			left: auto;
+		}
+	}
+
+	// default vertical and vertical up animated button
+	&.vertical-animated,
+	&.vertical-up-animated {
+		& .visible-content,
+		& .hidden-content {
+			transition: top 0.3s ease, bottom 0.3s ease;
+		}
+
+		& .visible-content {
+			top: 0em;
+		}
+
+		& .hidden-content {
+			bottom: -$button-line-height;
+		}
+
+		&:focus .visible-content,
+		&:hover .visible-content {
+			top: -$button-line-height*2;
+		}
+
+		&:focus .hidden-content,
+		&:hover .hidden-content {
+			bottom: $button-line-height;
+		}
+	}
+	// vertical down and vertical alternative animated button
+	&.vertical-down-animated,
+	&.vertical-alt-animated {
+		& .visible-content,
+		& .hidden-content {
+			transition: top 0.3s ease, bottom 0.3s ease;
+		}
+
+		& .visible-content {
+			top: 0em;
+		}
+
+		& .hidden-content {
+			bottom: $button-line-height*3;
+		}
+
+		&:focus .visible-content,
+		&:hover .visible-content {
+			top: $button-line-height*2;
+		}
+
+		&:focus .hidden-content,
+		&:hover .hidden-content {
+			bottom: $button-line-height;
+		}
+	}
+
+	// fade default and fade-in animated button
+	&.fade-animated,
+	&.fade-in-animated {
+		& .visible-content,
+		& .hidden-content {
+			transition: opacity 0.3s ease, transform 0.3s ease;
+		}
+
+		& .hidden-content {
+			opacity: 0;
+			top: -$button-line-height;
+			transform: scale(1.5);
+		}
+
+		&:focus .visible-content,
+		&:hover .visible-content {
+			opacity: 0;
+			transform: scale(0);
+		}
+
+		&:focus .hidden-content,
+		&:hover .hidden-content {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+
+	// fade-out and fade-alternative animated button
+	&.fade-out-animated,
+	&.fade-alt-animated {
+		& .visible-content,
+		& .hidden-content {
+			transition: opacity 0.3s ease, transform 0.3s ease;
+		}
+
+		& .hidden-content {
+			opacity: 0;
+			top: -$button-line-height;
+			transform: scale(0);
+		}
+
+		&:focus .visible-content,
+		&:hover .visible-content {
+			opacity: 0;
+			transform: scale(1.5);
+		}
+
+		&:focus .hidden-content,
+		&:hover .hidden-content {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+}
+
+
+// Labeled button
+
+.button {
+	&[class*=labeled] {
+		.label {
+			display: inline-flex;
+			position: absolute;
+			width: $button-label-width;
+			margin: 0em;
+			top: 0;
+			border-radius: inherit;
+			font-size: inherit;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.06);
+			color: inherit;
+		}
+	}
+	// left labeled button
+	&.labeled,
+	&.left-labeled {
+		padding-left: ($button-padding-lr/2) + $button-label-width !important;
+
+		.label {
+			left: 0;
+			border-top-right-radius: 0em;
+			border-bottom-right-radius: 0em;
+		}
+
+		&.compact {
+			@extend %compact-left-labeled-button;
+		}
+
+		&.loose {
+			@extend %loose-left-labeled-button;
+		}
+	}
+	// right labeled button
+	&.right-labeled {
+		padding-right: ($button-padding-lr/2) + $button-label-width !important;
+
+		.label {
+			right: 0;
+			border-top-left-radius: 0em;
+			border-bottom-left-radius: 0em;
+		}
+
+		&.compact {
+			@extend %compact-right-labeled-button;
+		}
+
+		&.loose {
+			@extend %loose-right-labeled-button;
+		}
+	}
+}
+
+// loading button
+
+.button.loading {
+	cursor: default;
+	color: transparent !important;
+	pointer-events: auto;
+	position: relative;
+
+	& > * {
+		opacity: 0 !important;
+	}
+
+	&::before {
+		position: absolute;
+		content: '';
+		width: 1.2em;
+		height: 1.2em;
+		border-radius: $radius-full;
+		border: 0.188em solid rgba(0, 0, 0, 0.75);
+		border-top-color: rgba(255, 255, 255, 0.75);
+		border-right-color: rgba(255,255,255,0.75);
+		top: 50%;
+		left: 50%;
+		margin: -0.6em 0 0 -0.6em;
+		animation: spin 0.6s linear;
+		animation-iteration-count: infinite;
+	}
+
+	&::after {
+		opacity: 0;
+	}
+}
+
+// .buttons helps give many buttons same style
+
+.buttons {
+	vertical-align: middle;
+	display: inline-block;
+	position: relative;
+
+	& > .button {
+		font: inherit !important;
+
+		&:first-child {
+			margin-left: 0em;
+		}
+
+		&:last-child {
+			margin-right: 0em;
+		}
+	}
+
+	&.compact {
+		.button {
+			@extend %compact-button;
+
+			&.icon {
+				@extend %compact-icon-button;
+			}
+
+			&.left-labeled {
+				@extend %compact-left-labeled-button;
+			}
+
+			&.right-labeled {
+				@extend %compact-right-labeled-button;
+			}
+		}
+	}
+
+	&.loose {
+		.button {
+			@extend %loose-button;
+
+			&.icon {
+				@extend %loose-icon-button;
+			}
+
+			&.left-labeled {
+				@extend %loose-left-labeled-button;
+			}
+
+			&.right-labeled {
+				@extend %loose-right-labeled-button;
+			}
+		}
+	}
+
+	&.icon {
+		.button {
+			@extend %icon-button;
+
+			&.compact {
+				@extend %compact-icon-button;
+			}
+
+			&.loose {
+				@extend %loose-icon-button;
+			}
+		}
+
+		&.compact .button {
+			@extend %compact-icon-button;
+		}
+		&.loose .button {
+			@extend %loose-icon-button;
+		}
+	}
+
+	&.fancy:not([class*="combined"]) .button {
+		@extend %fancy-button;
+
+		&:hover {
+			@extend %fancy-button-hover;
+		}
+	}
+
+	&[class*=combined] {
+		display: inline-flex;
+		border-radius: $radius-default;
+		margin: 0;
+
+		& > .button {
+			margin: 0em;
+			flex: 1 0 auto;
+			border-radius: inherit;
+		}
+
+		&.fancy {
+			@extend %fancy-button;
+
+			& > .button {
+				box-shadow: none;
+			}
+
+			&:hover {
+				@extend %fancy-button-hover;
+			}
+		}
+	}
+
+	&[class*=combined]:not(.v-combined) {
+		& > .button {
+			&:not(:first-child) {
+				margin-left: -1px;
+			}
+
+			&:not(:first-child):not(:last-child):not(:only-child) {
+				border-radius: 0em !important;
+			}
+
+			&:first-child:not(:only-child) {
+				border-top-right-radius: 0em !important;
+				border-bottom-right-radius: 0em !important;
+			}
+
+			&:last-child:not(:only-child) {
+				border-top-left-radius: 0em !important;
+				border-bottom-left-radius: 0em !important;
+			}
+		}
+
+		&.fluid {
+			width: 100%;
+		}
+	}
+
+	&.v-combined {
+		display: inline-flex;
+		flex-direction: column;
+
+		& > .button {
+			float: none;
+			width: 100%;
+
+			&:not(:first-child) {
+				margin-top: -1px;
+			}
+
+			&:not(:first-child):not(:last-child):not(:only-child) {
+				border-radius: 0em !important;
+			}
+
+			&:first-child:not(:only-child) {
+				border-bottom-left-radius: 0em !important;
+				border-bottom-right-radius: 0em !important;
+			}
+
+			&:last-child:not(:only-child) {
+				border-top-left-radius: 0em !important;
+				border-top-right-radius: 0em !important;
+			}
+		}
+
+		&.fluid {
+			width: 100%;
+		}
+	}
+}
+
+// circular button
+
+%circular-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 1;
+	border-radius: $radius-full;
+	height: $button-height;
+	width: $button-height;
+	padding: 0em;
+}
+
+%circular-compact-button {
+	height: $button-compact;
+	width: $button-compact;
+}
+
+%circular-loose-button {
+	height: $button-loose;
+	width: $button-loose;
+}
+
+.button.circular,
+.buttons.circular > .button {
+	@extend %circular-button;
+
+	&.compact {
+		@extend %circular-compact-button;
+	}
+
+	&.loose {
+		@extend %circular-loose-button;
+	}
+}
+
+.buttons.circular.compact > .button {
+	@extend %circular-compact-button;
+}
+
+.buttons.circular.loose > .button {
+	@extend %circular-loose-button;
+}
+
+
+%icon-button {
+	padding-left: ($button-padding-lr/2);
+	padding-right: ($button-padding-lr/2);
+}
+
+%compact-button {
+	padding: $button-compact-padding;
+}
+
+%compact-icon-button {
+	padding-left: ($button-compact-lr-padding/2);
+	padding-right: ($button-compact-lr-padding/2);
+}
+
+%compact-left-labeled-button {
+	padding-left: ($button-compact-lr-padding/2) + $button-label-width !important;
+}
+
+%compact-right-labeled-button {
+	padding-right: ($button-compact-lr-padding/2) + $button-label-width !important;
+}
+
+%loose-button {
+	padding: $button-loose-padding;
+}
+
+%loose-icon-button {
+	padding-left: ($button-loose-lr-padding/2);
+	padding-right: ($button-loose-lr-padding/2);
+}   
+
+%loose-left-labeled-button {
+	padding-left: ($button-loose-lr-padding/2) + $button-label-width !important;
+}
+		
+%loose-right-labeled-button {
+	padding-right: ($button-loose-lr-padding/2) + $button-label-width !important;
+}
+
+%fancy-button {
+	box-shadow: $button-fancy;
+	transition: box-shadow .3s ease-out;
+}
+
+%fancy-button-hover {
+	box-shadow: $button-fancy-hover;
+}

@@ -1,0 +1,48 @@
+/* --- PANEL --- */
+
+.panel {
+	position: relative;
+	background-color: #fff;
+	border: 1px solid rgba(34,36,38,.15);
+    box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);
+	border-radius: $radius-default;
+	list-style: none;
+	margin: 0.5em 0 1em 0;
+
+	&.inverted {
+		background: #1B1C1D;
+		color: rgba(255,255,255,.9);
+	}
+
+
+	& > .item {
+		line-height: 1.5;
+		position: relative;
+		margin: 0;
+		border-radius: 0em;
+		padding: 0.7em 1em;
+
+		&:not(:last-child) {
+			border-bottom: 1px solid #d2d2d2;
+		}
+
+		&:first-child {
+			border-top-left-radius: inherit;
+			border-top-right-radius: inherit;
+		}
+
+		&:last-child {
+			border-bottom-left-radius: inherit;
+			border-bottom-right-radius: inherit;
+		}
+
+		&.emphasized {
+			background-color: rgba(0, 0, 0, .05);
+		}
+	}
+
+	& > .header.item,
+	& > header.item {
+		font-weight: bold;
+	}
+}

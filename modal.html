@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Modal - Layout-UI</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/layout-ui.css" type="text/css">
+		<script src="js/require/jquery-2.1.4.min.js"></script>
+		<script src="js/require/anime.min.js"></script>
+		<script src="js/layout-ui.js"></script>
+	</head>
+
+	<body>
+		<img src="./images/slides/1.jpg" data-lightbox class="small image" data-caption="Lightbox 1" />
+		
+		<img src="./images/slides/2.jpg" data-lightbox="galerry1" class="small image" data-caption-head="Lightbox 2 gallery 1" data-caption="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+		voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non
+		provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+		At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+		voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non
+		provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+		At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+		voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non
+		provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+		At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+		voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non
+		provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+		At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+		voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non
+		provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+		At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+		voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non
+		provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+		At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+		voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non
+		provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+		At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+		voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non
+		provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga." />
+		<img src="./images/slides/3.jpg" data-lightbox="galerry1" class="small image" data-caption="Lightbox 2 gallery 2" />
+		<img src="./images/slides/6.jpg" data-lightbox="galerry1" class="small image" data-caption="Lightbox 2 gallery 3" />
+		<img src="./images/slides/7.jpg" data-lightbox="galerry1" class="small image" data-caption="Lightbox 2 gallery 4" />
+		<img src="./images/slides/3.jpg" data-lightbox="galerry1" class="small image" data-caption="Lightbox 2 gallery 2" />
+		<img src="./images/slides/6.jpg" data-lightbox="galerry1" class="small image" data-caption="Lightbox 2 gallery 3" />
+		<img src="./images/slides/7.jpg" data-lightbox="galerry1" class="small image" data-caption="Lightbox 2 gallery 4" />
+		<img src="./images/slides/3.jpg" data-lightbox="galerry1" class="small image" data-caption="Lightbox 2 gallery 2" />
+		<img src="./images/slides/6.jpg" data-lightbox="galerry1" class="small image" data-caption="Lightbox 2 gallery 3" />
+		<img src="./images/slides/7.jpg" data-lightbox="galerry1" class="small image" data-caption="Lightbox 2 gallery 4" />
+		<img src="./images/slides/3.jpg" data-lightbox="galerry1" class="small image" data-caption="Lightbox 2 gallery 2" />
+		<img src="./images/slides/6.jpg" data-lightbox="galerry1" class="small image" data-caption="Lightbox 2 gallery 3" />
+		<img src="./images/slides/7.jpg" data-lightbox="galerry1" class="small image" data-caption="Lightbox 2 gallery 4" />
+		<img src="./images/slides/3.jpg" data-lightbox="galerry1" class="small image" data-caption="Lightbox 2 gallery 2" />
+		<img src="./images/slides/6.jpg" data-lightbox="galerry1" class="small image" data-caption="Lightbox 2 gallery 3" />
+		<img src="./images/slides/7.jpg" data-lightbox="galerry1" class="small image" data-caption="Lightbox 2 gallery 4" />
+		<img src="./images/slides/3.jpg" data-lightbox="galerry1" class="small image" data-caption="Lightbox 2 gallery 2" />
+		<img src="./images/slides/6.jpg" data-lightbox="galerry1" class="small image" data-caption="Lightbox 2 gallery 3" />
+		<img src="./images/slides/7.jpg" data-lightbox="galerry1" class="small image" data-caption="Lightbox 2 gallery 4" />
+		<img src="./images/slides/3.jpg" data-lightbox="galerry1" class="small image" data-caption="Lightbox 2 gallery 2" />
+		<img src="./images/slides/6.jpg" data-lightbox="galerry1" class="small image" data-caption="Lightbox 2 gallery 3" />
+		<img src="./images/slides/7.jpg" data-lightbox="galerry1" class="small image" data-caption="Lightbox 2 gallery 4" />
+		<img src="./images/slides/3.jpg" data-lightbox="galerry1" class="small image" data-caption="Lightbox 2 gallery 2" />
+		<img src="./images/slides/6.jpg" data-lightbox="galerry1" class="small image" data-caption="Lightbox 2 gallery 3" />
+		<img src="./images/slides/7.jpg" data-lightbox="galerry1" class="small image" data-caption="Lightbox 2 gallery 4" />
+
+		<img src="./images/slides/1.jpg" data-lightbox="gallery1" class="small image" data-caption="Lightbox 2 gallery 4" />
+
+		<div id="modal1" class="modal">
+			<div class="modal-dialog">
+				<div class="padded content">
+					<h4>Modal Header</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+				</div>
+				<div class="padded footer">
+					<a href="#!" class="exit-modal waves-effect waves-red transparent button">DISAGREE</a>
+					<a href="#!" class="exit-modal waves-effect waves-classic waves-green transparent button">AGREE</a>
+					<a class="button modal-trigger" href="#modal2">Another MODAL</a>
+				</div>
+			</div>
+		</div>
+		<div id="modal2" class="modal">
+			<div class="modal-dialog">
+				<div class="padded content">
+					<h4>Modal Header</h4>
+					<div class="dropdown">
+						simple dropdown <i class="indicator icon i-menu-down r-floated" data-icon="arrow_drop_up"></i>
+						<div class="ui drop menu hidden" data-view="vertical" style="display: none;">
+						  <div class="item">New</div>
+						  <div class="item">Open... <span class="auxiliary r-floated">ctr + o</span></div>
+						  <div class="item">Save as... <span class="auxiliary r-floated">ctr + s</span></div>
+						  <div class="item">Rename <span class="auxiliary r-floated">ctr + r</span></div>
+						  <div class="item">Make a copy</div>
+						  <div class="item"><i class="r-spaced icon i-folder" data-icon="i-folder"></i> Move to folder</div>
+						  <div class="item"><i class="r-spaced icon i-delete" data-icon="i-delete"></i> Move to trash</div>
+						  <hr>
+						  <div class="item">Download as...</div>
+						  <div class="item sub dropdown">
+							Publish to web <i class="indicator icon i-menu-right r-floated" data-icon="arrow_drop_up"></i>
+							<div class="ui drop menu hidden" data-view="horizontal" style="display: none;">
+							  <div class="item">Google Docs</div>
+							  <div class="item">Google Drive</div>
+							  <div class="item">Dropbox</div>
+							  <div class="item">Adobe Creative Cloud</div>
+							  <div class="item sub dropdown">
+								Another Service... <i class="indicator icon i-menu-right r-floated"></i>
+								<div class="ui drop menu hidden" data-view="horizontal" style="display: none;">
+								  <div class="item">Search online</div>
+								  <div class="item">Custom Select</div>
+								  <div class="disabled item">No more option.</div>
+								</div>
+							  </div>
+							</div>
+						  </div>
+						  <div class="item">Email Collaborators</div>
+						</div>
+					  </div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+				</div>
+				<div class="padded footer">
+					<a href="#!" class="exit-modal waves-effect waves-red transparent button">DISAGREE</a>
+					<a href="#!" class="exit-modal waves-effect waves-classic waves-green transparent button">AGREE</a>
+				</div>
+			</div>
+		</div>
+		<div id="modal3" class="modal">
+			<div class="modal-dialog self-scroll">
+				<div class="padded content">
+					<h4>Modal Header</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+				</div>
+				<div class="padded footer">
+					<a href="#!" class="exit-modal waves-effect waves-red transparent button">DISAGREE</a>
+					<a href="#!" class="exit-modal waves-effect waves-classic waves-green transparent button">AGREE</a>
+				</div>
+			</div>
+		</div>
+		<div id="modal4" class="modal">
+			<div class="modal-dialog bottom-sheet">
+				<div class="padded content">
+					<h4>Modal Header</h4>
+					<ul class="panel">
+						<li class="item avatar">
+							<span class="heading">Title</span>
+							<p>First Line <br>
+							Second Line
+							</p>
+							<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+						</li>
+						<li class="item avatar">
+							<i class="material-icons circle">folder</i>
+							<span class="heading">Title</span>
+							<p>First Line <br>
+							Second Line
+							</p>
+							<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+						</li>
+						<li class="item avatar">
+							<i class="material-icons circle green">assessment</i>
+							<span class="heading">Title</span>
+							<p>First Line <br>
+							Second Line
+							</p>
+							<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+						</li>
+						<li class="collection-item avatar">
+							<i class="material-icons circle red">play_arrow</i>
+							<span class="heading">Title</span>
+							<p>First Line <br>
+							Second Line
+							</p>
+							<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="modal5" class="modal">
+			<div class="modal-dialog full-screen">
+				<div class="padded content">
+					<h4>Modal Header</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+				</div>
+				<div class="padded footer">
+					<a href="#!" class="exit-modal waves-effect waves-red transparent button">DISAGREE</a>
+					<a href="#!" class="exit-modal waves-effect waves-classic waves-green transparent button">AGREE</a>
+				</div>
+			</div>
+		</div>
+		<div id="modal6" class="modal">
+			<div class="modal-dialog">
+				<div class="padded content">
+					<h4>Modal Header</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+				</div>
+				<div class="padded footer">
+					<a href="#!" class="exit-modal waves-effect waves-red transparent button">DISAGREE</a>
+					<a href="#!" class="exit-modal waves-effect waves-classic waves-green transparent button">AGREE</a>
+				</div>
+			</div>
+		</div>
+		<div id="modal7" class="modal">
+			<div class="modal-dialog all-scale">
+				<div class="padded content">
+					<h4>Modal Header</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+				</div>
+				<div class="padded footer">
+					<a href="#!" class="exit-modal waves-effect waves-red transparent button">DISAGREE</a>
+					<a href="#!" class="exit-modal waves-effect waves-classic waves-green transparent button">AGREE</a>
+				</div>
+			</div>
+		</div>
+		<div id="modal8" class="modal">
+			<div class="modal-dialog horizontal-scale">
+				<div class="padded content">
+					<h4>Modal Header</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+				</div>
+				<div class="padded footer">
+					<a href="#!" class="exit-modal waves-effect waves-red transparent button">DISAGREE</a>
+					<a href="#!" class="exit-modal waves-effect waves-classic waves-green transparent button">AGREE</a>
+				</div>
+			</div>
+		</div>
+		<div id="modal9" class="modal">
+			<div class="modal-dialog vertical-scale">
+				<div class="padded content">
+					<h4>Modal Header</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+				</div>
+				<div class="padded footer">
+					<a href="#!" class="exit-modal waves-effect waves-red transparent button">DISAGREE</a>
+					<a href="#!" class="exit-modal waves-effect waves-classic waves-green transparent button">AGREE</a>
+				</div>
+			</div>
+		</div>
+		<div id="modal10" class="modal">
+			<div class="modal-dialog horizontal-flip">
+				<div class="padded content">
+					<h4>Modal Header</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+				</div>
+				<div class="padded footer">
+					<a href="#!" class="exit-modal waves-effect waves-red transparent button">DISAGREE</a>
+					<a href="#!" class="exit-modal waves-effect waves-classic waves-green transparent button">AGREE</a>
+				</div>
+			</div>
+		</div>
+		<div id="modal11" class="modal">
+			<div class="modal-dialog vertical-flip">
+				<div class="padded content">
+					<h4>Modal Header</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+				</div>
+				<div class="padded footer">
+					<a href="#!" class="exit-modal waves-effect waves-red transparent button">DISAGREE</a>
+					<a href="#!" class="exit-modal waves-effect waves-classic waves-green transparent button">AGREE</a>
+				</div>
+			</div>
+		</div>
+
+		<header>
+			<div class="container" data-level="1">
+				<div class="heading">Modal</div>
+				<p class="big">Create modal dialog with diffrent styles and transistions.</p>
+			</div>
+			<hr />
+		</header>
+
+		<article>
+			<div class="no-gutter row container">
+				<div id="mainContent" class="padded 12-width md-10-width col">
+					<section data-level="3">
+						<div class="heading">Definition</div>
+						<p>A modal displays content that temporarily blocks interactions with the main view of a site.</p>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Introduction</div>
+						<p>A modal is created with a <code>modal</code> classed <code>div</code>. It can contain any content. For a modal to work, it requires something to trigger it. The <code>modal-trigger</code> class is intialized on a click trigger. So any element that has the <code>modal-trigger</code> class and an <code>href</code> or <code>data-target</code> attribute linking to the <code>id</code> of a modal will trigger the modal on click.</p>
+						<p>Click on the button below to see how a modal works.</p>
+
+						<div class="caution note">It is advicible to make your modal element a direct child of the <code>&lt;body&gt;</code> tag in other to avoid any unexpected display of the modal.</div>
+						
+						<div class="preview-box">
+							<a class="button modal-trigger" href="#modal1">MODAL</a>
+						</div>
+
+						<div class="markup-box">
+							<code>&lt;div class="modal" id="modal1"&gt;<br />
+								&nbsp;&nbsp;...<br />
+								&lt;/div&gt;<br /><br />
+								&lt;a class="modal-trigger" href="#modal1"&gt;modal trigger&lt;/a&gt;<br />
+								or<br />
+								&lt;div class="modal-trigger" data-target="modal1"&gt;modal trigger&lt;/div&gt;
+							</code>
+						</div>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Self Scroll Modal</div>
+						<p>If the content of a modal requires scrolling, the modal overlay will be the scroller. ie. The overflowed modal is wraped in an overlay that can scroll it. But if you want the modal itself to be scrollable, you add the <code>self-scroll</code> to the modal. In addition, the <code>self-scroll</code> class will centralilze the modal in the overlay.</p>
+						<p>Click the buttons below to compare.</p>
+
+						<div class="preview-box">
+							<a class="button modal-trigger" href="#modal2">NORMAL MODAL</a>
+							<a class="button modal-trigger" href="#modal3">MODAL SELF SCROLL STYLE</a>
+						</div>
+
+						<div class="markup-box">
+							<code>&lt;div class="self-scroll modal" id="modal1"&gt;<br />
+								&nbsp;&nbsp;...<br />
+								&lt;/div&gt;
+							</code>
+						</div>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Bottom Sheet Modal</div>
+						<p>A bottom sheet modal pops-up from the bottom of the screen and display it content at the bottom of the screen. To create a bottom sheet modal, add the <code>bottom-sheet</code> class to a modal.</p>
+
+						<div class="preview-box">
+							<a class="button modal-trigger" href="#modal4">MODAL BOTTOM SHEET STYLE</a>
+						</div>
+
+						<div class="markup-box">
+							<code>&lt;div class="bottom-sheet modal" id="modal1"&gt;<br />
+								&nbsp;&nbsp;...<br />
+								&lt;/div&gt;
+							</code>
+						</div>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Full Screen Modal</div>
+						<p>A Full screen modal makes the modal fill the entire screen. It is compostory to have a close button to close the modal. It is created by adding the <code>full-screen</code> class to a modal.</p>
+
+						<div class="preview-box">
+							<a class="button modal-trigger" href="#modal5">FULL SCREEN MODAL</a>
+						</div>
+
+						<div class="markup-box">
+							<code>&lt;div class="full-screen modal" id="modal1"&gt;<br />
+								&nbsp;&nbsp;...<br />
+								&lt;/div&gt;
+							</code>
+						</div>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Animation</div>
+						<p>We provide six different animation classes to open and close a modal. They are <code>fade</code>, <code>all-scale</code>, <code>horizontal-scale</code>, <code>vertical-scale</code>, <code>horizontal-flip</code> and <code>vertical-flip</code>. A disired animation class should be added to a modal.</p>
+						<p>Click on the buttons aside the animation name to preview.</p>
+
+						<div class="table-scroll preview-box">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>Class name</th>
+										<th>Preview Button</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>fade</td>
+										<td><a class="button modal-trigger" href="#modal6">Fade</a></td>
+									</tr>
+									<tr>
+										<td>all-scale</td>
+										<td><a class="button modal-trigger" href="#modal7">All Scale</a></td>
+									</tr>
+									<tr>
+										<td>horizontal-scale</td>
+										<td><a class="button modal-trigger" href="#modal8">Horizontal Scale</a></td>
+									</tr>
+									<tr>
+										<td>vertical-scale</td>
+										<td><a class="button modal-trigger" href="#modal9">Vertical Scale</a></td>
+									</tr>
+									<tr>
+										<td>horizontal-flip</td>
+										<td><a class="button modal-trigger" href="#modal10">Horizontal Flip</a></td>
+									</tr>
+									<tr>
+										<td>vertical-flip</td>
+										<td><a class="button modal-trigger" href="#modal11">Vertical Flip</a></td>
+									</tr>
+								</tbody>
+								</tbody>
+							</table>
+						</div>
+
+						<section data-level="3">
+							<div class="heading">Modal Initialization</div>
+							<p>You can open a modal using a trigger:</p>
+							<div class="caution note">The trigger must have either a <code>href</code> or <code>data-target</code> attribute linking to the <code>id</code> of the modal to open. If you are using the <code>href</code> attribute, the value must be prefixed with <strong>#</strong>.</div>
+							
+							<div class="markup-box">
+								<code>$(document).ready(function(){<br />
+									// the "href" or "data-target" attribute of .modal-trigger must specify the modal ID that wants to be triggered<br />
+									$('.modal-trigger').modal(options);<br />
+								  });</code>
+							</div>
+
+							<p>You can also open modals programatically, the below code will make your modal open.</p>
+
+							<div class="markup-box">
+								<code>$('#modal1').openModal(options);</code>
+							</div>
+
+							<p>You can also close them programatically:</p>
+
+							<div class="markup-box">
+								<code>$('#modal1').closeModal();</code>
+							</div>
+
+							<div class="note">NB: the <code>options</code> parameter is optional</div>
+						</section>
+
+						<section data-level="3">
+							<div class="heading">Modal Options</div>
+							<p>You can customize the behavior of each modal using the following options. Options can be passed to a modal as a parameter when it is initialized or as a value to the <code>data-options</code> attribute of the modal in an object format. ie. name:value pair seperated with (,) eg<code>{ <em>option</em>: value, ... }</code></p>
+
+							<div class="table-scroll">
+								<table class="definition table">
+									<thead>
+										<tr>
+											<th>Options</th>
+											<th>Default Value</th>
+											<th>Description</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>closeOnEsc</td>
+											<td>true</td>
+											<td>This option controls the ability to close a modal on Escape Key press.</td>
+										</tr>
+										<tr>
+											<td>closeOnLayerClick</td>
+											<td>true</td>
+											<td>This option controls the ability to close a modal on the click of the faint-transparent layer that covers the page.</td>
+										</tr>
+										<tr>
+											<td>blurring</td>
+											<td>false</td>
+											<td>This tell wether to blur the page on when modal is opened.</td>
+										</tr>
+										<tr>
+											<td>duration</td>
+											<td>400</td>
+											<td>This is the duration of modal animation (in miliseconds) NB: value should be a number</td>
+										</tr>
+										<tr>
+											<td>ready</td>
+											<td>undefined</td>
+											<td>This option can either be undefined or a function called to called when the modal finished opening.</td>
+										</tr>
+										<tr>
+											<td>complete</td>
+											<td>undefined</td>
+											<td>This option can either be undefined or a function called to called when the modal finished closing.</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<th>Options</th>
+											<th>Default Value</th>
+											<th>Description</th>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+
+
+
+
+						
+
+
+				</div>
+			</div>
+		</article>
+	</body>
+</html>

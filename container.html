@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Container - Layout-UI</title>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/layout-ui.css" type="text/css">
+		<script src="js/jquery-2.1.4/jquery-2.1.4.min.js"></script>
+		<script src="js/layout-ui.js"></script>
+		<style>
+			.preview-box .col .test {
+				background-color: #f4eef5;
+				border: 1px solid #9c27b0;
+				color: #9c27b0;
+				margin-bottom: 10px;
+				min-height: 40px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<div class="container" data-level="1">
+				<div class="heading">Grid and Container</div>
+				<p class="big">Create a fully responsive grids and containers.</p>
+			</div>
+			<hr />
+		</header>
+
+		<article>
+			<div class="no-gutter container grid">
+				<div id="mainContent" class="padded 12-width md-10-width col">
+					<section data-level="3">
+						<div class="heading">Container</div>
+						<p>A container is an element designed to contain page elements to a reasonable maximum width based on the size of a user's screen. This is useful to couple with other UI elements like grid or menu to restrict their width to a reasonable size for display.</p>
+
+						<section>
+							<div class="heading">Container Sizes</div>
+							<p>Containers are designed to responsively adjust their maximum width based on the size of the screen they are appearing. It is created by adding the <code>container</code> class to a block element.</p>
+
+							<div class="table-scroll">
+								<table class="definition table nowrap-text">
+									<thead>
+										<tr>
+											<th></th>
+											<th colspan="2">
+												Below Mobile<br>
+												<span class="normal-weight">< 480px</span>
+											</th>
+											<th colspan="2">
+												Mobile<br>
+												<span class="normal-weight">≥ 480px</span>
+											</th>
+											<th colspan="2">
+												Tablet<br>
+												<span class="normal-weight">≥ 730px</span>
+											</th>
+											<th colspan="2">
+												Small Monitor<br>
+												<span class="normal-weight">≥ 960px</span>
+											</th>
+											<th colspan="2">
+												Large Monitor<br>
+												<span class="normal-weight">≥ 1200px</span>
+											</th>
+										</tr>
+										<tr>
+											<th></th>
+											<th>Width</th>
+											<th>Max Width</th>
+											<th>Width</th>
+											<th>Max Width</th>
+											<th>Width</th>
+											<th>Max Width</th>
+											<th>Width</th>
+											<th>Max Width</th>
+											<th>Width</th>
+											<th>Max Width</th>
+										</tr>
+
+									</thead>
+									<tbody>
+										<tr>
+											<td><code>.container</code></td>
+											<td>100%</td>
+											<td>440px</td>
+											<td>100% - 40px</td>
+											<td>650px</td>
+											<td>90.5%</td>
+											<td>810px</td>
+											<td>85.5%</td>
+											<td>1000px</td>
+											<td>85.5%</td>
+											<td>1100px</td>
+										</tr>
+										<tr>
+											<td><code>.container-sm</code></td>
+											<td>100%</td>
+											<td>440px</td>
+											<td>100% - 40px</td>
+											<td>650px</td>
+											<td>90.5%</td>
+											<td>810px</td>
+											<td>85.5%</td>
+											<td>1000px</td>
+											<td>85.5%</td>
+											<td>1100px</td>
+										</tr>
+										<tr>
+											<td><code>.container-md</code></td>
+											<td>100%</td>
+											<td>100%</td>
+											<td>100%</td>
+											<td>660.65px</td>
+											<td>90.5%</td>
+											<td>810px</td>
+											<td>85.5%</td>
+											<td>1000px</td>
+											<td>85.5%</td>
+											<td>1100px</td>
+										</tr>
+										<tr>
+											<td><code>.container-lg</code></td>
+											<td>100%</td>
+											<td>100%</td>
+											<td>100%</td>
+											<td>100%</td>
+											<td>100%</td>
+											<td>820.8px</td>
+											<td>85.5%</td>
+											<td>1000px</td>
+											<td>85.5%</td>
+											<td>1100px</td>
+										</tr>
+										<tr>
+											<td><code>.container-xl</code></td>
+											<td>100%</td>
+											<td>100%</td>
+											<td>100%</td>
+											<td>100%</td>
+											<td>100%</td>
+											<td>100%</td>
+											<td>100%</td>
+											<td>1026px</td>
+											<td>85.5%</td>
+											<td>1100px</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<th></th>
+											<th>Width</th>
+											<th>Max Width</th>
+											<th>Width</th>
+											<th>Max Width</th>
+											<th>Width</th>
+											<th>Max Width</th>
+											<th>Width</th>
+											<th>Max Width</th>
+											<th>Width</th>
+											<th>Max Width</th>
+										</tr>
+										<tr>
+											<th></th>
+											<th colspan="2">Below Mobile</th>
+											<th colspan="2">Mobile</th>
+											<th colspan="2">Tablet</th>
+											<th colspan="2">Small Monitor</th>
+											<th colspan="2">Large Monitor</th>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+
+							<div class="markup-box">
+								<code>
+									&lt;div class="container"&gt;<br>
+									&nbsp;&nbsp;... ...<br>
+									&lt;/div&gt;
+								</code>
+							</div>
+
+							<p>You can also create a text container by adding the <code>text</code> class to a <code>container</code> classed element. What it does is that it limits the max-width of the container to <code>700px</code>.</p>
+						</section>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Grid</div>
+						<p>A grid is used to harmonize negative space in a layout.</p>
+						<p>Using a grid makes content appear to flow more naturally on your page. It is created by adding the <code>grid</code> class to a block element. Grids divide horizontal space into unit(s) called "columns". We choose as default <strong>a maximum of 12 columns per row</strong>. All columns in a grid are provided with three (3) methods to size them. 1. To specify the size equally, 2. specify the size individually, and 3. specify the size manually.</p>
+
+						<div class="caution note">Note that if columns' size is not specified in a grid, the grid system will chooses an arbitrary column count to allow per row as the viewport and columns' content allows.</div>
+
+						<section>
+							<div class="heading">Equally size columns in a grid</div>
+							<p>To equally size the columns in a grid, a class should be added to the grid itself in these format <code>x-cols</code> where <strong>x</strong> is a number from <strong>1 to 12</strong> and its specifies the number of columns to appear per row. See example below.</p>
+
+							<div class="preview-box">
+								<div class="grid 5-cols">
+									<div class="col"><div class="test">grid sample with columns. It is coooooooooool!!!!!!</div></div>
+									<div class="col"><div class="test">grid sample with columns. It is coooooooooool!!!!!!</div></div>
+									<div class="col"><div class="test">grid sample with columns. It is coooooooooool!!!!!!</div></div>
+									<div class="col"><div class="test">grid sample with columns. It is coooooooooool!!!!!!</div></div>
+									<div class="col"><div class="test">grid sample with columns. It is coooooooooool!!!!!!</div></div>
+									<div class="col"><div class="test">grid sample with columns. It is coooooooooool!!!!!!</div></div>
+									<div class="col"><div class="test">grid sample with columns. It is coooooooooool!!!!!!</div></div>
+									<div class="col"><div class="test">grid sample with columns. It is coooooooooool!!!!!!</div></div>
+									<div class="col"><div class="test">grid sample with columns. It is coooooooooool!!!!!!</div></div>
+									<div class="col"><div class="test">grid sample with columns. It is coooooooooool!!!!!!</div></div>
+								</div>
+							</div>
+
+							<p>A grid of equally sized columns can also be made responsive ie. different numbers of column can be set to appear in a row at different screen size. Basically, this is done by specifying the number of columns to appear per row in the format explained above and pefixing it with a particular screen size prefix as seen in the table below.</p>
+
+							We provide five (5) screen set to change the number of column in a row.
+							<table class="definition table">
+								<thead>
+									<tr>
+										<th></th>
+										<th>Below Mobile</th>
+										<th>Mobile</th>
+										<th>Tablet</th>
+										<th>Small Monitor</th>
+										<th>Large Monitor</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Size Range</td>
+										<td>below 480px</td>
+										<td>480px - 730px</td>
+										<td>731px - 960px</td>
+										<td>961px - 1200px</td>
+										<td>above - 1200px</td>
+									</tr>
+									<tr>
+										<td>Prefix</td>
+										<td><em>no prefix</em></td>
+										<td>sm</td>
+										<td>md</td>
+										<td>lg</td>
+										<td>xl</td>
+									</tr>
+									<tr>
+										<td>Class Format</td>
+										<td><code>x-cols</code></td>
+										<td><code>sm-x-cols</code></td>
+										<td><code>md-x-cols</code></td>
+										<td><code>lg-x-cols</code></td>
+										<td><code>xl-x-cols</code></td>
+									</tr>
+								</tbody>
+								<tfoot>
+									<tr>
+										<th></th>
+										<th>Below Mobile</th>
+										<th>Mobile</th>
+										<th>Tablet</th>
+										<th>Small Monitor</th>
+										<th>Large Monitor</th>
+									</tr>
+								</tfoot>
+							</table>
+
+							<div class="note">Note that <strong>x</strong> in the Class Format row above is a number from 1-12 specifying the number of column that can appear in a row.</div>
+
+							<div class="preview-box">
+								<div class="grid 1-cols sm-2-cols md-3-cols lg-4-cols xl-5-cols">
+									<div class="col">
+										<div class="test">
+											below mobile screen 1-cols class<br>
+											mobile screen 2-cols class<br>
+											tablet screen 3-cols class<br>
+											small monitor screen 4-cols class<br>
+											large monitor screen 5-cols class.
+										</div>
+									</div>
+									<div class="col">
+										<div class="test">
+											below mobile screen 1-cols class<br>
+											mobile screen 2-cols class<br>
+											tablet screen 3-cols class<br>
+											small monitor screen 4-cols class<br>
+											large monitor screen 5-cols class.
+										</div>
+									</div>
+									<div class="col">
+										<div class="test">
+											below mobile screen 1-cols class<br>
+											mobile screen 2-cols class<br>
+											tablet screen 3-cols class<br>
+											small monitor screen 4-cols class<br>
+											large monitor screen 5-cols class.
+										</div>
+									</div>
+									<div class="col">
+										<div class="test">
+											below mobile screen 1-cols class<br>
+											mobile screen 2-cols class<br>
+											tablet screen 3-cols class<br>
+											small monitor screen 4-cols class<br>
+											large monitor screen 5-cols class.
+										</div>
+									</div>
+									<div class="col">
+										<div class="test">
+											below mobile screen 1-cols class<br>
+											mobile screen 2-cols class<br>
+											tablet screen 3-cols class<br>
+											small monitor screen 4-cols class<br>
+											large monitor screen 5-cols class.
+										</div>
+									</div>
+									<div class="col">
+										<div class="test">
+											below mobile screen 1-cols class<br>
+											mobile screen 2-cols class<br>
+											tablet screen 3-cols class<br>
+											small monitor screen 4-cols class<br>
+											large monitor screen 5-cols class.
+										</div>
+									</div>
+									<div class="col">
+										<div class="test">
+											below mobile screen 1-cols class<br>
+											mobile screen 2-cols class<br>
+											tablet screen 3-cols class<br>
+											small monitor screen 4-cols class<br>
+											large monitor screen 5-cols class.
+										</div>
+									</div>
+									<div class="col">
+										<div class="test">
+											below mobile screen 1-cols class<br>
+											mobile screen 2-cols class<br>
+											tablet screen 3-cols class<br>
+											small monitor screen 4-cols class<br>
+											large monitor screen 5-cols class.
+										</div>
+									</div>
+									<div class="col">
+										<div class="test">
+											below mobile screen 1-cols class<br>
+											mobile screen 2-cols class<br>
+											tablet screen 3-cols class<br>
+											small monitor screen 4-cols class<br>
+											large monitor screen 5-cols class.
+										</div>
+									</div>
+									<div class="col">
+										<div class="test">
+											below mobile screen 1-cols class<br>
+											mobile screen 2-cols class<br>
+											tablet screen 3-cols class<br>
+											small monitor screen 4-cols class<br>
+											large monitor screen 5-cols class.
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<section>
+							<div class="heading">Individually size columns in a grid</div>
+							<p>To individually size columns in a grid, all columns in that grid must specify their width as proportion of the total available row width. These is done by giving each columns in the grid a class in <strong>x-width</strong> format where <strong>x</strong> is a number from 1-12 " which denote the width as <strong>x of 12 of the row width</strong>. Dont forget that <strong>x</strong> is a number from 1-12.</p>
+
+							<div class="preview-box">
+								<div class="grid">
+									<div class="col 9-width"><div class="test">9-width column</div></div>
+									<div class="col 3-width"><div class="test">3-width column</div></div>
+									<div class="col 3-width"><div class="test">3-width column</div></div>
+									<div class="col 9-width"><div class="test">9-width column</div></div>
+								</div>
+							</div>
+
+							<p>Columns in a grid can also be given a responsive size. It is done by specifying the width in the format explained aboved and prefixing it with a particular screen size prefix as seen in the table below.</p>
+
+							<table class="definition table">
+								<thead>
+									<tr>
+										<th></th>
+										<th>Below Mobile</th>
+										<th>Mobile</th>
+										<th>Tablet</th>
+										<th>Small Monitor</th>
+										<th>Large Monitor</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Size Range</td>
+										<td>below 480px</td>
+										<td>480px - 730px</td>
+										<td>731px - 960px</td>
+										<td>961px - 1200px</td>
+										<td>above - 1200px</td>
+									</tr>
+									<tr>
+										<td>Prefix</td>
+										<td><em>no prefix</em></td>
+										<td>sm</td>
+										<td>md</td>
+										<td>lg</td>
+										<td>xl</td>
+									</tr>
+									<tr>
+										<td>Class Format</td>
+										<td><code>x-width</code></td>
+										<td><code>sm-x-width</code></td>
+										<td><code>md-x-width</code></td>
+										<td><code>lg-x-width</code></td>
+										<td><code>xl-x-width</code></td>
+									</tr>
+								</tbody>
+								<tfoot>
+									<tr>
+										<th></th>
+										<th>Below Mobile</th>
+										<th>Mobile</th>
+										<th>Tablet</th>
+										<th>Small Monitor</th>
+										<th>Large Monitor</th>
+									</tr>
+								</tfoot>
+							</table>
+
+							<div class="note">Note that <strong>x</strong> in the Class Format row in the table above is a number from 1-12 and it is used to determine the width of the element it is used on.</div>
+
+							<div class="positive note">Note that the classes shown provided here above can be used to size any sizable element even outside a grid.</div>
+
+							<div class="preview-box">
+								<div class="grid">
+									<div class="col 10-width sm-8-width md-6-width lg-4-width xl-2-width"><div class="test">
+										below mobile screen 10-width<br>
+										mobile screen 8-width<br>
+										tablet screen 6-width<br>
+										small monitor screen 4-width<br>
+										large monitor screen 2-width
+									</div></div>
+									<div class="col 2-width sm-4-width md-6-width lg-8-width xl-10-width"><div class="test">
+										below mobile screen 2-width<br>
+										mobile screen 4-width<br>
+										tablet screen 6-width<br>
+										small monitor screen 8-width<br>
+										large monitor screen 10-width
+									</div></div>
+									<div class="col 2-width sm-4-width md-6-width lg-8-width xl-10-width"><div class="test">
+										below mobile screen 2-width<br>
+										mobile screen 4-width<br>
+										tablet screen 6-width<br>
+										small monitor screen 8-width<br>
+										large monitor screen 10-width
+									</div></div>
+									<div class="col 10-width sm-8-width md-6-width lg-4-width xl-2-width"><div class="test">
+										below mobile screen 10-width<br>
+										mobile screen 8-width<br>
+										tablet screen 6-width<br>
+										small monitor screen 4-width<br>
+										large monitor screen 2-width
+									</div></div>
+								</div>
+							</div>
+						</section>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Stackable Grid</div>
+						<p>As we provide, a grid can be set to stack all columns within it at a maximum screen width of 730px (small screen downward). To stack a grid, add the <code>stackable</code> class to the grid.</p>
+
+						<div class="info note">To notice change, test this webpage on a small screen device or reduce the browser window.</div>
+
+						<div class="preview-box">
+							<div class="stackable grid">
+								<div class="col 3-width"><div class="test">3-width column</div></div>
+								<div class="col 3-width"><div class="test">3-width column</div></div>
+								<div class="col 3-width"><div class="test">3-width column</div></div>
+								<div class="col 3-width"><div class="test">3-width column</div></div>
+							</div>
+						</div>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Gutter</div>
+						<p>Grids automatically create horizontal gutter between columns. To avoid the gutter you will need to add the <code>no-gutter</code> class to the grid.</p>
+
+						<div class="preview-box">
+							<div class="no-gutter grid 5-cols">
+								<div class="col"><div class="test">grid sample with columns. It is coooooooooool!!!!!!</div></div>
+								<div class="col"><div class="test">grid sample with columns. It is coooooooooool!!!!!!</div></div>
+								<div class="col"><div class="test">grid sample with columns. It is coooooooooool!!!!!!</div></div>
+								<div class="col"><div class="test">grid sample with columns. It is coooooooooool!!!!!!</div></div>
+								<div class="col"><div class="test">grid sample with columns. It is coooooooooool!!!!!!</div></div>
+							</div>
+						</div>
+					</section>
+					
+					<section data-level="3">
+						<div class="heading">Source Ordering</div>
+						<p>You can change the display order of the columns to keep a specific column order in the source code. Add one of the <code>*-push</code> classes to move the column to the right and add one of the <code>*-pull</code> classes to move a column to the left. This allows you for example to flip the columns' display order for wider viewports. We also provide the <code>*-offset</code> class to offset columns which enables creating additional space between them.</p>
+
+						<p>Note: <strong>*</strong> in the classes metioned above is a number from <strong>1 to 12</strong>.</p>
+
+						<div class="preview-box">
+							<div class="heading">Pull and Push Example</div>
+							<div class="grid">
+								<div class="col 4-width 8-push"><div class="test">the first column <code>4-width</code> and <code>8-push</code></div></div>
+								<div class="col 8-width 4-pull"><div class="test">the second column <code>8-width</code> and <code>4-pull</code>.</div></div>
+							</div>
+
+							<div class="heading">Offset Example</div>
+							<div class="grid 4-cols">
+								<div class="col 3-offset"><div class="test">Offset column <code>3-offset</code></div></div>
+								<div class="col"><div class="test"></div></div>
+								<div class="col"><div class="test"></div></div>
+								<div class="col"><div class="test"></div></div>
+								<div class="col"><div class="test"></div></div>
+								<div class="col"><div class="test"></div></div>
+							</div>
+
+							<div class="note">Note that the number in front of <code>-pull</code>, <code>-push</code> and <code>-offset</code> is any number between 1 and 12. The size of the pull, push and offset is determined by the size of the parent width divided by 12 and multiplied by the number specified ie. if <code>2-pull</code> is used on an element then (parentWidth/12) * 2 is the size used for the pull.</div>
+						</div>
+
+						<div class="heading">Responsive pull, push and offset</div>
+						<p>The pull push and offset action can be applied to an element in a responsive way. This is done by adding the provided screen size prefix to the front of the pull, push or offset class. See the table below for more explaination.</p>
+
+						<table class="definition table">
+							<thead>
+								<tr>
+									<th></th>
+									<th>Below Mobile</th>
+									<th>Mobile</th>
+									<th>Tablet</th>
+									<th>Small Monitor</th>
+									<th>Large Monitor</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Size Range</td>
+									<td>below 480px</td>
+									<td>480px - 730px</td>
+									<td>731px - 960px</td>
+									<td>961px - 1200px</td>
+									<td>above - 1200px</td>
+								</tr>
+								<tr>
+									<td>Prefix</td>
+									<td><em>no prefix</em></td>
+									<td>sm</td>
+									<td>md</td>
+									<td>lg</td>
+									<td>xl</td>
+								</tr>
+								<tr>
+									<td>Class Format</td>
+									<td><code>x-pull</code>, <code>x-push</code>, <code>x-offset</code></td>
+									<td><code>sm-x-pull</code>, <code>sm-x-push</code>, <code>sm-x-offset</code></td>
+									<td><code>md-x-pull</code>, <code>md-x-push</code>, <code>md-x-offset</code></td>
+									<td><code>lg-x-pull</code>, <code>lg-x-push</code>, <code>lg-x-offset</code></td>
+									<td><code>xl-x-pull</code>, <code>xl-x-push</code>, <code>xl-x-offset</code></td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<th></th>
+									<th>Below Mobile</th>
+									<th>Mobile</th>
+									<th>Tablet</th>
+									<th>Small Monitor</th>
+									<th>Large Monitor</th>
+								</tr>
+							</tfoot>
+						</table>
+
+						<div class="note">Note that <strong>x</strong> in the Class Format row in the table above is a number from 1-12 used to determine the pull, push or offset size.</div>
+		</article>

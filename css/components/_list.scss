@@ -1,0 +1,361 @@
+/* --- LIST AND SET --- */
+
+ul,
+ol,
+dl {
+	font-size: 1em;
+	position: relative;
+	padding: 0;
+	display: block;
+	margin-bottom: $margin-default;
+}
+
+ul,
+ol {
+	margin-left: 2em;
+	list-style-position: outside;
+
+	& > li {
+		display: list-item;
+		position: relative;
+		padding-left: 0.5em;
+	}
+
+	& .sub-list {
+		margin-top: $margin-default/2;
+		margin-bottom: $margin-default/2;
+	}
+
+	&.no-type
+	&.no-type .sub-list:not(.free-list) {
+  		list-style: none;
+  		margin-left: 0;
+	}
+
+	&.inline {
+		display: block;
+		margin-left: 0;
+
+		& > li {
+			display: inline-block;
+
+			&:not(:first-child) {
+				margin-left: 0.5em;
+			}
+
+			&:first-child {
+				padding-left: 0em;
+			}
+		}
+	}
+
+	&.tree,
+	&.tree .sub-list {
+		&::before {
+			content: "";
+			position: absolute;
+			height: 100%;
+			border-left: 1.5px dotted $divider-bd-color;
+		}
+
+		& > li {
+			padding-left: 1.2em;
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0.7em;
+				left: 0;
+				width: 1em;
+				border-top: 1.5px dotted $divider-bd-color;
+			}
+		}
+	}
+}
+
+ol.ordered,
+ol.ordered .sub-list {
+	counter-reset: ordered;
+	list-style-type: none;
+
+	& > li {
+		list-style-type: none;
+
+		&::before {
+			position: absolute;
+			top: auto;
+			left: auto;
+			right: calc(100% + 0.55em);
+			user-select: none;
+			pointer-events: none;
+			counter-increment: ordered;
+			content: counters(ordered, ".") " ";
+			text-align: right;
+			vertical-align: middle;
+		}
+	}
+}
+
+ul.icon-bullet {
+	list-style-type: none;
+
+	& > li {
+		list-style: none;
+
+		& > .icon:first-child {
+			line-height: inherit;
+			position: absolute;
+			top: auto;
+			  left: -1.5em;
+			  width: 1.5em;
+			  text-align: center;
+			  margin-right: 0.5em !important;
+		}
+	}
+}
+
+dt {font-weight: $bold-weight;}
+
+dd {
+	margin-left: 0;
+	margin-bottom: 0.5em;
+}
+
+@media #{$medium-and-up} {
+	dl.horizontal {
+		dt {
+			width: 12em;
+			float: left;
+			clear: both;
+			margin-bottom: 0.5em;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+
+		dt + dt { margin-bottom: 0.25em;}
+
+		dd {
+			margin-left: 13em;
+			margin-bottom: 0.5em;
+		}
+	}
+}
+
+// a general list and sublist order of highlight
+
+ul,
+ul .sub-list .sub-list .sub-list,
+ul .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list {
+	list-style-type: disc;
+}
+
+ul .sub-list,
+ul .sub-list .sub-list .sub-list .sub-list,
+ul .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list {
+	list-style-type: circle;
+}
+
+ul .sub-list .sub-list,
+ul .sub-list .sub-list .sub-list .sub-list .sub-list,
+ul .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list {
+	list-style-type: square;
+}
+
+ol,
+ol .sub-list .sub-list .sub-list,
+ol .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list {
+	list-style-type: decimal;
+}
+
+ol .sub-list,
+ol .sub-list .sub-list .sub-list .sub-list,
+ol .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list {
+	list-style-type: lower-alpha;
+}
+
+ol .sub-list .sub-list,
+ol .sub-list .sub-list .sub-list .sub-list .sub-list,
+ol .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list {
+	list-style-type: lower-roman;
+}
+
+// order of a disc type list
+
+ul.disc-type,
+ul.disc-type .sub-list .sub-list .sub-list,
+ul.disc-type .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list {
+	list-style-type: disc;
+}
+
+ul.disc-type .sub-list,
+ul.disc-type .sub-list .sub-list .sub-list .sub-list,
+ul.disc-type .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list {
+	list-style-type: circle;
+}
+
+ul.disc-type .sub-list .sub-list,
+ul.disc-type .sub-list .sub-list .sub-list .sub-list .sub-list,
+ul.disc-type .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list {
+	list-style-type: square;
+}
+
+// order of a cicle type list
+
+ul.circle-type,
+ul.circle-type .sub-list .sub-list .sub-list,
+ul.circle-type .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list {
+	list-style-type: circle;
+}
+
+ul.circle-type .sub-list,
+ul.circle-type .sub-list .sub-list .sub-list .sub-list,
+u.circle-typel .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list {
+	list-style-type: square;
+}
+
+ul.circle-type .sub-list .sub-list,
+ul.circle-type .sub-list .sub-list .sub-list .sub-list .sub-list,
+ul.circle-type .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list {
+	list-style-type: disc;
+}
+
+// order of a square type list
+
+ul.square-type,
+ul.square-type .sub-list .sub-list .sub-list,
+ul.square-type .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list {
+	list-style-type: square;
+}
+
+ul.square-type .sub-list,
+ul.square-type .sub-list .sub-list .sub-list .sub-list,
+ul.square-type .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list {
+	list-style-type: disc;
+}
+
+ul.square-type .sub-list .sub-list,
+ul.square-type .sub-list .sub-list .sub-list .sub-list .sub-list,
+ul.square-type .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list {
+	list-style-type: circle;
+}
+
+// order of a decimal type list
+
+ol.decimal-type,
+ol.decimal-type .sub-list .sub-list .sub-list,
+ol.decimal-type .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list {
+	list-style-type: decimal;
+}
+
+ol.decimal-type .sub-list,
+ol.decimal-type .sub-list .sub-list .sub-list .sub-list,
+ol.decimal-type .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list {
+	list-style-type: lower-alpha;
+}
+
+ol.decimal-type .sub-list .sub-list,
+ol.decimal-type .sub-list .sub-list .sub-list .sub-list .sub-list,
+ol.decimal-type .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list {
+	list-style-type: lower-roman;
+}
+
+// order of a lower-alpha type list
+
+ol.lower-alpha-type,
+ol.lower-alpha-type .sub-list .sub-list .sub-list,
+ol.lower-alpha-type .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list {
+	list-style-type: lower-alpha;
+}
+
+ol.lower-alpha-type .sub-list,
+ol.lower-alpha-type .sub-list .sub-list .sub-list .sub-list,
+ol.lower-alpha-type .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list {
+	list-style-type: lower-roman;
+}
+
+ol.lower-alpha-type .sub-list .sub-list,
+ol.lower-alpha-type .sub-list .sub-list .sub-list .sub-list .sub-list,
+ol.lower-alpha-type .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list {
+	list-style-type: decimal;
+}
+
+// order of lower-roman type list
+
+ol.lower-roman-type,
+ol.lower-roman-type .sub-list .sub-list .sub-list,
+ol.lower-roman-type .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list {
+	list-style-type: lower-roman;
+}
+
+ol.lower-roman-type .sub-list,
+ol.lower-roman-type .sub-list .sub-list .sub-list .sub-list,
+ol.lower-roman-type .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list {
+	list-style-type: decimal;
+}
+
+ol.lower-roman-type .sub-list .sub-list,
+ol.lower-roman-type .sub-list .sub-list .sub-list .sub-list .sub-list,
+ol.lower-roman-type .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list {
+	list-style-type: lower-alpha;
+}
+
+// order of a general uppercase-numbering list
+
+ol.uppercase-numbering,
+ol.uppercase-numbering .sub-list .sub-list .sub-list,
+ol.uppercase-numbering .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list {
+	list-style-type: decimal;
+}
+
+ol.uppercase-numbering .sub-list,
+ol.uppercase-numbering .sub-list .sub-list .sub-list .sub-list,
+ol.uppercase-numbering .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list {
+	list-style-type: upper-alpha;
+}
+
+ol.uppercase-numbering .sub-list .sub-list,
+ol.uppercase-numbering .sub-list .sub-list .sub-list .sub-list .sub-list,
+ol.uppercase-numbering .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list {
+	list-style-type: upper-roman;
+}
+
+// order of upper-alpha type list
+
+ol.upper-alpha-type,
+ol.upper-alpha-type .sub-list .sub-list .sub-list,
+ol.upper-alpha-type .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list {
+	list-style-type: upper-alpha;
+}
+
+ol.upper-alpha-type .sub-list,
+ol.upper-alpha-type .sub-list .sub-list .sub-list .sub-list,
+ol.upper-alpha-type .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list {
+	list-style-type: upper-roman;
+}
+
+ol.upper-alpha-type .sub-list .sub-list,
+ol.upper-alpha-type .sub-list .sub-list .sub-list .sub-list .sub-list,
+ol.upper-alpha-type .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list {
+	list-style-type: decimal;
+}
+
+// order of a upper-roman type list
+
+ol.upper-roman-type,
+ol.upper-roman-type .sub-list .sub-list .sub-list,
+ol.upper-roman-type .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list {
+	list-style-type: upper-roman;
+}
+
+ol.upper-roman-type .sub-list,
+ol.upper-roman-type .sub-list .sub-list .sub-list .sub-list,
+ol.upper-roman-type .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list {
+	list-style-type: decimal;
+}
+
+ol.upper-roman-type .sub-list .sub-list,
+ol.upper-roman-type .sub-list .sub-list .sub-list .sub-list .sub-list,
+ol.upper-roman-type .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list .sub-list {
+	list-style-type: upper-alpha;
+}

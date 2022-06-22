@@ -1,0 +1,300 @@
+
+.reveal {
+  position: relative !important;
+  font-size: 0em !important;
+
+  & > * {
+  	font-size: 1rem;
+  }
+
+	& > .content {
+	  position: absolute !important;
+	  top: 0em !important;
+	  left: 0em !important;
+	  z-index: 3 !important;
+	  transition: all 0.5s ease 0.1s;
+	}
+	
+	& > .hoverer {
+	  position: relative !important;
+	  z-index: 2 !important;
+	}
+
+	// Make sure hovered element is on top of other reveal
+	&.active .content,
+	&:hover .content,
+	&.focusable:focus .content {
+  		z-index: 4 !important;
+	}
+
+	// Slide
+
+	&[class*="slide"] {
+	  overflow: hidden !important;
+	  white-space: nowrap;
+		& > .content,
+		& > .hoverer {
+		  display: block;
+		  width: 100%;
+		  float: left;
+		  margin: 0em;
+		  transition: transform 0.5s ease 0.1s;
+		}
+
+		& > .content {
+	  	position: relative !important;
+		}
+
+		& > .hoverer {
+			position: absolute !important;
+			left: 0% !important;
+		}
+	}
+
+	&[class*="slide"]:not(.slide-right):not(.slide-up):not(.slide-down) {
+		& > .hoverer {
+		  transform: translateX(100%) !important;
+		}
+		
+		&.active > .content,
+		&:hover > .content,
+		&.focusable:focus > .content {
+	    transform: translateX(-100%) !important;
+		}
+
+		&.active > .hoverer,
+		&:hover > .hoverer,
+		&.focusable:focus > .hoverer {
+			transform: translateX(0%) !important;
+		}
+	}
+
+	&.slide-right {
+		& > .content {
+    	transform: translateX(0%) !important;
+		}
+	
+		& > .hoverer {
+    	transform: translateX(-100%) !important;
+		}
+	
+		&.active > .content,
+		&:hover > .content,
+		&.focusable:focus > .content {
+	  	transform: translateX(100%) !important;
+		}
+	
+		&.active > .hoverer,
+		&:hover > .hoverer,
+		&.focusable:focus > .hoverer {
+    	transform: translateX(0%) !important;
+		}
+	}
+		
+	&.slide-up {
+		& > .hoverer {
+	    transform: translateY(100%) !important;
+		}
+	
+		&.active > .content,
+		&:hover > .content,
+		&.focusable:focus > .content {
+	    transform: translateY(-100%) !important;
+		}
+		
+		&.active.reveal > .hoverer,
+		&:hover > .hoverer,
+		&.focusable:focus > .hoverer {
+	    transform: translateY(0%) !important;
+		}
+	}
+
+	&.slide-down {	
+		& > .hoverer {
+	    transform: translateY(-100%) !important;
+		}
+		
+		&.active > .content,
+		&:hover > .content,
+		&.focusable:focus > .content {
+      transform: translateY(100%) !important;
+		}
+		
+		&.active > .hoverer,
+		&:hover > .hoverer,
+		&.focusable:focus > .hoverer {
+      transform: translateY(0%) !important;
+		}
+	}
+
+	// Fade
+
+	&.fade {
+		& > .content {
+	  		opacity: 1;
+		}
+		&.active > .content,
+		&:hover > .content,
+		&.focusable:focus > .content {
+  			opacity: 0;
+		}
+	}
+
+	// Move
+
+	&[class*="move"] {
+	  overflow: hidden !important;
+	  white-space: nowrap;
+
+		& > .content,
+		& > .hoverer {
+		  display: block;
+		  float: left;
+		  margin: 0em;
+		  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1) 0.1s;
+		}
+		
+		& > .content {
+  		position: relative !important;
+		}
+		
+		& > .hoverer {
+	  	position: absolute !important;
+	  	left: 0% !important;
+	  	width: 100% !important;
+		}
+	}
+
+	&[class*="move"]:not(.move-right):not(.move-up):not(.move-down) {
+		&.active > .content,
+		&:hover > .content,
+		&.focusable:focus > .content {
+  		transform: translateX(-100%) !important;
+		}
+	}
+
+	&.move-right {
+		&.active > .content,
+		&:hover > .content,
+		&.focusable:focus > .content {
+		  transform: translateX(100%) !important;
+		}
+	}
+
+	&.move-up {
+		&.active > .content,
+		&:hover > .content,
+		&.focusable:focus > .content {
+		  transform: translateY(-100%) !important;
+		}
+	}
+
+	&.move-down {
+		&.active > .content,
+		&:hover > .content,
+		&.focusable:focus > .content {
+		  transform: translateY(100%) !important;
+		}
+	}
+
+	// Rotate
+
+	&[class*="rotate"] > .content {
+  	transition-duration: 0.5s;
+  	transform: rotate(0deg);
+	}
+
+	&[class*="rotate"]:not(.rotate-left) {
+		& > .content {
+    	transform-origin: bottom right;
+		}
+
+		&.active > .content,
+		&:hover > .content,
+		&.focusable:focus > .content {
+		  transform: rotate(110deg);
+		}
+	}
+
+	&.rotate-left {
+		& > .content {
+	  	transform-origin: bottom left;
+		}
+		
+		&.active > .content,
+		&:hover > .content,
+		&.focusable:focus > .content {
+		  transform: rotate(-110deg);
+		}
+	}
+
+
+	// States
+
+	&.disabled:hover > .visible.content {
+	  position: static !important;
+	  display: block !important;
+	  opacity: 1 !important;
+	  top: 0 !important;
+	  left: 0 !important;
+	  right: auto !important;
+	  bottom: auto !important;
+	  transform: none !important;
+	}
+	
+	&.disabled:hover > .hidden.hoverer {
+  	display: none !important;
+	}
+
+	// Visible
+
+	&.visible {
+  	overflow: visible;
+	}
+
+	// Instant
+	
+	&.instant > .content,
+	&.instant > .hoverer {
+  	transition-delay: 0s !important;
+	}
+}
+
+.gallery-item {
+	position: relative;
+	z-index: 1;
+	transition-duration: 500ms;
+	overflow: hidden;
+
+	& > .content {
+		width: 100%;
+		transition-duration: 500ms;
+	}
+
+	& > .hoverer {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		right: 0;
+		background-color: rgba(0, 0, 0, 0.6);
+		opacity: 0;
+		visibility: hidden;
+		z-index: 10;
+		transition-duration: 500ms;
+	}
+	
+	&.active > .content,
+	&:hover > .content,
+	&.focusable:focus > .content {
+		transform: scale(1.2);
+	}
+	
+	&.active > .hoverer,
+	&:hover > .hoverer,
+	&.focusable:focus > .hoverer {
+		opacity: 1;
+		visibility: visible;
+	}
+}

@@ -1,0 +1,30 @@
+
+@each $class, $color in  $color-list {
+  .#{$class}-bg {background-color: $color;}
+  .#{$class}-bg.ltn-1 {background-color: lighten($color, 10%);}
+  .#{$class}-bg.ltn-2 {background-color: lighten($color, 20%);}
+  .#{$class}-bg.ltn-3 {background-color: lighten($color, 30%);}
+  .#{$class}-bg.ltn-4 {background-color: lighten($color, 40%);}
+  .#{$class}-bg.dkn-1 {background-color: darken($color, 5%);}
+  .#{$class}-bg.dkn-2 {background-color: darken($color, 10%);}
+  .#{$class}-bg.dkn-3 {background-color: darken($color, 15%);}
+  .#{$class}-bg.dkn-4 {background-color: darken($color, 20%);}
+}
+@each $class, $color in $color-list {
+  .text-#{$class} {color: $color;}
+}
+
+.black-bg {background-color: #000000;}
+.white-bg {background-color: #ffffff;}
+.transparent-bg {background-color: transparent;}
+
+.text-black {color: #000000;}
+.text-white {color: #ffffff;}
+
+.dark-clue {
+  background-color: $dark-clue !important;
+}
+
+.light-clue {
+  background-color: $light-clue !important;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Scrollspy - Layout-UI</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/layout-ui.css" type="text/css">
+		<script src="js/jquery-2.1.4/jquery-2.1.4.min.js"></script>
+		<script src="js/layout-ui.js"></script>
+		<script src="js/component/dropdown.js"></script>
+		<style>
+			#main-content-nav {
+				overflow-x: hidden;
+				overflow-y: auto;
+			}
+
+			body {
+				max-width: 1200px;
+				margin: auto;
+				width: 100%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<article id="main-doc" class="grid">
+			<header data-level="1" class="fluid">
+				<div class="heading">Scrollspy</div>
+				<p class="big">Easily track your page cotents on a menu and also smoothly scroll to a particular content on your page with a click.</p>
+				<hr />
+			</header>
+			<div class="grid no-gutter">
+				<div id="main-content" class="padded col 12-width md-10-width">
+					<section data-level="3" id="introduction">
+						<div class="heading">Introduction</div>
+						<p>Spy the scroll position of a page or any scrollable container and inform me about what you see in a menu. Scrollspy is used to track certain elements and tell which element the user's viewport is currently centered on. An example of how a scrollspy function is that of our table-of-contents(TOC) on the right side of this page. Clicking on a link in the TOC will also smoothly scroll the page to the element that was linked.</p>
+					</section>
+
+					<section data-level="3" id="structure">
+						<div class="heading">Usage</div>
+						<p>To implement a scrollspy on your page or a scrollable container, you have to put somethings in place:</p>
+						<ul>
+							<li>There must be a page or a container in the page that is scollable depending on where to implement the scrollspy.</li>
+							<li>There must be a menu with items in it that is linked to the <code>id</code> attribute of desired elements in the page or in the scrollable container.</li>
+						</ul>
+							After the above requirement is in place, you have to initialize the plugin on your menu by adding the attribute <code>data-scrollspy</code>. That attribute can either have a value that is the <code>id</code> of the scollable container that you want to spy or it should not have value at all to indicate that you want to spy the page.</p>create a menu that contains items linked to a desired element in your page or a scrollable container by <code>id</code>.

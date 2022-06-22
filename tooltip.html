@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tooltips</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/layout-ui.css" type="text/css">
+    <script src="js/jquery-2.1.4/jquery-2.1.4.min.js"></script>
+    <script src="js/layout-ui.js"></script>
+    <script src="js/component/tooltip.js"></script>
+    <style>
+    </style>
+
+  </head>
+  <body>
+    <div class="container">
+  <div style="height: 20vh;">
+To change the overall look of your document, choose new Theme elements on the Page Layout tab. To change the looks available in the Quick Style gallery, use the Change Current Quick Style Set command. Both the Themes gallery and the Quick Styles gallery provide reset commands so that you can always restore the look of your document to the original contained in your current template.
+On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document. You can use these galleries to insert tables, headers, footers, lists, cover pages, and other document building blocks. When you create pictures, charts, or diagrams, they also coordinate with your current document look.</div>
+<div class="tooltip-html" id="googo">
+  <div class='heading'>Tooltip test</div>
+  <div class='content'>This to insert tables</div>
+</div>
+<button class="tooltipper button" data-tooltip-id="googo" data-position="">Auto tooltip</button>
+<button class="tooltipper button" data-tooltip-id="googo" data-position="top">Top tooltip</button>
+<button class="tooltipper button" data-content="This to insert tables" data-position="bottom">Bottom tooltip</button>
+<button class="tooltipper button" data-content="This to insert tables" data-position="left">Left tooltip</button>
+<button class="tooltipper button" data-content="This to insert tables" data-position="right">Right tooltip</button>
+
+<br><br><br>
+
+<div style="height: 40vh;">
+To change the overall look of your document, choose new Theme elements on the Page Layout tab. To change the looks available in the Quick Style gallery, use the Change Current Quick Style Set command. Both the Themes gallery and the Quick Styles gallery provide reset commands so that you can always restore the look of your document to the original contained in your current template.
+On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document. You can use these galleries to insert tables, headers, footers, lists, cover pages, and other document building blocks. When you create pictures, charts, or diagrams, they also coordinate with your current document look.</div>
+</body>
+</html>

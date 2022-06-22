@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>List - Layout UI</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/layout-ui.css" type="text/css">
+		<script src="js/jquery-2.1.4/jquery-2.1.4.min.js"></script>
+		<script src="js/layout-ui.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<div class="container" data-level="1">
+				<div class="heading">List</div>
+				<p class="big">Easily create nice looking lists, which come in different styles.</p>
+			</div>
+			<hr />
+		</header>
+
+		<article>
+			<div class="no-gutter row container">
+				<div id="mainContent" class="padded 12-width md-10-width col">
+					<section data-level="3">
+						<div class="heading">Introduction</div>
+						<p>A list is used to group related content. As provided by html, we have the ol, ul and dl. We worked on those provisions to make list more easy and stylable.</p>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">ol and ul</div>
+						<p>OL means ordered list. it is ideally used to group related content giving it a numbering order. We already provided the available ordering type of html list as class for ease access. See example below.</p>
+
+						<div class="info note">
+							<ul>
+								<li>The different types that is listed below should be used as class to attain them.</li>
+								<li>To create a list with no indicator, use the <code>no-type</code> class on the list.</li>
+							</ul>
+						</div>
+
+						<div class="preview-box">
+							<div class="grid 1-col md-2-col">
+								<div class="col">
+									<div class="heading">decimal-type</div>
+									<ol class="decimal-type">
+										<li>Apples</li>
+										<li>Pears</li>
+										<li>Oranges</li>
+									</ol>
+									<div class="info note">Note that the decimal-type is the default ol type. So you did not need to use any class to use that type. But in a situation whereby the default ordering style has been changed from the decimal-type, the <code>decimal-type</code> class can be added to the list to enable the decimal-type.</div>
+								</div>
+								<div class="col">
+									<div class="heading">lower-alpha-type</div>
+									<ol class="lower-alpha-type">
+										<li>Apples</li>
+										<li>Pears</li>
+										<li>Oranges</li>
+									</ol>
+								</div>
+								<div class="col">
+									<div class="heading">lower-roman-type</div>
+									<ol class="lower-roman-type">
+										<li>Apples</li>
+										<li>Pears</li>
+										<li>Oranges</li>
+									</ol>
+								</div>
+								<div class="col">
+									<div class="heading">upper-alpha-type</div>
+									<ol class="upper-alpha-type">
+										<li>Apples</li>
+										<li>Pears</li>
+										<li>Oranges</li>
+									</ol>
+								</div>
+								<div class="col">
+									<div class="heading">upper-roman-type</div>
+									<ol class="upper-roman-type">
+										<li>Apples</li>
+										<li>Pears</li>
+										<li>Oranges</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+
+						<p>UL means un-ordered list. It is ideally used to group related content specifying bullet in front of it. We already provided the available un-ordering type of html list as class for ease access. See example below.</p>
+
+						<div class="preview-box">
+							<div class="grid 1-col md-2-col">
+								<div class="col">
+									<div class="heading">disc-type</div>
+									<ul class="decimal-type">
+										<li>Apples</li>
+										<li>Pears</li>
+										<li>Oranges</li>
+									</ul>
+									<div class="info note">Note that the disc-type is the default <stong>ul</stong> type. So you did not need to use any class to use that type. But in a situation whereby the default ordering style has been changed from the disc-type, the <code>disc-type</code> class can be added to the list to enable the disc-type.</div>
+								</div>
+								<div class="col">
+									<div class="heading">circle-type</div>
+									<ul class="circle-type">
+										<li>Apples</li>
+										<li>Pears</li>
+										<li>Oranges</li>
+									</ul>
+								</div>
+								<div class="col">
+									<div class="heading">square-type</div>
+									<ul class="square-type">
+										<li>Apples</li>
+										<li>Pears</li>
+										<li>Oranges</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">dl (Defination List)</div>
+						<p>DL means Defination List. Definition lists are made up of a set of terms along with the definitions for each of those terms.</p>
+						<p>The definition list is created with the <code>&lt;dl&gt;</code> element and usually consists of a series of terms and their definitions. Inside the <code>&lt;dl&gt;</code> element you will usually see pairs of <code>&lt;dt&gt;</code> and <code>&lt;dd&gt;</code> elements. The <code>&lt;dt&gt;</code> is used to contain the term being defined (the definition term). The <code>&lt;dd&gt;</code> is used to contain the definition.</p>
+						<p>We already syled the <code>dl</code> element to apear more distinct than it was inititially.</p>
+
+						<div class="preview-box">
+							<dl>
+								<dt>Sashimi</dt>
+								<dd>Sliced raw fish that is served with condiments such as shredded daikon radish or ginger root, wasabi and soy sauce</dd>
+								<dt>Scale</dt>
+								<dd>A device used to accurately measure the weight of ingredients</dd>
+								<dd>A technique by which the scales are removed from the skin of a fish</dd>
+								<dt>Scamorze</dt>
+								<dt>Scamorzo</dt>
+								<dd>An Italian cheese usually made from whole cow's milk (although it was traditionally made from buffalo milk)</dd>
+							</dl>
+						</div>
+
+						<section>
+							<div class="heading">Horizontal DL</div>
+							<p>We also provide you with a side by side view of the definition terms and the definition. See example below.</p>
+
+							<div class="preview-box">
+								<dl class="horizontal">
+									<dt>Sashimi</dt>
+									<dd>Sliced raw fish that is served with condiments such as shredded daikon radish or ginger root, wasabi and soy sauce</dd>
+									<dt>Scale</dt>
+									<dd>A device used to accurately measure the weight of ingredients</dd>
+									<dd>A technique by which the scales are removed from the skin of a fish</dd>
+									<dt>Scamorze</dt>
+									<dt>Scamorzo</dt>
+									<dd>An Italian cheese usually made from whole cow's milk (although it was traditionally made from buffalo milk)</dd>
+								</dl>
+							</div>
+						</section>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Sub-List</div>
+						<p>We also provide you with a sub-component of list called <strong>sub-list</strong>. It is used to create a child list. It is just like a typical list just that it has the <code>sub-list</code> class. It is designed to exist in a <code>li</code> element to appear as a child of the <code>li</code>. See example below.</p>
+
+						<div class="note">sub-list, when used with <code>ol</code> follows the order of "decimal-type > lower-apha-type > lower-roman-type". And when used with <code>ul</code> follows the order of "disc-type > circle-type > square-type".</div>
+
+						<div class="preview-box">
+							<div class="grid 1-col md-2-col">
+								<div class="col">
+									<div class="heading">sub-list with ol</div>
+									<ol>
+										<li>Animal</li>
+										<li>Plant
+											<ol class="sub-list">
+												<li>Fruit
+													<ol class="sub-list">
+														<li>Mango</li>
+														<li>Orange</li>
+														<li>Pawpaw</li>
+													</ol>
+												</li>
+												<li>Cereal</li>
+												<li>Tree</li>
+											</ol>
+										</li>
+										<li>Things</li>
+									</ol>
+								</div>
+
+								<div class="col">
+									<div class="heading">sub-list with ul</div>
+									<ul>
+										<li>Animal</li>
+										<li>Plant
+											<ul class="sub-list">
+												<li>Fruit
+													<ul class="sub-list">
+														<li>Mango</li>
+														<li>Orange</li>
+														<li>Pawpaw</li>
+													</ul>
+												</li>
+												<li>Cereal</li>
+												<li>Tree</li>
+											</ul>
+										</li>
+										<li>Things</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="markup-box">
+							<code>&lt;ol&gt; <br>
+								&nbsp;&nbsp;&lt;li&gt;your list content here...&lt;/li&gt; <br>
+								&nbsp;&nbsp;&lt;li&gt;your list content here... <br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;ol class="<strong>sub-list</strong>"&gt; <br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;your sub-list content here...&lt;/li&gt; <br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;your sub-list content here...&lt;/li&gt; <br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;your sub-list content here...&lt;/li&gt; <br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ol&gt; <br>
+								&nbsp;&nbsp;&lt;/li&gt; <br>
+								&nbsp;&nbsp;&lt;li&gt;your list content here...&lt;/li&gt; <br>
+								&lt;/ol&gt;
+							</code>
+						</div>
+
+						<div class="info note">You can also create a <code>ul</code> sub-list as in the same way in the example above. A sub-list can be as many as you want. Just follow the format above.</div>
+
+					</section>
+
+					<section data-level="3">
+						<div class="heading">The .ordered list and its sub-list</div>
+						<p>We also provide a special type of list numbering system that is identical with the decimal-type numbering of ol. Just that its sub-list will be in these order "1, 1.1, 1.1.1, 1.1.1.1, ...". Add the <code>ordered</code> class to a ul or ol list to use these utility. See example below.</p>
+
+						<div class="preview-box">
+							<ul class="ordered">
+								<li>Animal</li>
+								<li>Plant
+									<ul class="sub-list">
+										<li>Fruit
+											<ul class="sub-list">
+												<li>Mango</li>
+												<li>Orange</li>
+												<li>Pawpaw</li>
+											</ul>
+										</li>
+										<li>Cereal</li>
+										<li>Tree</li>
+									</ul>
+								</li>
+								<li>Things</li>
+							</ul>
+						</div>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Tree List</div>
+						<p>We also provide a class that style a list (ol or ul) in form of a tree. This is done by adding the <code>tree</code> class to a list. It automatically style all sub-lists in it as a tree list. See example below.</p>
+
+						<div class="preview-box">
+							<ul class="tree">
+								<li>Animal</li>
+								<li>Plant
+									<ul class="sub-list">
+										<li>Fruit
+											<ul class="sub-list">
+												<li>Mango</li>
+												<li>Orange</li>
+												<li>Pawpaw</li>
+											</ul>
+										</li>
+										<li>Cereal</li>
+										<li>Tree</li>
+									</ul>
+								</li>
+								<li>Things</li>
+							</ul>
+						</div>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Icon bullet List</div>
+						<p>We also provide a utility that can enable you to use a specified icon as the numbering indicator of a list. This is done by giving a list (ol, ul or a container with .item classed children) the <code>icon-bullet</code> class and place your icon as the first child of each item (a <code>li</code> element or an <code>item</code> classed element) in the list. See example below.</p>
+
+						<div class="preview-box">
+							<ul class="icon-bullet">
+								<li><i class="icon i-check-circle-outline"></i> Animal</li>
+								<li><i class="icon i-check-circle-outline"></i> Plant</li>
+								<li><i class="icon i-check-circle-outline"></i> Fruit</li>
+								<li><i class="icon i-check-circle-outline"></i> Mango</li>
+								<li><i class="icon i-check-circle-outline"></i> Orange</li>
+								<li><i class="icon i-check-circle-outline"></i> Pawpaw</li>
+								<li><i class="icon i-check-circle-outline"></i> Cereal</li>
+								<li><i class="icon i-check-circle-outline"></i> Tree</li>
+								<li><i class="icon i-check-circle-outline"></i> Things</li>
+							</ul>
+						</div>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Inline List</div>
+						<p>A list can be syled to display its items side by side. Just add the <code>inline</code> class to a list to syle one. See example below.</p>
+
+						<div class="caution note">An inline list will not display its item numbering indicator or bullet.</div>
+
+						<div class="preview-box">
+							<ul class="inline">
+								<li>Fruit</li>
+								<li>Mango</li>
+								<li>Orange</li>
+								<li>Pawpaw</li>
+								<li>Cereal</li>
+								<li>Tree</li>
+							</ul>
+						</div>
+					</section>
+				</div>
+			</div>
+		</article>
+	</body>
+</html>

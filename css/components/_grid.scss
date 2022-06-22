@@ -1,0 +1,314 @@
+/* --- CONTAINER, GRID, COLUMN, WIDTH, PUSH, PULL, OFFSET AND CONTINOUS COLUMN --- */
+
+$grid-gutter: 1rem;
+$container-max: 1060px;
+$container-text-max: 700px;
+$container-md-max: 660.65px;
+$container-lg-max: 820.8px;
+$container-xl-max: 1026px;
+$column-gap: 25px;
+
+// fixed sizes
+
+.fullscreen-sized {
+	position: relative;
+	width: 100vw !important;
+	left: 50% !important;
+	transform: translateX(-50%) !important;
+	margin-left: 0px !important;
+	box-sizing: border-box;
+}
+
+.extremely-bled {
+	margin-left: -10000px !important;
+	width: calc(100% + 20000px) !important;
+	padding-left: 10000px !important;
+	padding-right: 10000px !important;
+}
+
+
+// Container
+
+.container,
+.container-text,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl {
+	position: relative;
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.container-text { max-width: $container-text-max; }
+.container-md { max-width: $container-md-max; }
+.container-lg { max-width: $container-lg-max; }
+.container-xl { max-width: $container-xl-max; }
+
+
+@media #{$small-and-down} {
+	.container { max-width: 440px; }
+}
+@media #{$small-and-up} {
+	.container,
+	.container-sm {
+		width: calc(100% - 40px);
+		max-width: 650px;
+	}
+}
+@media #{$medium-and-up} {
+	.container,
+	.container-sm,
+	.container-md {
+		width: 90.5%;
+		max-width: 810px;
+	}
+}
+@media #{$large-and-up} {
+	.container,
+	.container-sm,
+	.container-md,
+	.container-lg {
+		width: 85.5%;
+		max-width: 1000px;
+	}
+}
+@media #{$xlarge-and-up} {
+	.container,
+	.container-sm,
+	.container-md,
+	.container-lg,
+	.container-xl { 
+		width: 85.5%;
+		max-width: 1100px;
+	}
+}
+
+// Grid
+
+.grid,
+.fields,
+[class*=-fields] {
+	box-sizing: border-box;
+	display: flex;
+	position: relative;
+	flex-flow: row wrap;
+}
+
+.grid .col,
+.fields .field,
+[class*=-fields] .field {
+	flex: 0 0 auto;
+	position: relative;
+	max-width: 100%;
+	min-height: 1px;
+	box-sizing: border-box;
+}
+
+.grid:not([class*=-cols]) > .col:not([class*=-width]):not(.manual-width),
+.fields > field:not([class*=-width]):not(.manual-width) {
+	flex: 1 1 0;
+}
+
+.grid.guttered {
+	margin-left: -$grid-gutter;
+	margin-right: -$grid-gutter;
+
+	& > .col {
+		padding-left: $grid-gutter;
+		padding-right: $grid-gutter;
+	}
+}
+
+.fields:not(.no-gutter),
+[class*=-fields]:not(.no-gutter) {
+	margin-left: -0.5rem;
+	margin-right: -0.5rem;
+
+	& > .field {
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+	}
+}
+
+// Grid col size
+
+$i: 1;
+@while $i <= $num-cols {
+	$perc: unquote((100 / ($i)) + "%");
+	.grid[class~="#{$i}-cols"] > .col,
+	[class~="#{$i}-fields"] > .field {
+		width: $perc;
+	}
+	$i: $i + 1;
+}
+@media #{$small-and-up} {
+	$i: 1;
+	@while $i <= $num-cols {
+		$perc: unquote((100 / ($i)) + "%");
+		.grid.sm-#{$i}-cols > .col {
+			width: $perc;
+		}
+		$i: $i + 1;
+	}
+}
+@media #{$medium-and-up} {
+	$i: 1;
+	@while $i <= $num-cols {
+		$perc: unquote((100 / ($i)) + "%");
+		.grid.md-#{$i}-cols > .col {
+			width: $perc;
+		}
+		$i: $i + 1;
+	}
+}
+@media #{$large-and-up} {
+	$i: 1;
+	@while $i <= $num-cols {
+		$perc: unquote((100 / ($i)) + "%");
+		.grid.lg-#{$i}-cols > .col {
+			width: $perc;
+		}
+		$i: $i + 1;
+	}
+}
+@media #{$xlarge-and-up} {
+	$i: 1;
+	@while $i <= $num-cols {
+		$perc: unquote((100 / ($i)) + "%");
+		.grid.xl-#{$i}-cols > .col {
+			width: $perc;
+		}
+		$i: $i + 1;
+	}
+}
+
+// Width, push, pull and offset
+
+$i: 1;
+@while $i <= $num-cols {
+	$perc: unquote((100 * $i) / $num-cols + "%");
+	[class~="#{$i}-width"] { width: $perc !important; }
+	[class~="#{$i}-push"] { left: unquote($perc); }
+	[class~="#{$i}-pull"] { left: unquote(-$perc); }
+	[class~="#{$i}-offset"] { margin-left: $perc; }
+	$i: $i + 1;
+}
+.auto-width { width: auto !important; }
+@media #{$small-and-up} {
+	$i: 1;
+	@while $i <= $num-cols {
+		$perc: unquote((100 * $i) / $num-cols + "%");
+		.sm-#{$i}-width { width: $perc !important; }
+		.sm-#{$i}-push { left: unquote($perc); }
+		.sm-#{$i}-pull { left: unquote(-$perc); }
+		.sm-#{$i}-offset { margin-left: $perc; }
+		$i: $i + 1;
+	}
+	.sm-auto-width { width: auto !important; }
+}
+@media #{$medium-and-up} {
+	$i: 1;
+	@while $i <= $num-cols {
+		$perc: unquote((100 * $i) / $num-cols + "%");
+		.md-#{$i}-width { width: $perc !important; }
+		.md-#{$i}-push { left: unquote($perc); }
+		.md-#{$i}-pull { left: unquote(-$perc); }
+		.md-#{$i}-offset { margin-left: $perc; }
+		$i: $i + 1;
+	}
+	.md-auto-width { width: auto !important; }
+}
+@media #{$large-and-up} {
+	$i: 1;
+	@while $i <= $num-cols {
+		$perc: unquote((100 * $i) / $num-cols + "%");
+		.lg-#{$i}-width { width: $perc !important; }
+		.lg-#{$i}-push { left: unquote($perc); }
+		.lg-#{$i}-pull { left: unquote(-$perc); }
+		.lg-#{$i}-offset { margin-left: $perc; }
+		$i: $i + 1;
+	}
+	.lg-auto-width { width: auto !important; }
+}
+@media #{$xlarge-and-up} {
+	$i: 1;
+	@while $i <= $num-cols {
+		$perc: unquote((100 * $i) / $num-cols + "%");
+		.xl-#{$i}-width { width: $perc !important; }
+		.xl-#{$i}-push { left: unquote($perc); }
+		.xl-#{$i}-pull { left: unquote(-$perc); }
+		.xl-#{$i}-offset { margin-left: $perc; }
+		$i: $i + 1;
+	}
+	.xl-auto-width { width: auto !important; }
+}
+
+@media #{$medium-and-down} {
+	.grid.stackable > .col,
+	.fields > .field,
+	[class*=-fields] > .field {
+		width: 100% !important;
+	}
+}
+
+// Continous column
+
+.ccolumn {
+	column-gap: $column-gap;
+
+	&[class*=-rule] {
+		column-rule-style: solid;
+		column-rule-color: $divider-bd-color;
+	}
+
+	&.thin-rule {
+		column-rule-width: thin;
+	}
+
+	&.medium-rule {
+		column-rule-width: medium;
+	}
+
+	&.thick-rule {
+		column-rule-width: thick;
+	}
+}
+.ccolumn {
+	$i: 1;
+	@while $i <= $num-ccols {
+		&.xs-#{$i} {column-count: $i;}
+		$i: $i + 1;
+	}
+	@media #{$small-and-up} {
+		$i: 1;
+		@while $i <= $num-ccols {
+			&.sm-#{$i} {column-count: $i;}
+			$i: $i + 1;
+		}
+	}
+	@media #{$medium-and-up} {
+		$i: 1;
+		@while $i <= $num-ccols {
+			&.md-#{$i} {column-count: $i;}
+			$i: $i + 1;
+		}
+	}
+	@media #{$large-and-up} {
+		$i: 1;
+		@while $i <= $num-ccols {
+			&.sm-#{$i} {column-count: $i;}
+			$i: $i + 1;
+		}
+	}
+	@media #{$xlarge-and-up} {
+		$i: 1;
+		@while $i <= $num-ccols {
+			&.xl-#{$i} {column-count: $i;}
+			$i: $i + 1;
+		}
+	}
+}

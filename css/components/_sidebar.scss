@@ -1,0 +1,429 @@
+/* --- SIDEBAR --- */
+
+$sb-lr-width: 260px;
+$sb-lr-thin-width: 150px;
+$sb-lr-wide-width: 350px;
+$sb-tb-width: 42px;
+$sb-tb-thin-width: 36px;
+$sb-tb-wide-width: 72px;
+
+.sidebar {
+	border-radius: 0em !important;
+	margin: 0 !important;
+	overflow-y: auto !important;
+	max-width: 100%;
+	max-height: 100%;
+	z-index: 1000;
+	backface-visibility:hidden;
+	animation-duration: 500ms;
+	transition: none;
+	transform: translate3d(0, 0, 0);
+	-webkit-overflow-scrolling: touch;
+	will-change: transform;
+	visibility: hidden;
+
+	&:not(.released) { position: fixed !important; }
+	&.released { position: relative; }
+	& > * { backface-visibility: hidden; }
+
+	// Direction
+
+	&.left,
+	&.right {
+		height: 100% !important;
+		top: 0;
+		box-shadow: 0px 0px 20px rgba(34, 36, 38, 0.15);
+	}
+
+	&.left {
+		right: auto;
+		left: 0px;
+		transform: translate3d(-100%, 0, 0);
+	}
+
+	&.right {
+		left: auto;
+		right: 0px;
+		transform: translate3d(100%, 0, 0);
+	}
+
+	&.top,
+	&.bottom {
+		width: 100% !important;
+		left: 0;
+		box-shadow: 0px 0px 20px rgba(34, 36, 38, 0.15);
+	}
+
+	&.top {
+		top: 0px;
+		bottom: auto;
+		transform: translate3d(0, -100%, 0);
+	}
+
+	&.bottom {
+		top: auto;
+		bottom: 0px;
+		transform: translate3d(0, 100%, 0);
+	}
+}
+
+// Pushable
+
+.pushable {
+	overflow-x: hidden;
+	padding: 0em !important;
+
+	& > [class*=fixed] {
+		position: fixed;
+		backface-visibility: hidden;
+		transition: transform 500ms ease;
+		will-change: transform;
+		z-index: 101;
+	}
+
+	& > .pusher {
+		position: relative;
+		backface-visibility: hidden;
+		overflow: hidden;
+		min-height: 100%;
+		min-width: 100%;
+		transition: transform 500ms ease;
+		z-index: 2;
+		background: inherit;
+	}
+
+	// Dimmer
+
+	& > .pusher:after {
+		position: fixed;
+		top: 0px;
+		right: 0px;
+		content: "";
+		background-color: rgba(0, 0, 0, 0.4);
+		overflow: hidden;
+		opacity: 0;
+		transition: opacity 500ms;
+		will-change: opacity;
+		z-index: 1000;
+	}
+
+	& > .sidebar.pusher-dimming.active ~ .pusher::after {
+		width: 100% !important;
+		height: 100% !important;
+		opacity: 1 !important;
+	}
+
+	&:not(body) {
+		transform: translate3d(0, 0, 0);
+
+		& > .sidebar,
+		& > [class*=fixed],
+		& > .pusher::after {
+			position: absolute;
+		}
+	}
+}
+
+body.pushable {
+	background: #545454 !important;
+
+	& > .pusher {
+		position: absolute;
+		background: #FFFFFF;
+		width: 100%;
+		overflow-x: auto;
+	}
+}
+
+// States
+
+// default
+
+.sidebar {
+	transition: transform 500ms ease;
+
+	&.left.active ~ [class*="fixed"],
+	&.left.active ~ .pusher {
+		transform: translate3d($sb-lr-width, 0, 0);
+	}
+
+	&.left.active.thin ~ [class*="fixed"],
+	&.left.active.thin ~ .pusher {
+		transform: translate3d($sb-lr-thin-width, 0, 0);
+	}
+
+	&.left.active.wide ~ [class*="fixed"],
+	&.left.active.wide ~ .pusher {
+		transform: translate3d($sb-lr-wide-width, 0, 0);
+	}
+
+	&.right.active ~ [class*="fixed"],
+	&.right.active ~ .pusher {
+		transform: translate3d(-$sb-lr-width, 0, 0);
+	}
+
+	&.right.active.thin ~ [class*="fixed"],
+	&.right.active.thin ~ .pusher {
+		transform: translate3d(-$sb-lr-thin-width, 0, 0);
+	}
+
+	&.right.active.wide ~ [class*="fixed"],
+	&.right.active.wide ~ .pusher {
+		transform: translate3d(-$sb-lr-wide-width, 0, 0);
+	}
+
+	&.top.active ~ [class*="fixed"],
+	&.top.active ~ .pusher {
+		transform: translate3d(0, $sb-tb-width, 0);
+	}
+
+	&.top.active.thin ~ [class*="fixed"],
+	&.top.active.thin ~ .pusher {
+		transform: translate3d(0, $sb-tb-thin-width, 0);
+	}
+
+	&.top.active.wide ~ [class*="fixed"],
+	&.top.active.wide ~ .pusher {
+		transform: translate3d(0, $sb-tb-wide-width, 0);
+	}
+
+	&.bottom.active ~ [class*="fixed"],
+	&.bottom.active ~ .pusher {
+		transform: translate3d(0, -$sb-tb-width, 0);
+	}
+
+	&.bottom.active.thin ~ [class*="fixed"],
+	&.bottom.active.thin ~ .pusher {
+		transform: translate3d(0, -$sb-tb-thin-width, 0);
+	}
+
+	&.bottom.active.wide ~ [class*="fixed"],
+	&.bottom.active.wide ~ .pusher {
+		transform: translate3d(0, -$sb-tb-wide-width, 0);
+	}
+
+	// opposite sides visible forces content overlay
+
+	&.left.active ~ &.right.active ~ [class*="fixed"],
+	&.left.active ~ &.right.active ~ .pusher,
+	&.right.active ~ &.left.active ~ [class*="fixed"],
+	&.right.active ~ &.left.active ~ .pusher {
+		transform: translate3d(0, 0, 0);
+	}
+
+	&.animating {
+		visibility: visible;
+	}
+
+	&.active, &.visible {
+		visibility: visible;
+		transform: translate3d(0, 0, 0) !important;
+	}
+}
+
+// Sidebar Width
+
+.sidebar {
+	// Left & Right
+
+	&.left,
+	&.right {
+		width: $sb-lr-width;
+	}
+
+	&.left.thin,
+	&.right.thin {
+  	width: $sb-lr-thin-width;
+	}
+
+	&.left.wide,
+	&.right.wide {
+		width: $sb-lr-wide-width;
+	}
+}
+
+// Animations
+
+// Overlay
+
+.sidebar.overlay {
+	z-index: 102;
+	transition: transform 500ms ease;
+
+	&.left {
+		transform: translate3d(-100%, 0%, 0);
+	}
+
+	&.right {
+		transform: translate3d(100%, 0%, 0);
+	}
+
+	&.top {
+		transform: translate3d(0%, -100%, 0);
+	}
+
+	&.bottom {
+		transform: translate3d(0%, 100%, 0);
+	}
+
+	&.active {
+		transform: translate3d(0%, 0%, 0);
+	}
+
+	&.active ~ [class*="fixed"],
+	&.active ~ .pusher {
+		transform: none !important;
+	}
+}
+
+// Push
+
+.sidebar.push {
+	z-index: 102;
+	transition: transform 500ms ease;
+
+	&.left {
+		transform: translate3d(-100%, 0%, 0);
+	}
+
+	&.right {
+		transform: translate3d(100%, 0%, 0);
+	}
+
+	&.top {
+		transform: translate3d(0%, -100%, 0);
+	}
+
+	&.bottom {
+		transform: translate3d(0%, 100%, 0);
+	}
+
+	&.active {
+		transform: translate3d(0%, 0, 0);
+	}
+}
+
+// Uncover
+
+.sidebar.uncover {
+	transform: translate3d(0, 0, 0);
+  z-index: 1;
+
+	&.active {
+		transform: translate3d(0, 0, 0);
+		transition: transform 500ms ease;
+	}
+}
+
+// Slide Along
+
+.sidebar.slide-along {
+	z-index: 1;
+	transition: transform 500ms ease;
+
+	&.left {
+		transform: translate3d(-50%, 0, 0);
+	}
+
+	&.right {
+		transform: translate3d(50%, 0, 0);
+	}
+
+	&.top {
+		transform: translate3d(0, -50%, 0);
+	}
+
+	&.bottom {
+		transform: translate3d(0%, 50%, 0);
+	}
+
+	&.active {
+		transform: translate3d(0%, 0, 0);
+	}
+}
+
+// Slide Out
+
+.sidebar.slide-out {
+	z-index: 1;
+	transition: transform 500ms ease;
+
+	&.left {
+		transform: translate3d(50%, 0, 0);
+	}
+
+	&.right {
+		transform: translate3d(-50%, 0, 0);
+	}
+
+	&.top {
+		transform: translate3d(0%, 50%, 0);
+	}
+
+	&.bottom {
+		transform: translate3d(0%, -50%, 0);
+	}
+
+	&.active {
+		transform: translate3d(0%, 0, 0);
+	}
+}
+
+// Scale Down
+
+.sidebar.scale-down {
+	transition: transform 500ms ease;
+	z-index: 102;
+
+	&.left {
+		transform: translate3d(-100%, 0, 0);
+
+		& ~ .pusher {
+			transform-origin: 75% 50%;
+		}
+	}
+
+	&.right {
+		transform: translate3d(100%, 0, 0);
+
+		& ~ .pusher {
+			transform-origin: 25% 50%;
+		}
+	}
+
+	&.top {
+		transform: translate3d(0%, -100%, 0);
+
+		& ~ .pusher {
+			transform-origin: 50% 75%;
+		}
+	}
+
+	&.bottom {
+		transform: translate3d(0%, 100%, 0);
+
+		& ~ .pusher {
+			transform-origin: 50% 25%;
+		}
+	}
+
+	&.active ~ .pusher,
+	&.animating ~ .pusher {
+		display: block !important;
+		width: 100%;
+		height: 100%;
+		overflow: hidden !important;
+	}
+
+	&.active {
+		transform: translate3d(0, 0, 0);
+
+		& ~ .pusher {
+			transform: scale(0.75);
+		}
+	}
+}
+
+.sidebar-lock {
+	@extend %screen-locker;
+}

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Note - Layout-UI</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/layout-ui.css" type="text/css">
+		<script src="js/jquery-2.1.4/jquery-2.1.4.min.js"></script>
+		<script src="js/layout-ui.js"></script>
+		<script src="js/component/dropdown.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<div class="container" data-level="1">
+				<div class="heading">Note and Callout</div>
+				<p class="big">Create nice looking notes and callouts with different alert syles that really call users attention.</p>
+			</div>
+			<hr />
+		</header>
+
+		<article>
+			<div class="no-gutter row container">
+				<div id="mainContent" class="padded 12-width md-10-width col">
+					<section data-level="3">
+						<div class="heading">Introduction</div>
+						<p>A note and a callout are used to display information that needs the reader attention. Both note and callout does the same thing. Just that their style are different. Note is created by adding the <code>note</code> class to a block element. While a callout is by adding the <code>callout</code> class to a block element. See example below.</p>
+
+						<div class="preview-box">
+							A note
+							<div class="note">
+								<i class="icon close i-close"></i>
+								<div class="heading">Changes in Service</div>
+								<p>We just updated our privacy policy here to better service our customers. We recommend reviewing the changes.</p>
+							</div>
+							A callout
+							<div class="callout">
+								<i class="close icon i-close"></i>
+								<div class="heading">Changes in Service</div>
+								<p>We just updated our privacy policy here to better service our customers. We recommend reviewing the changes.</p>
+							</div>
+						</div>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Icon Note and Callout</div>
+						<p>A note and a callout can contain an icon. To do that, give the note or callout an <code>icon</code> class and place your icon as the first child in the note or callout, then create a container for the content and class it <code>content</code>.</p>
+
+						<div class="preview-box">
+							<div class="icon note">
+								<i class="main icon i-email"></i>
+								<div class="content">
+									<div class="heading">Have you heard about our mailing list?</div>
+									<p>Get the best news in your e-mail every day. Our God is not unrighteous</p>
+								</div>
+							</div>
+
+							<div class="icon callout">
+								<i class="main icon i-email"></i>
+								<div class="content">
+									<div class="heading">Have you heard about our mailing list?</div>
+									<p>Get the best news in your e-mail every day. Our God is not unrighteous</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="markup-box">
+							<code>&lt;div class="icon note"&gt;<br>
+								&nbsp;&nbsp;&lt;i class="main icon i-email"&gt;&lt;/i&gt;<br>
+								&nbsp;&nbsp;&lt;div class="content"&gt;<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;... your content here ...<br>
+								&nbsp;&nbsp;&lt;/div&gt;<br>
+								&lt;/div&gt;
+							</code><br>
+
+							NB: Use the same code for callout. Just that you change the note class into callout class.
+						</div>
+
+
+					<section data-level="3">
+			            <div class="heading">States</div>
+			            <p>A note and a callout can be formated to indicate it content in different states.</p>
+
+			            <section>
+			              <div class="heading">Info State</div>
+			              <p>A note and a callout can be formated to display in a colourful way to indicate it content as an information. Just add the <code>info</code> class a note or a callout to display them in their info state.</p>
+
+			              <div class="preview-box">
+			                A note
+			                <div class="info note">
+			                  <div class="heading">Changes in Service</div>
+			                  <p>We just updated our privacy policy here to better service our customers. We recommend reviewing the changes.</p>
+			                </div>
+			                A callout
+			                <div class="info callout">
+			                  <div class="heading">Changes in Service</div>
+			                  <p>We just updated our privacy policy here to better service our customers. We recommend reviewing the changes.</p>
+			                </div>
+			              </div>
+			            </section>
+
+			            <section>
+			              <div class="heading">Caution State</div>
+			              <p>A note and a callout can be formated to display in a colourful way to indicate it content as a warning information. Just add the <code>caution</code> class a note or a callout to display them in their caution state.</p>
+
+			              <div class="preview-box">
+			                A note
+			                <div class="caution note">
+			                  <div class="heading">You must register before you can do that!</div>
+			                  <p>Visit our registration page, then try again</p>
+			                </div>
+			                A callout
+			                <div class="caution callout">
+			                  <div class="heading">You must register before you can do that!</div>
+			                  <p>Visit our registration page, then try again</p>
+			                </div>
+			              </div>
+			            </section>
+
+			            <section>
+			              <div class="heading">Positive State</div>
+			              <p>A note and a callout can be formated to display in a colourful way to indicate it content as a positive information. Just add the <code>positive</code> class a note or a callout to display them in their positive state.</p>
+
+			              <div class="preview-box">
+			                A note
+			                <div class="positive note">
+			                  <div class="heading">Your user registration was successful.</div>
+			                  <p>You may now log-in with the username you have chosen.</p>
+			                </div>
+			                A callout
+			                <div class="positive callout">
+			                  <div class="heading">Your user registration was successful.</div>
+			                  <p>You may now log-in with the username you have chosen.</p>
+			                </div>
+			              </div>
+			            </section>
+
+			            <section>
+			              <div class="heading">Negative State</div>
+			              <p>A note and a callout can be formated to display in a colourful way to indicate it content as a negative information. Just add the <code>negative</code> class a note or a callout to display them in their negative state.</p>
+
+			              <div class="preview-box">
+			                A note
+			                <div class="negative note">
+			                  <div class="heading">There was some errors with your submission</div>
+			                  <ul>
+			                    <li>You must include both a upper and lower case letters in your password.</li>
+			                    <li>You need to select your home country.</li>
+			                  </ul>
+			                </div>
+			                A callout
+			                <div class="negative callout">
+			                  <div class="heading">There was some errors with your submission</div>
+			                  <ul>
+			                    <li>You must include both a upper and lower case letters in your password.</li>
+			                    <li>You need to select your home country.</li>
+			                  </ul>
+			                </div>
+			            </section>
+			          </section>
+			          
+			          <section data-level="3">
+			            <div class="heading">Size</div>
+			            <p>A note can have different sizes</p>
+			            
+			            <div class="preview-box">
+			              <div class="mini note">This is a mini note.</div>
+			              <div class="small note">This is a small note.</div>
+			              <div class=" note">This is a normal note.</div>
+			              <div class="large note">This is large note</div>
+			              <div class="big note">This is big note</div>
+			              <div class="huge note">This is huge note</div>
+			            </div>
+			          </section>
+
+
+
+
+
+
+  <div class="dismissable example">
+    <h4 class="heading">Dismissable Block</h4>
+    <p>A note that the user can choose to hide</p>
+    <div class="note">
+      <div class="heading">Welcome back!</div>
+      <p>This is a special notification which you can dismiss if you're bored with it.</p>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="heading">Floating</h4>
+    <p>A note can float above content that it is related to</p>
+    <div class="floating note">
+      <p>Way to go!</p>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="heading">Compact</h4>
+    <p>A note can only take up the width of its content.</p>
+    <div class="compact note">
+      <p>Get all the best inventions in your e-mail every day. Sign up now!</p>
+    </div>
+  </div>
+</body>
+
+</html>

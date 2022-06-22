@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Scroll-pin - Layout-UI</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/layout-ui.css" type="text/css">
+		<script src="js/jquery-2.1.4/jquery-2.1.4.min.js"></script>
+		<script src="js/layout-ui.js"></script>
+		<style>
+			#main-content-nav {
+				overflow-x: hidden;
+				overflow-y: auto;
+			}
+
+			body {
+				max-width: 1200px;
+				margin: auto;
+				width: 100%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<article id="main-doc" class="grid">
+			<header data-level="1" class="fluid">
+				<div class="heading">Scroll-pin</div>
+				<p class="big">Control the pining of an object in respect to the amount of your page scroll.</p>
+				<hr />
+			</header>
+			<div class="grid no-gutter">
+				<div id="main-content" class="padded col 12-width md-10-width">
+					<section data-level="3" id="introduction">
+						<div class="heading">Introduction</div>
+						<p>Scroll-pin is used to pin an element to the browser's viewport at a particular scroll range of the page. A typical example of what scroll-pin does is that of this page content-menu at the right-hand-side of your screen.</p>
+
+						<div class="caution note">The examples specified above may be hidden on small screen sizes. For the best experience, view these example on a large resolution display</div>
+					</section>
+
+					<section data-level="3" id="behaviour">
+						<div class="heading">Behaviour</div>
+						<p>A typical scrollPin element attaches itself to the viewport when it is passed, and remains fixed to the viewport until you scroll opposite to the element initial position and above it. Additional static content can exist above sticky content without affecting its position. See <a href="./scroll-pin-examples.html">example #pin1</a></p>
+
+						<div class="sub heading">scrollPin element longer than the viewport</div>
+						<p>
+							scrollPin element that is longer than the viewport will automatically scroll independently from the context. Shifting the scroll direction at any time will also immediately adjust the scroll position of the scrollPin element.<br>
+							This behavior makes sure users aren't required to navigate all the way to the top of the context to see the scrollPin element-top and also not required to navigate all the way to the bottom of context to see the scrollPin element-bottom. See <a href="./scroll-pin-examples.html">example #pin2</a>
+						</p>
+
+						<div class="sub heading">parent Guided scrollPin element</div>
+						<p>A parent guided scrollPin element behaves like a typical scrollPin just that the element continue to flow with the page context when the parent of the scrollPin element has almost been scrolled out of viewport and the remaining part of it in the viewport cannot contain the scrollPin element. See <a href="./scroll-pin-examples.html">example #pin3</a></p>
+
+						<div class="sub heading">sticky scrollPin element</div>
+						<p>A sticky scrollPin element behaves like the parent-guided scrollPin element just that the scrollPin element will be pushed by the viewport depending on the scroll direction. When scrolling down, content will be stuck to the top of the viewport, but in the opposite direction content is stuck to the bottom of the viewport. See <a href="./scroll-pin-examples.html">example #pin4</a></p>
+					</section>
+
+					<section data-level="3" id="usage">
+						<div class="heading">Usage</div>
+						<p>Scroll-pin is pre-initialized on any <code>scroll-pin</code> classed element with a default settings on it. I.e. any element that has the <code>scroll-pin</code> class will pin to the browser's viewport at some scroll range. But to initialize it yourself on an element that does not have the <code>scroll-pin</code> class or you just want to re-initialize it again to specify a custom settings on it, you just need to write a simple javascript code. Follow the pattern below.</p>
+
+						<div class="markup-box">
+							<code>
+								$(document).ready(function() { <br>
+								&nbsp;&nbsp;$('<mark>element</mark>').scrollPin(<mark>options</mark>); <br>
+								})
+							</code>
+						</div>
+
+						<div class="note">
+							<ul>
+								<li><strong>element</strong> in the code above is a selector (like normal css selector) for the element you want to initialize scroll-pin on.</li>
+								<li><strong>options</strong> in the code above is a javascript object value that contains custom settings to be passed to the scroll-pin element. The available settings that can be passed to a scrollPin element will be listed in the section below.</li>
+							</ul>
+						</div>
+					</section>
+					<section data-level="3" id="setup">
+						<div class="heading">Scroll-pin Settings</div>
+						<p>We are going list the available settings that apply on a scroll-pin element and how to specify your own custom settings on a scroll-pin element.</p>
+
+						<div class="sub heading">Availabe Settings</div>
+
+						<table class="definition table">
+							<thead>
+								<tr>
+									<th>Options</th>
+									<th>Default Value</th>
+									<th>Description</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>className</td>
+									<td>"pinned"</td>
+									<td>This option receive a string value that denote the class name for an element that is pinned to the browser's viewport.</td>
+								</tr>
+								<tr>
+									<td>parentGuide</td>
+									<td>false</td>
+									<td>This receives a boolean value (true or false). If set <code>true</code>, the element behaves like a parent-guided-scrollPin as explained in the <a href="#behaviour" onclick="$(this).scroller()">Behaviour</a> section above.</td>
+								</tr>
+								<tr>
+									<td>topSpacing</td>
+									<td>0</td>
+									<td>This denote a margin, in pixels, from the container element's (or the browser window's) top. This only works if the "hard" property is set to FALSE. NB: value should be a number</td>
+								</tr>
+								<tr>
+									<td>bottomSpacing</td>
+									<td>0</td>
+									<td>This denote a margin, in pixels, from the container element's bottom. This only works if the "forceVisible" property is set to FALSE and it is used only if the "parentGuide" property is TRUE. NB: value should be a number</td>
+								</tr>
+								<tr>
+									<td>zIndex</td>
+									<td>9999</td>
+									<td>This denote the value of zIndex CSS property to be set for pinned elements. NB: value should be a number</td>
+								</tr>
+								<tr>
+									<td>pinned</td>
+									<td>undefined</td>
+									<td>This option can either be undefined or a function called to called when the scroll-pin element is pinned to the browser's viewport.</td>
+								</tr>
+								<tr>
+									<td>unpinned</td>
+									<td>undefined</td>
+									<td>This option can either be undefined or a function called to called when the scroll-pin element is not pinned to the browser's viewport.</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<th>Options</th>
+									<th>Default Value</th>
+									<th>Description</th>
+								</tr>
+							</tfoot>
+						</table>
+
+						<div class="sub heading">Specify Settings on Scroll-pin element</div>
+						
+						<p>We provide a way to specify settings on your scroll-pin element. Settings is passed to a scroll-pin element as a value to a created <code>data-options</code> attribute of the scroll-pin element in a <strong>name:value</strong> pair seperated with colon (;). eg <code>data-options ="option1: value1; option2: value2; ..."</code></p>
+
+						<div class="caution note">Passing a function as a value using this method might not work. You can use the second method provided to pass a function as a value of your settings.</div>
+						<div class="markup-box">
+							<code>
+								&lt;div class="scroll-pin" <mark>data-options="topSpacing: 30;"</mark>&gt;<br>
+								&nbsp;&nbsp;... your content here ... <br>
+								&lt;/div&gt;
+							</code>
+						</div>
+
+						<div class="sub heading">Specify settings through initialization</div>
+						<p>Settings can be passed to the scroll-pin when initializing it on an element as seen in the <a href="#usage">Usage</a> section above. Here we are going to show you how the settings is passed during initialization. See example code below.</p>
+
+						<div class="markup-box">
+							<code>
+								$(document).ready(function() { <br>
+								&nbsp;&nbsp;$('element').scrollPin({ <br>
+								<mark>&nbsp;&nbsp;&nbsp;&nbsp;topSpacing: 40, <br>
+								&nbsp;&nbsp;&nbsp;&nbsp;parentGuide: true, <br>
+								&nbsp;&nbsp;&nbsp;&nbsp;pinned: function() { <br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert("I am now pinned down."); <br>
+								&nbsp;&nbsp;&nbsp;&nbsp;} <br></mark>
+								&nbsp;&nbsp;}) <br>
+								})
+							</code>
+						</div>
+					</section>
+					<section data-level="3" class="padded d-flex flex-middle" id="examples">
+						<a href="./scroll-pin-examples.html" class="primary fancy big button">VIEW EXAMPLES</a>
+					</section>
+				</div>
+				<div id="main-content-nav" class="col 2-width md-and-down-hidden auto-l-bordered">
+					<div class="vertical menu">
+						<a href="#introduction" class="item">Introduction</a>
+						<a href="#behaviour" class="item">Behaviour</a>
+						<a href="#usage" class="item">Usage</a>
+						<a href="#setup" class="item">Setup</a>
+						<div class="xhover item"><a href="./scroll-pin-examples.html" class="primary fancy button">VIEW EXAMPLES</a></div>
+					</div>
+				</div>
+			</div>
+		</article>
+		<script>
+			$("#main-content-nav > .vertical.menu").scrollPin({
+				bottomSpacing: 10,
+				parentGuide: true
+			});
+		</script>
+	</body>
+</html>	

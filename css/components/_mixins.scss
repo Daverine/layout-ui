@@ -1,0 +1,32 @@
+
+@mixin root-font($color: $text-color) {
+	font: {
+		family: $root-font;
+		size: inherit;
+		weight: $normal;
+	}
+	color: $color;
+	text-rendering: optimizeLegibility;
+}
+
+@mixin header {
+	font: {
+		family: $root-font;
+		weight: $semi-bold;
+	}
+	line-height: 1.15em;
+	margin: 0.25em 0 0.1em;
+}
+
+@mixin disabled-state($disabled-state: $disabled-state) {
+	opacity: $disabled-state;
+	cursor: not-allowed;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+@mixin appearance($appearance) {
+	-webkit-appearance: $appearance;
+	   -moz-appearance: $appearance;
+	        appearance: $appearance;
+}

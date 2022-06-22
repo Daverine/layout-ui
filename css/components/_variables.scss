@@ -1,0 +1,214 @@
+// emmadave ui sass variables
+$root-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$text-color: #292b2c;
+$text-weight: 400;
+$text-size: 16px;
+$page-bg: #fff;
+$line-height: 1.5;
+$margin-default: 1em;
+
+$link-color: rgb(17, 85, 204);
+$footer-link-color: #0275d8;
+$auxiliary-text-color: #636c72;
+
+$emd: emd !default;
+$remd: remd !default;
+
+// H1 to H6
+
+$h1: 2;
+$h2: 1.8;
+$h3: 1.6;
+$h4: 1.4;
+$h5: 1.2;
+$h6: 1;
+
+// Heading Size
+
+$heading-size: 1.1;
+
+// Sizes
+
+$mini: 0.7;
+$small: 0.85;
+$medium: 1;
+$big: 1.25;
+$huge: 1.5;
+
+// Font weight
+
+$light-weight: 300;
+$normal-weight: normal;
+$semibold-weight: 500;
+$bold-weight: bold;
+$extrabold-weight: border;
+
+// Colors
+
+$color-list: (
+	"red": #e53427,
+	"pink": #e91e63,
+	"purple": #9c27b0,
+	"violet": #673ab7,
+	"blue": #2196F3,
+	"teal": #1c9e92,
+	"green": #21ba45,
+	"olive": #b5cc18,
+	"yellow": #fbbd08,
+	"orange": #f2711c,
+	"brown": #a5673f,
+	"blue-grey": #607d8b,
+	"grey": #909090,
+	"black": #000000
+);
+$neutral-bd: rgba(34, 36, 38, 0.2);
+$neutral-bg: #f5f5f5;
+$divider-bd-color: rgba(34, 36, 38, 0.2);
+$inverted-bd-color: rgba(255,255,255,.2);
+$invert-color: rgba(255, 255, 255, 0.9);
+$invert-bg: #1b1c1d;
+$dark-clue: rgba(0, 0, 0, 0.15);
+$light-clue: rgba(255, 255, 255, 0.15);
+
+
+// grids
+
+$num-cols: 12;
+$num-ccols: 6;
+$max-divi: $num-cols/2;
+$gutter-width: 1.5rem !default;
+$element-top-margin: $gutter-width/3 !default;
+$element-bottom-margin: ($gutter-width*2)/3 !default;
+
+// Media Query Ranges
+$small-screen: 480px;
+$medium-screen: 730px;
+$large-screen: 960px;
+$xlarge-screen: 1200px;
+$small-and-up: "only screen and (min-width: #{$small-screen})";
+$medium-and-up: "only screen and (min-width : #{$medium-screen})";
+$large-and-up: "only screen and (min-width : #{$large-screen})";
+$xlarge-and-up: "only screen and (min-width : #{$xlarge-screen})";
+$small-and-down: "only screen and (max-width : #{$small-screen - 1px})";
+$medium-and-down: "only screen and (max-width : #{$medium-screen - 1px})";
+$large-and-down: "only screen and (max-width : #{$large-screen - 1px})";
+$xlarge-and-down: "only screen and (max-width: #{$xlarge-screen - 1px})";
+$medium-only: "only screen and (min-width : #{$small-screen + 100px}) and (max-width : #{$large-screen - 1px})";
+$large-only: "only screen and (min-width : #{$medium-screen + 100px}) and (max-width : #{$xlarge-screen - 1px})";
+
+// radius values
+$radius-default: 1px;
+$radius-sm: 2px;
+$radius-md: 5px;
+$radius-lg: 10px;
+$radius-full: 1000rem;
+$round-radius: 0.3rem;
+
+// border width
+$bd-thin: 1px;
+$bd-medium: 3px;
+$bd-thick: 5px;
+
+// elements states
+$basic-text-color: rgb(0, 0, 0);
+$basic-bg-color: transparent;
+$basic-bd-color: rgb(0, 0, 0);
+
+$primary-text-color: rgb(060, 106, 128);
+$primary-bg-light-color: rgb(249, 252, 254);
+$primary-bd-color: rgb(149, 193, 214);
+
+$positive-text-color: rgb(40, 150, 50);
+$positive-bg-light-color: rgb(244, 255, 230);
+$positive-bd-color: rgb(150, 200, 140);
+
+$caution-text-color: rgb(220, 160, 80);
+$caution-bg-light-color: rgb(255, 250, 240);
+$caution-bd-color: rgb(224, 204, 163);
+
+$negative-text-color: rgb(190, 30, 50);
+$negative-bg-light-color: rgb(255, 247, 249);
+$negative-bd-color: rgb(220, 150, 150);
+
+$disabled-state: 0.5;
+
+// forms variable
+$form-height: 2.4em;
+$form-margin: 0.3em 0em 0.3rem 0em;
+$form-tb-padding: 0.6em;
+$form-lr-padding: 1em;
+$form-padding: calc(#{$form-tb-padding} - 1px) $form-lr-padding;
+$form-line-height: 1.2;
+$form-bd-color: rgb(210, 210, 210);
+$form-bd-hover-color: darken($form-bd-color, 15%);
+$form-bd-focus-color: rgb(120, 180, 240);
+$form-bd: 1px solid $form-bd-color;
+$form-shadow: inset 0px 1px 1px 1px rgba(210, 210, 210, 0.15);
+$form-hover-shadow: 0px 1px 5px rgba(200, 200, 200, 0.07);
+$form-focus-shadow: inset 0px 1px 5px rgba(200, 200, 200, 0.1),  0px 0px 5px rgba(100, 100, 100, 0.1);
+$form-disabled-color: #999999;
+$form-disabled-bg: #f9f9f9;
+$form-disabled-bd-color: #eaeaea;
+$form-positive-bd-color: #43a047;
+$form-positive-bg-color: #f9fdf4;
+$form-negative-bd-color: #e81123;
+$form-negative-bg-color: #fdfafa;
+
+// Button variables
+$button-line-height: 1em;
+$button-height: 2.2em;
+$button-compact: 1.8em;
+$button-loose: 2.6em;
+$button-label-width: $button-height;
+$button-padding-tb: 0.6em;
+$button-padding-lr: 1.5em;
+$button-padding: $button-padding-tb $button-padding-lr;
+$button-compact-tb-padding: 0.4em;
+$button-compact-lr-padding: $button-compact * $button-padding-lr / $button-height;
+$button-compact-padding: $button-compact-tb-padding $button-compact-lr-padding;
+$button-loose-tb-padding: 0.8em;
+$button-loose-lr-padding: ($button-loose * $button-padding-lr / $button-height);
+$button-loose-padding: $button-loose-tb-padding $button-loose-lr-padding;
+$button-fancy: 0 2px 5px 0 rgba(0, 0, 0, 0.16),0 2px 10px 0 rgba(0, 0, 0, 0.12);
+$button-fancy-hover: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15);
+$button-default: $text-color;
+$button-default-bg: rgb(225, 225, 225);
+$button-default-hf-bg: rgb(215, 215, 215);
+$button-default-active-bg: rgb(205, 205, 205);
+$button-primary: #fff;
+$button-primary-bg: rgb(33, 133, 208);
+$button-primary-hf-bg: rgb(0, 137, 230);
+$button-primary-active-bg: rgb(21, 131, 204);
+$button-positive: #fff;
+$button-positive-bg: rgb(33, 186, 69);
+$button-positive-hf-bg: rgb(50, 200, 100);
+$button-positive-active-bg: rgb(20, 180, 80);
+$button-caution: #fff;
+$button-caution-bg: rgb(225, 190, 70);
+$button-caution-hf-bg: rgb(230, 195, 75);
+$button-caution-active-bg: rgb(220, 185, 65);
+$button-negative: #fff;
+$button-negative-bg: rgb(225, 75, 70);
+$button-negative-hf-bg: rgb(220, 55, 55);
+$button-negative-active-bg: rgb(219, 40, 40);
+$button-secondary: #fff;
+$button-secondary-bg: #333;
+$button-secondary-hf-bg: #444;
+$button-secondary-active-bg: #222;
+$button-disabled-opacity: 0.5;
+
+// label
+$label-font-size: 0.8;
+$label-height: 1.7em;
+$label-compact: 1.5em;
+$label-loose: 1.9em;
+$label-tb-padding: 0.375em;
+$label-lr-padding: 0.375em;
+$label-padding: $label-tb-padding $label-lr-padding;
+$label-compact-tb-padding: 0.275em;
+$label-compact-lr-padding: $label-compact * $label-lr-padding / $label-height;
+$label-compact-padding: $label-compact-tb-padding $label-compact-lr-padding;
+$label-loose-tb-padding: 0.475em;
+$label-loose-lr-padding: $label-loose * $label-lr-padding / $label-height;
+$label-loose-padding: $label-loose-tb-padding $label-loose-lr-padding;
+$label-bg: #e9e9e9;

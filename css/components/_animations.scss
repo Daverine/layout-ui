@@ -1,0 +1,419 @@
+[data-lui-anim] {
+  &.visible {
+    animation-name: fadeIn;
+    opacity: 1;
+  }
+
+  &:not(.visible) {
+    animation-name: fadeOut;
+    opacity: 0;
+  }
+}
+
+// In and Out Animation
+
+[data-lui-anim="scale"].visible {
+  animation-name: scaleIn;
+}
+
+[data-lui-anim="scale"]:not(.visible) {
+  animation-name: scaleOut;
+}
+
+[data-lui-anim="scaleX"].visible {
+  animation-name: scaleXIn;
+}
+
+[data-lui-anim="scaleX"]:not(.visible) {
+  animation-name: scaleXOut;
+}
+
+[data-lui-anim="scaleY"].visible,
+[data-lui-anim="slide"].visible {
+  animation-name: scaleYIn;
+}
+
+[data-lui-anim="scaleY"]:not(.visible),
+[data-lui-anim="slide"]:not(.visible) {
+  animation-name: scaleYOut;
+}
+
+[data-lui-anim="xFlip"].visible {
+  animation-name: horizontalFlipIn;
+}
+
+[data-lui-anim="xFlip"]:not(.visible) {
+  animation-name: horizontalFlipOut;
+}
+
+[data-lui-anim="yFlip"].visible {
+  animation-name: verticalFlipIn;
+}
+
+[data-lui-anim="yFlip"]:not(.visible) {
+  animation-name: verticalFlipOut;
+}
+
+[data-lui-anim="fadeUp"].visible {
+  animation-name: fadeInUp;
+}
+
+[data-lui-anim="fadeUp"]:not(.visible) {
+  animation-name: fadeOutUp;
+}
+
+[data-lui-anim="fadeLeft"].visible {
+  animation-name: fadeInLeft;
+}
+
+[data-lui-anim="fadeLeft"]:not(.visible) {
+  animation-name: fadeOutLeft;
+}
+
+[data-lui-anim="fadeDown"].visible {
+  animation-name: fadeInDown;
+}
+
+[data-lui-anim="fadeDown"]:not(.visible) {
+  animation-name: fadeOutDown;
+}
+
+[data-lui-anim="fadeRight"].visible {
+  animation-name: fadeInRight;
+}
+
+[data-lui-anim="fadeRight"]:not(.visible) {
+  animation-name: fadeOutRight;
+}
+
+// Infinite animation
+
+.spinning,
+.alt-spinning {
+  backface-visibility: hidden;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+}
+.spinning {
+  animation-name: spin;
+}
+.alt-spinning {
+  animation-name: spinAlt;
+}
+
+// animations keyframe
+
+// FadeIn and fadeOut
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: tranlateY(0%);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: tranlateX(0%);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOutUp {
+  from {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
+@keyframes fadeOutLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+@keyframes fadeOutRight {
+  from {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+// ScaleIn and ScaleOut
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+// Scaler X axis alone
+
+@keyframes scaleXIn {
+  from {
+    opacity: 0;
+    transform: scaleX(0.25);
+  }
+
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes scaleXOut {
+  from {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scaleX(0.25);
+  }
+}
+
+// Scaler Y axis alone
+
+@keyframes scaleYIn {
+  from {
+    opacity: 0;
+    transform: scaleY(0.25);
+  }
+
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+@keyframes scaleYOut {
+  from {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scaleY(0.25);
+  }
+}
+
+// Horizontal FlipIn and FlipOut
+
+@keyframes horizontalFlipIn {
+  from {
+    opacity: 0;
+    transform: perspective(2000px) rotateY(-90deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: perspective(2000px) rotateY(0deg);
+  }
+}
+
+@keyframes horizontalFlipOut {
+  from {
+    opacity: 1;
+    transform: perspective(2000px) rotateY(0deg);
+  }
+
+  to {
+    opacity: 0;
+    transform: perspective(2000px) rotateY(90deg);
+  }
+}
+
+// Vertical Flip
+
+@keyframes verticalFlipIn {
+  from {
+    opacity: 0;
+    transform: perspective(2000px) rotateX(-90deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: perspective(2000px) rotateX(0deg);
+  }
+}
+
+@keyframes verticalFlipOut {
+  from {
+    opacity: 1;
+    transform: perspective(2000px) rotateX(0deg);
+  }
+
+  to {
+    opacity: 0;
+    transform: perspective(2000px) rotateX(90deg);
+  }
+}
+
+// Spin
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinAlt {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+// Grow and Shrink Horizontally
+
+@keyframes growH {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes shrinkH {
+  from {
+    width: 100%;
+  }
+
+  to {
+    width: 0%;
+  }
+}
+
+// Grow and Shrink Vertically
+
+@keyframes growV {
+  from {
+    height: 0%;
+  }
+
+  to {
+    height: 100%;
+  }
+}
+
+@keyframes shrinkV {
+  from {
+    height: 100%;
+  }
+
+  to {
+    height: 0%;
+  }
+}

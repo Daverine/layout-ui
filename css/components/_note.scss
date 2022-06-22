@@ -1,0 +1,150 @@
+$note-basic: #666;
+$note-basic-bg: rgb(248, 248, 249);
+$note-basic-bd: #cdcdce;
+$note-header-font-size: 1.1em;
+$note-info: rgba(60, 106, 128, 0.85);
+$note-info-bg: rgb(250, 253, 255);
+$note-info-bd-color: rgb(149, 193, 214);
+$note-positive: rgba(70, 150, 90, 0.85);
+$note-positive-bg: rgb(249, 255, 247);
+$note-positive-bd-color: rgb(157, 208, 166);
+$note-caution: #b38739;
+$note-caution-bg: #fffee3;
+$note-caution-bd-color: #ceb876;
+$note-negative: #c8586a;
+$note-negative-bg: #fff9fb;
+$note-negative-bd-color: #dc9696;
+
+/* --- NOTE --- */
+
+.note, .callout {
+	position: relative;
+	display: block;
+	font-size: 1rem;
+	line-height: 1.2;
+	margin: 1rem 0em;
+	padding: 0.88em 1.5em 0.88em 1em;
+	color: $note-basic;
+	transition: opacity 0.1s ease, color 0.1s ease, background 0.1s ease, border-color 0.1s ease;
+
+	& .heading { margin: 0 0 0.2em; }
+
+	&.#{$emd} { font-size: 1em; }
+	
+	& > :first-child { margin-top: 0; }
+	
+	& > :last-child { margin-bottom: 0; }
+
+	&.compact { padding: 0.7em 1em; }
+	
+	&.loose { padding: 1.3em 1em; }
+
+	/* Close Icon */
+	& > .close.icon {
+		cursor: pointer;
+		position: absolute;
+		margin: 0em;
+		top: 0.5em;
+		right: 0.25em;
+		opacity: 0.7;
+		transition: opacity 0.1s ease;
+	}
+
+	& > .close.icon:hover {
+		opacity: 1;
+	}
+
+	&.icon {
+		display: flex;
+		align-items: center;
+
+		& > .icon.main:not(.close) {
+			width: auto;
+			line-height: 1;
+			font-size: 2em;
+			flex: 0 0 auto;
+			vertical-align: middle;
+
+			&:first-child { margin-right: 0.5em; }
+			
+			&:last-child { margin-left: 0.5em; }
+		}
+
+		& > .content {
+			vertical-align: middle;
+			flex: 1 1 auto;
+		}
+	}
+}
+
+.note {
+	border-radius: $radius-default;
+	border: 1px solid $note-basic-bd;
+	background: $note-basic-bg;
+
+	// status variation
+
+	&.info {
+		color: $note-info;
+		background-color: $note-info-bg;
+		border-color: $note-info-bd-color;
+	}
+
+	&.positive {
+		color: $note-positive;
+		background-color: $note-positive-bg;
+		border-color: $note-positive-bd-color;
+	}
+
+	&.caution {
+		color: $note-caution;
+		background-color: $note-caution-bg;
+		border-color: $note-caution-bd-color;
+	}
+
+	&.negative {
+		color: $note-negative;
+		background-color: $note-negative-bg;
+		border-color: $note-negative-bd-color;
+	}
+
+	// Floating Note
+
+	&.floating {
+		box-shadow: 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.15);
+	}
+}
+
+.callout {
+	background-color: #fff;
+	border-left: 3px solid #a7a7a7;
+	box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+
+	&.info {
+		background-color: #f4f8fa;
+		border-color: #73a2bf;
+
+		& .callout-color {color: #4caf50;}
+	}
+
+	&.positive {
+		background-color: #f5ffed;
+		border-color: #4caf50;
+
+		& .callout-color {color: #4caf50;}
+	}
+
+	&.caution {
+		background-color: #fff4cc;
+		border-color: #b38739;
+
+		& .callout-color {color: #f0ad4e;}
+	}
+
+	&.negative {
+		background-color: #fdf7f7;
+		border-color: #d9534f;
+
+		& .callout-color {color: #d9534f;}
+	}
+}

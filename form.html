@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Form - Layout-UI</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/layout-ui.css" type="text/css">
+		<script src="js/require/jquery-2.1.4.min.js"></script>
+		<script src="js/layout-ui.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<div class="container" data-level="1">
+				<div class="heading">Form</div>
+				<p class="big">Easily create nice looking forms with different styles and layout.</p>
+			</div>
+			<hr />
+		</header>
+
+		<article>
+			<div class="no-gutter row container">
+				<div id="mainContent" class="padded 12-width md-10-width col">
+					<section data-level="3">
+						<div class="heading">Definition</div>
+						<p>A form displays a set of related user input fields in a structured way.</p>
+					</section>
+					
+					<section data-level="3">
+						<div class="heading">Basic Form compontent Usage</div>
+						<p>All form components are created by their normal html syntax. The <code>input</code> element with it <code>type</code> attribute, the <code>select</code> box and the <code>textarea</code>.</p>						
+
+						<div class="preview-box">
+							<input type="text" placeholder="A simple text input" /><br />
+							<input type="checkbox" id="testCheckbox">
+							<label for="testCheckbox">I agree to the Terms and Conditions</label><br />
+							<div class="info note">A checkbox can also be used as a switch. Follow the code below for switch to create one.</div>
+							<input class="switch" type="checkbox" id="testSwitch">
+							<label for="testSwitch">I want to switch on the notification</label><br />
+							<label>Are you a spirit?</label>
+							<input type="radio" name="question" id="yes" />
+							<label for="yes">Yes</label>
+							<input type="radio" name="question" id="no" />
+							<label for="no">No</label><br />
+							<select>
+								<option>Male</option>
+								<option>Female</option>
+							</select><br />
+							<textarea></textarea><br />
+							<input type="file" /><br />
+							<input type="range" />
+						</div>
+
+						<div class="markup-box">
+							<code>&lt;input type="text" placeholder="A simple text input" /&gt;</code>
+							<div class="note">The input <code>type</code> attribute can be any type of input that can contain a character. eg. text, password, number, date, file, range ...</div>
+
+							<code>&lt;div class="checkbox"&gt;<br />
+								&nbsp;&nbsp;&lt;input type="checkbox" /&gt;<br />
+								&nbsp;&nbsp;&lt;div class="box"&gt;&lt;/div&gt;<br />
+							&lt;/div&gt;</code> <br /><br />
+							<code>&lt;div class="switch"&gt;<br />
+								&nbsp;&nbsp;&lt;input type="checkbox" /&gt;<br />
+								&nbsp;&nbsp;&lt;div class="lever"&gt;&lt;/div&gt;<br />
+							&lt;/div&gt;</code><br /><br />
+							<code>&lt;div class="radio"&gt;<br />
+								&nbsp;&nbsp;&lt;input type="radio" /&gt;<br />
+								&nbsp;&nbsp;&lt;div class="box"&gt;&lt;/div&gt;<br />
+							&lt;/div&gt;</code>
+
+							<div class="note"><ul>
+								<li>To use customized checkbox and radio button you need to follow the example code above.</li>
+								<li>The <code>box</code> classed element in the checkbox or radio div can be a label.
+								</li>
+							</ul></div>
+
+							<code>&lt;select&gt;<br />
+								&nbsp;&nbsp;&lt;option&gt;...&lt;/option&gt;<br />
+								&nbsp;&nbsp;&lt;option&gt;...&lt;/option&gt;<br />
+								&lt;/select&gt;<br /><br />
+								&lt;textarea&gt;&lt;/textarea&gt;
+							</code>
+						</div>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">The input-box and its components</div>
+						<p>The input element can be extended with addons i.e button, label, select, ..., and icon. These is done by creating a <code>div</code> that has an <code>input-box</code> class and adding a box-like form component (like input[type=text], select, etc.) that has the <code>subject</code> class, and any desired components to the div.<br>
+						See different ways to use it below.</p>
+
+						<section data-level="4">
+							<div class="heading">Icon Input-box</div>
+							<p>A box-like form component can have an icon inside of it as a badge.</p>
+						
+							<div class="preview-box">
+								<div class="icon input-box">
+									<input type="text" class="subject" placeholder="Search..." />
+									<i class="icon i-magnify" data-icon="search"></i>
+								</div><br />
+								<div class="left-icon input-box">
+									<input type="text" class="subject" placeholder="Search..." />
+									<i class="icon i-magnify" data-icon="search"></i>
+								</div>
+								
+								<div class="caution note">When using component like select, you have to be mindful of where you place your barge icon to avoid overlapping of icons.</div>
+
+								<div class="left-icon input-box">
+									<select class="subject">
+										<option>Select Color...</option>
+										<option>Green</option>
+										<option>Blue</option>
+										<option>Red</option>
+									</select>
+									<i class="icon i-cube" data-icon="search"></i>
+								</div><br />
+								<div class="left-icon input-box">
+									<div class="select dropdown subject" tabindex="0">
+										<div class="placeholder">Select an Item</div>
+										<i class="icon i-menu-down"></i>
+										<input type="hidden" name="want">
+										<div class="drop menu">
+											<div class="item" data-value="1">item 1</div>
+											<div class="item" data-value="2">item 2</div>
+											<div class="item" data-value="3">item 3</div>
+											<div class="item" data-value="4">item 4</div>
+										</div>
+									</div>
+									<i class="icon i-cube" data-icon="search"></i>
+								</div>
+							</div>
+
+							<div class="markup-box">
+								<code><mark data-mark-colour="yellow">&lt;div class="icon input-box"&gt;</mark><br />
+									<mark data-mark-colour="green">&nbsp;&nbsp;&lt;input type="text" class="subject" placeholder="Search..." /&gt;</mark><br />
+									<mark data-mark-colour="pink">&nbsp;&nbsp;&lt;i class="icon i-magnify"&gt;&lt;/i&gt;</mark><br />
+								<mark data-mark-colour="yellow">&lt;/div&gt;</mark></code><br><br>
+							</div>
+							
+							<div class="note"><ul>
+								<li>The code highlighted with <span class="circular label mark" data-mark-colour="yellow"></span> is the input-box. It must have <code>icon</code> class to tell the input box you will add an icon inside the box. And you can also prefix the <code>icon</code> class with <code>left</code> (as in <code>left-icon</code>) to tell the input-box you want the icon at the left-side of the box.
+								<li>The code highlighted with <span class="circular label mark" data-mark-colour="green"></span> can be any box-like form component (eg, input type=text, select, .select,dropdown etc.). And it must have the <code>subject</code> class.</li>
+								<li>The code hightlighted with <span class="circular label mark" data-mark-colour="pink"></span> can contain any icon but it must have the <code>icon</code> class.</li>
+							</ul></div>
+							
+							<div class="caution note">It is better to place the icon after the subject to show the subject focus change on the icon. i.e When the subject is focused on, the icon also shows it focus state.</div>
+						</section>
+
+						<section data-level="4">
+							<div class="heading">Loading Input-box</div>
+							<p>An Input can appear to be loading.</p>
+
+						 	<div class="preview-box">
+								<div class="loading input-box" data-load-pos="left">
+									<input type="text" class="subject" placeholder="Loading..." />
+									<span class="loader"></span>
+								</div>
+								<br />
+								<div class="loading input-box" data-load-pos="right">
+									<input type="text" class="subject" placeholder="Loading..." />
+									<span class="loader"></span>
+								</div>
+
+								<div class="info note">When using component like select and select dropdown you have to be mindful of where you place your barge icon to avoid overlapping in icons.</div>
+
+								<div class="loading input-box" data-load-pos="left">
+									<select class="subject">
+										<option>Select Color...</option>
+										<option>Green</option>
+										<option>Blue</option>
+										<option>Red</option>
+									</select>
+									<i class="icon i-magnify loader" data-icon="search"></i>
+								</div><br />
+								<div class="loading left-icon input-box">
+									<div class="select dropdown subject" tabindex="0">
+										<div class="placeholder">Select an Item</div>
+										<i class="icon i-menu-down"></i>
+										<input type="hidden" name="want">
+										<div class="drop menu">
+											<div class="item" data-value="1">item 1</div>
+											<div class="item" data-value="2">item 2</div>
+											<div class="item" data-value="3">item 3</div>
+											<div class="item" data-value="4">item 4</div>
+										</div>
+									</div>
+									<i class="icon i-magnify loader" data-icon="search"></i>
+								</div>
+							</div>
+
+							<div class="markup-box">
+								<code><mark data-mark-colour="yellow">&lt;div class="loading input-box" data-load-pos="left"&gt;</mark><br />
+									<mark data-mark-colour="green">&nbsp;&nbsp;&lt;input type="text" class="subject" placeholder="Search..." /&gt;</mark><br />
+									<mark data-mark-colour="pink">&nbsp;&nbsp;&lt;span class="loader"&gt;&lt;/span&gt;</mark><br />
+								<mark data-mark-colour="yellow">&lt;/div&gt;</mark></code><br />
+							</div>
+
+							<div class="info note"><ul>
+								<li>A loading input-box requires an attribute of <code>data-load-pos</code> to position the loader either to the <code>left</code> or the <code>right</code>.</li>
+								<li>A loading input can be easily integrated into an icon input. Just add the <code>loader</code>class to the main icon. You can then toggle the <code>loading</code> class to the input div to show the loading state.</li>
+								<li>You don't need to use the <code>data-load-pos</code> when the loading input is intergrated into the icon input.</li>
+							</ul></div> 
+
+							<div class="preview-box">
+								<div class="loading left-icon input-box" id="formid1">
+									<input type="text" class="subject" placeholder="Toggle loading..." />
+									<i class="icon i-magnify loader"></i>
+								</div>
+								<button class="button" onclick="$('#formid1').toggleClass('loading')">Toggle Loading</button>
+							</div>
+						</section>
+
+						<section data-level="4">
+							<div class="heading">Expandable Input-box</div>
+							<p>An Input-box can have it subject extended with components like button, label, select etc. The input-box must have the <code>expandable</code>, the subject must have the <code>subject</code> class and the component to be added to input-box must be classed <code>addon</code>. Also note that the addon will appear in any position you place it in your code relative to the subject.</p>
+
+							<div class="preview-box">
+								<div class="expandable input-box">
+									<input type="text" class="subject" placeholder="Expanded with button" />
+									<a href="" class="button addon">Button</a>
+								</div><br />
+								<div class=" expandable input-box">
+									<a href="" class="positive button addon">Button</a>
+									<input type="text" class="subject" placeholder="Expanded with button" />
+								</div><br />
+								<div class="expandable input-box">
+									<input type="text" class="subject" placeholder="Expanded with label" />
+									<a href="" class="label addon">Label</a>
+								</div><br />
+								<div class="expandable input-box">
+									<a href="" class="label addon">Label</a>
+									<input type="text" class="subject" placeholder="Expanded with label" />
+								</div><br />
+								<div class=" expandable input-box">
+									<a href="" class="positive button addon">Button</a>
+									<input type="text" class="subject" placeholder="Expanded with button" />
+									<a href="" class="label addon">Label</a>
+								</div><br />
+								<div class="expandable input-box">
+									<select class="subject">
+										<option>Select Color...</option>
+										<option>Green</option>
+										<option>Blue</option>
+										<option>Red</option>
+									</select>
+									<a href="" class="button addon">Button</a>
+								</div><br />
+								<div class=" expandable input-box">
+									<a href="" class="positive button addon">Button</a>
+									<div class="select dropdown subject" tabindex="0">
+										<div class="placeholder">Select an Item</div>
+										<i class="icon i-menu-down"></i>
+										<input type="hidden" name="want">
+										<div class="drop menu">
+											<div class="item" data-value="1">item 1</div>
+											<div class="item" data-value="2">item 2</div>
+											<div class="item" data-value="3">item 3</div>
+											<div class="item" data-value="4">item 4</div>
+										</div>
+									</div>
+								</div><br />
+								
+							</div>
+
+							<div class="markup-box">
+								<code><mark data-mark-colour="yellow">&lt;div class="expandable input-box"&gt;</mark><br />
+								<mark data-mark-colour="green">&nbsp;&nbsp;&lt;input type="text" class="subject" placeholder="Expanded with button" / &gt;</mark><br />
+								<mark data-mark-colour="pink">&nbsp;&nbsp;&lt;a class="addon button"&gt;Button&lt;/a&gt;</mark><br />
+								<mark data-mark-colour="yellow">&lt;/div&gt;</mark></code>
+							</div>
+						</section>
+
+						<section data-level="4">
+							<div class="heading">Using different Input-box feature together</div>
+							<p>An expandable input-box can also have an icon or a loader in it. But it must be positioned in an opposing direction with the addon of the expandable input. Except if the subject is another input-box that already has it icon or loader in it i.e icon input-box, or loading input-box.</p>
+
+							<div class="info note">If an icon or a loader will be used in an expandable input-box, it must not be the first or the last component in the input box. In other words the <code>subject</code> or an <code>addon</code> component should be the first or last element in the input-box to ensure an accurate border radius.</div>
+							
+							<div class="preview-box">
+								<div class="left-icon expandable input-box">
+									<input type="text" class="subject" placeholder="Icon + addon" />
+									<a href="" class="button addon">Button</a>
+									<i class="icon i-magnify" data-icon="search"></i>
+								</div><br />
+								<div class="right-icon expandable input-box">
+									<a href="" class="button addon">Button</a>
+									<i class="icon i-magnify" data-icon="search"></i>
+									<input type="text" class="subject" placeholder="Icon + addon" />
+								</div>
+							</div>
+
+							<div class="markup-box">
+								<code><mark data-mark-colour="yellow">&lt;div class="left-icon expandable input-box"&gt;</mark><br />
+								<mark data-mark-colour="green">&nbsp;&nbsp;&lt;input type="text" class="subject" placeholder="Expanded with button" / &gt;</mark><br />
+								<mark data-mark-colour="pink">&nbsp;&nbsp;&lt;i class="icon i-magnify"&gt;&lt;/i&gt;</mark><br />
+								<mark data-mark-colour="blue">&nbsp;&nbsp;&lt;a class="addon button"&gt;Button&lt;/a&gt;</mark><br />
+								<mark data-mark-colour="yellow">&lt;/div&gt;</mark></code><br /><br />
+								
+								<code><mark data-mark-colour="yellow">&lt;div class="icon expandable input-box"&gt;</mark><br />
+								<mark data-mark-colour="blue">&nbsp;&nbsp;&lt;a class="addon button"&gt;Button&lt;/a&gt;</mark><br />
+								<mark data-mark-colour="pink">&nbsp;&nbsp;&lt;i class="icon i-magnify"&gt;&lt;/i&gt;</mark><br />
+								<mark data-mark-colour="green">&nbsp;&nbsp;&lt;input type="text" class="subject" placeholder="Expanded with button" / &gt;</mark><br />
+								<mark data-mark-colour="yellow">&lt;/div&gt;</mark></code>
+							</div>
+
+							<div class="preview-box">
+								<div class="sub heading">Example for a coupled icon input in an expandable input</div>
+								<div class="expandable input-box">
+									<div class="icon input-box subject">
+										<input type="text" class="subject" placeholder="An Icon Input with Expandable Input" />
+										<i class="icon i-magnify"></i>
+									</div>
+									<a class="button addon">Button</a>
+								</div>
+							</div>
+
+							<div class="markup-box">								
+								<code><mark data-mark-colour="yellow">&lt;div class="expandable input-box"&gt;</mark><br />
+								<mark data-mark-colour="green">&nbsp;&nbsp;&lt;div class="icon input-box subject"&gt;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" class="subject" placeholder="Expanded with button" / &gt;<br />
+								<mark data-mark-colour="pink">&nbsp;&nbsp;&nbsp;&nbsp;&lt;i class="icon i-magnify"&gt;&lt;/i&gt;</mark><br />
+								&nbsp;&nbsp;&lt;/div&gt;</mark><br/>
+								<mark data-mark-colour="blue">&nbsp;&nbsp;&lt;a class="addon button"&gt;Button&lt;/a&gt;</mark><br />
+								<mark data-mark-colour="yellow">&lt;/div&gt;</mark></code>
+							</div>
+						</section>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Form Component Variation</div>
+						<p>There are variations in the way each form component displays. It could in type, state or size.</p>
+
+						<section data-level="4">
+							<div class="heading">Types</div>
+							<p>Input, select and textarea elements can appear in three diffrent types. The layout type, the transparent type and the inverted type.</p>
+
+							<section>
+								<div class="heading">Layout</div>
+								<p>There are two types of layout that an input, a select and a textarea can appear. The box layout and the lined layout. The box layout is the default layout and it is created by the normal syntax of input, select and textarea. Whereas to create an input, a select or a textarea with the lined layout, you need to add the <code>lined</code> class to it.</p>
+
+								<div class="preview-box">
+									<input type="text" placeholder="A box formated input" /><br />
+									<select>
+										<option>Male</option>
+										<option>Female</option>
+									</select><br />
+									<textarea placeholder="A box formated textarea"></textarea><br />
+
+									<input type="text" class="lined" placeholder="A lined formated input" /><br />
+									<select class="lined">
+										<option>Male</option>
+										<option>Female</option>
+									</select><br />
+									<textarea class="lined" placeholder="A lined formated textarea"></textarea><br />
+									<div class="lined select dropdown" tabindex="0">
+										<div class="placeholder">Select an item...</div>
+										<i class="icon i-menu-down"></i>
+										<input type="hidden" data-value="">
+										<div class="drop menu">
+											<div class="item">item 1</div>
+											<div class="item">item 2</div>
+											<div class="item">item 3</div>
+											<div class="item">item 4</div>
+										</div>
+									</div>
+								</div>
+							</section>
+					
+							<section>
+								<div class="heading">Transparent</div>
+								<p>Inputs, selects and textareas can be transparent. To create a transparent input, select or textarea, just add the <code>transparent</code> class to the element.</p>
+
+								<div class="info note">Note that The content or the placeholder is the only visible area of a transparent input, select or textarea.</div>
+
+								<div class="preview-box">
+									<input type="text" class="transparent" placeholder="A tranparent input" /><br />
+									<select class="transparent">
+										<option>Male</option>
+										<option>Female</option>
+									</select><br />
+									<textarea class="transparent" placeholder="A transparent textarea"></textarea>
+								</div>
+							</section>
+
+							<section>
+								<div class="heading">Inverted Input</div>
+								<p>Inputs, selects and textareas can be inverted. And this is done by adding the <code>inverted</code> class to the element. The <code>inverted</code> class gives the element a black background and a white text color.</p>
+
+								<div class="preview-box">	
+								<input type="text" class="inverted" placeholder="An inverted input" /><br />
+								<select class="inverted">
+									<option>Male</option>
+									<option>Female</option>
+								</select><br />
+								<textarea class="inverted" placeholder="An Inverted textarea"></textarea>
+								</div>
+							</section>
+						</section>
+
+						<section data-level="4">
+							<div class="heading">States</div>
+							 <section>
+								<div class="heading">Disabled</div>
+								<p>Inputs, selects and textarea can appear to be disabled. That is done by simply adding the <code>disabled</code> attribute or class.</p>
+
+								<div class="preview-box">
+									<input type="text" disabled placeholder="A disabled input" /><br />
+									<select class="disabled">
+										<option>Male</option>
+										<option>Female</option>
+									</select><br />
+									<textarea disabled placeholder="A disabled textarea"></textarea>
+								</div>
+							</section>
+
+							<section>
+								<div class="heading">Notification state</div>
+								<p>An Input, select and textarea can show a positive or negative state. This is done by adding the state name as class ie. <code>positive</code> and <code>negative</code> classes.</p>
+
+								<div class="preview-box">
+									<input type="text" class="positive" placeholder="A positive input" /><br />
+									<select class="positive">
+										<option>Male</option>
+										<option>Female</option>
+									</select><br />
+									<textarea class="positive" placeholder="A positive textarea"></textarea>
+								</div>
+
+								<div class="preview-box">
+									<input type="text" class="negative" placeholder="A negative input" /><br />
+									<select class="negative">
+										<option>Male</option>
+										<option>Female</option>
+									</select><br />
+									<textarea class="negative" placeholder="A negative textarea"></textarea>
+								</div>
+							</section>
+						</section>
+
+						<section data-level="4">
+							<div class="heading">Sizes</div>
+							<p>We provide four (4) different classes that can be used to adjust the font size of inputs, selects and textareas. They are <code>mini</code>, <code>small</code>, <code>big</code> and <code>huge</code>. The input element will be used as an example.</p>
+
+							<div class="preview-box">
+								<input type="text" class="mini" placeholder="Mini input." /><br />
+								<input type="text" class="small" placeholder="Small input." /><br />
+								<input type="text" class="big" placeholder="Big input." /><br />
+								<input type="text" class="huge" placeholder="Huge input." /><br />
+							</div>
+						</section>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Tweaks and Utilities</div>
+						<p>We provide you with tweaks and utilites to create a nice looking form components.</p>
+
+						<section data-level="4">
+							<div class="heading">Text Fitted Components</div>
+							<p>Inputs, selects and textareas can be formated in a way to fit-in within text. This is done by adding the <code>text-fit</code> class to an element to format.</p>
+
+							<div class="preview-box">
+								<input type="text" class="text-fit" placeholder="I am a text fitted input!" /><br />
+								<select class="text-fit">
+									<option>Male</option>
+									<option>Female</option>
+								</select><br />
+								<textarea class="text-fit" placeholder="I am a text fitted textarea!"></textarea>
+							</div>
+						</section>
+
+						<section data-level="4">
+							<div class="heading">Colour Clue</div>
+							<p>A transparent input, select or textarea can be given a background that makes it appear in relative to it parent background. We provide two different colour clue classes. They are the <code>light-clue</code> and the <code>dark-clue</code>.</p>
+
+							<div class="preview-box">
+								<div style="position: relative; width: 100%; padding: 1em; background-color: black;">
+									<input class="transparent light-clue inverted" placeholder="A light-clue transparent input" /><br />
+									<select class="transparent light-clue inverted">
+										<option>Male</option>
+										<option>Female</option>
+									</select><br />
+									<textarea class="transparent light-clue inverted" placeholder="A light-clue transparent textarea"></textarea>
+								</div><br />
+								<div style="position: relative; width: 100%; padding: 1em; background-color: #c1ddeb;">
+									<input class="transparent dark-clue" placeholder="A dark-clue transparent input" /><br />
+									<select class="transparent dark-clue">
+										<option>Male</option>
+										<option>Female</option>
+									</select><br />
+									<textarea class="transparent dark-clue" placeholder="A light-clue transparent textarea"></textarea>
+								</div>
+							</div>
+						</section>
+
+
+						<section data-level="4">
+							<div class="heading">Field</div>
+							<p>A field is provided as a box to section form components in a form. It could be used as a container for a label and a form component and it also enables some styling possibilities ie. label-placeholder and prefixed field. It is a <code>div</code> element with a <code>field</code> class.</p>
+
+							<div class="preview-box">
+								<div class="field">
+									<label>Full Name</label>
+									<input type="text" placeholder="Coupling of input and label in a field."/>
+								</div>
+								<div class="field">
+									<label>Your Comment</label>
+									<textarea placeholder="Coupling of textarea and label in a field."></textarea>
+								</div>
+								<div class="note">A field can be formated to display a label alongside the principal form component by adding the <code>inline</code> class to the field.</div>
+
+								<div class="inline field">
+									<label>Inline Label</label>
+									<input type="text" placeholder="Field with inline label" />
+								</div>
+							</div>
+
+							<section>
+								<div class="heading">A Label Placeholder Field</div>
+								<p>A label placeholder field is created by adding the <code>label-placholder</code> class to a field that contain an input with the <code>required</code> attribute and a label in respect order ie. the input should be placed before the label. It appears more fitted with a lined input.</p>
+
+								<div class="preview-box">
+									<div class="field label-placeholder">
+										<input type="text" required />
+										<label>Label as placeholder</label>
+									</div>
+									<div class="field label-placeholder">
+										<input type="text" class="lined" required />
+										<label>Label as placeholder</label>
+									</div>
+								</div>
+								
+								<div class="note">Note that if the input used has a placeholder attribute, the Label will remain has a label</div>
+							</section>
+
+							<section>
+								<div class="heading">A prefixed field</div>
+								<p>A field can be prefixed with an icon. This is created by adding the <code>prefixed</code> class to a field and an icon placed before the main form components in the field.</p>
+
+								<div class="preview-box">
+									<div class="prefixed field">
+										<i class="icon prefix i-soccer"></i>
+										<input type="text" />
+									</div>
+									<div class="prefixed field">
+										<label>A label</label>
+										<i class="icon prefix i-soccer"></i>
+										<input type="text" placeholder="A prefixed field with label" />
+									</div>
+									<div class="prefixed label-placeholder field">
+										<i class="icon prefix i-soccer"></i>
+										<input type="text" class="lined" required />
+										<label>A label</label>
+									</div>
+								</div>
+							</section>
+						</section>
+
+						<section data-level="4">
+							<div class="heading">Fields</div>
+							<p>Fields is used as a container for two or more field. It can be used to equally size the fields in it or used as a flex container that enables individual fields in it to be given different sizes and still remain inline. We provide 11 classes to equally size fields and 10 classes to individually size fields in a <strong>fields</strong> component.</p>
+
+							<p>To equally size fields in a <strong>fields</strong> container, a number from 2 to 12 is added as a prefix to the <code>fields</code> classed (seperated with hypen) of a div used to wrap two or more field. ie. <code>&lt;div class="<em>x</em>-fields"&gt;...&lt;/div&gt;</code> where <em>x</em> is a number from 2 to 12.</p>
+
+							<div class="preview-box">
+								<div class="3-fields">
+									<div class="field">
+										<label>First name</label>
+										<input type="text" placeholder="First Name">
+									</div>
+									<div class="field">
+										<label>Middle name</label>
+										<input type="text" placeholder="Middle Name">
+									</div>
+									<div class="field">
+										<label>Last name</label>
+										<input type="text" placeholder="Last Name">
+									</div>
+								</div>
+							</div>
+
+							<p>To individually size a field and retain it inline status, the fields container in is also required. In this case, it is used as a flex container while the individual field is given size from the grid class. The <code>-wide</code> class that is prefixed by a number from 2 to 12 is given to the field ie. <code>&lt;div class="fields"&gt;&lt;div class="field x-width"&gt;...&lt;/div&gt;...&lt;/div&gt;</code> where x is a number from 2 to 12.</p>
+
+							<div class="preview-box">
+								<div class="fields">
+									<div class="7-width field">
+										<label>First name</label>
+										<input type="text" placeholder="First Name">
+									</div>
+									<div class="3-width field">
+										<label>Middle name</label>
+										<input type="text" placeholder="Middle Name">
+									</div>
+									<div class="2-width field">
+										<label>Last name</label>
+										<input type="text" placeholder="Last Name">
+									</div>
+								</div>
+							</div>
+
+							<div class="note"><ul>
+								<li>A single label can be used with multiple fields by using the fields container as the main form component in a field.</li>
+								<li>Fields container is responsive. It makes all the fields in it fluid at a <a href="sreen.html"><em>medium screen and down</em></a></li>
+							</ul></div>
+						</section>
+			
+						<section data-level="4">
+							<div class="heading">Form Examples and Usage</div>
+							<form class="ui form">
+								<div class="field">
+									<label>First Name</label>
+									<input type="text" name="first-name" placeholder="First Name">
+								</div>
+								<div class="field">
+									<label>Last Name</label>
+									<input type="text" name="last-name" placeholder="Last Name">
+								</div>
+								<div class="field">
+									<div class="checkbox">
+										<input type="checkbox">
+										<label class="box">I agree to the Terms and Conditions</label>
+									</div>
+								</div>
+								<button class="ui button" type="submit">Submit</button>
+							</form>
+
+							<form class="ui form">
+								<fieldset>
+									<legend>Shipping Information</legend>
+									<div class="field">
+										<label>Name</label>
+										<div class="2-fields">
+											<div class="field">
+												<input type="text" name="shipping[first-name]" placeholder="First Name">
+											</div>
+											<div class="field">
+												<input type="text" name="shipping[last-name]" placeholder="Last Name">
+											</div>
+										</div>
+									</div>
+									<div class="field">
+										<label>Billing Address</label>
+										<div class="fields">
+											<div class="9-width field">
+												<input type="text" name="shipping[address]" placeholder="Street Address">
+											</div>
+											<div class="3-width field">
+												<input type="text" name="shipping[address-2]" placeholder="Apt #">
+											</div>
+										</div>
+									</div>
+									<div class="2-fields">
+										<div class="field">
+											<label>State</label>
+											<select>
+												<option value="">State</option>
+												<option value="AL">Alabama</option>
+												<option value="AK">Alaska</option>
+												<option value="AZ">Arizona</option>
+												<option value="AR">Arkansas</option>
+												<option value="CA">California</option>
+												<option value="CO">Colorado</option>
+												<option value="CT">Connecticut</option>
+												<option value="DE">Delaware</option>
+												<option value="DC">District Of Columbia</option>
+												<option value="FL">Florida</option>
+												<option value="GA">Georgia</option>
+												<option value="HI">Hawaii</option>
+												<option value="ID">Idaho</option>
+												<option value="IL">Illinois</option>
+												<option value="IN">Indiana</option>
+												<option value="IA">Iowa</option>
+												<option value="KS">Kansas</option>
+												<option value="KY">Kentucky</option>
+												<option value="LA">Louisiana</option>
+												<option value="ME">Maine</option>
+												<option value="MD">Maryland</option>
+												<option value="MA">Massachusetts</option>
+												<option value="MI">Michigan</option>
+												<option value="MN">Minnesota</option>
+												<option value="MS">Mississippi</option>
+												<option value="MO">Missouri</option>
+												<option value="MT">Montana</option>
+												<option value="NE">Nebraska</option>
+												<option value="NV">Nevada</option>
+												<option value="NH">New Hampshire</option>
+												<option value="NJ">New Jersey</option>
+												<option value="NM">New Mexico</option>
+												<option value="NY">New York</option>
+												<option value="NC">North Carolina</option>
+												<option value="ND">North Dakota</option>
+												<option value="OH">Ohio</option>
+												<option value="OK">Oklahoma</option>
+												<option value="OR">Oregon</option>
+												<option value="PA">Pennsylvania</option>
+												<option value="RI">Rhode Island</option>
+												<option value="SC">South Carolina</option>
+												<option value="SD">South Dakota</option>
+												<option value="TN">Tennessee</option>
+												<option value="TX">Texas</option>
+												<option value="UT">Utah</option>
+												<option value="VT">Vermont</option>
+												<option value="VA">Virginia</option>
+												<option value="WA">Washington</option>
+												<option value="WV">West Virginia</option>
+												<option value="WI">Wisconsin</option>
+												<option value="WY">Wyoming</option>
+											</select>
+										</div>
+										<div class="field">
+											<label>Country</label>
+											<select name="country">
+												<option value="af">Afghanistan</option>
+												<option value="ax">Aland Islands</option>
+												<option value="al">Albania</option>
+												<option value="dz">Algeria</option>
+												<option value="as">American Samoa</option>
+												<option value="ad">Andorra</option>
+												<option value="ao">Angola</option>
+												<option value="ai">Anguilla</option>
+												<option value="ag">Antigua</option>
+												<option value="ar">Argentina</option>
+												<option value="am">Armenia</option>
+												<option value="aw">Aruba</option>
+												<option value="au">Australia</option>
+												<option value="at">Austria</option>
+												<option value="az">Azerbaijan</option>
+												<option value="bs">Bahamas</option>
+												<option value="bh">Bahrain</option>
+												<option value="bd">Bangladesh</option>
+												<option value="bb">Barbados</option>
+												<option value="by">Belarus</option>
+												<option value="be">Belgium</option>
+												<option value="bz">Belize</option>
+												<option value="bj">Benin</option>
+												<option value="bm">Bermuda</option>
+												<option value="bt">Bhutan</option>
+												<option value="bo">Bolivia</option>
+												<option value="ba">Bosnia</option>
+												<option value="bw">Botswana</option>
+												<option value="bv">Bouvet Island</option>
+												<option value="br">Brazil</option>
+												<option value="vg">British Virgin Islands</option>
+												<option value="bn">Brunei</option>
+												<option value="bg">Bulgaria</option>
+												<option value="bf">Burkina Faso</option>
+												<option value="ar">Burma</option>
+												<option value="bi">Burundi</option>
+												<option value="tc">Caicos Islands</option>
+												<option value="kh">Cambodia</option>
+												<option value="cm">Cameroon</option>
+												<option value="ca">Canada</option>
+												<option value="cv">Cape Verde</option>
+												<option value="ky">Cayman Islands</option>
+												<option value="cf">Central African Republic</option>
+												<option value="td">Chad</option>
+												<option value="cl">Chile</option>
+												<option value="cn">China</option>
+												<option value="cx">Christmas Island</option>
+												<option value="cc">Cocos Islands</option>
+												<option value="co">Colombia</option>
+												<option value="km">Comoros</option>
+												<option value="cg">Congo Brazzaville</option>
+												<option value="cd">Congo</option>
+												<option value="ck">Cook Islands</option>
+												<option value="cr">Costa Rica</option>
+												<option value="ci">Cote Divoire</option>
+												<option value="hr">Croatia</option>
+												<option value="cu">Cuba</option>
+												<option value="cy">Cyprus</option>
+												<option value="cz">Czech Republic</option>
+												<option value="dk">Denmark</option>
+												<option value="dj">Djibouti</option>
+												<option value="dm">Dominica</option>
+												<option value="do">Dominican Republic</option>
+												<option value="ec">Ecuador</option>
+												<option value="eg">Egypt</option>
+												<option value="sv">El Salvador</option>
+												<option value="gb">England</option>
+												<option value="gq">Equatorial Guinea</option>
+												<option value="er">Eritrea</option>
+												<option value="ee">Estonia</option>
+												<option value="et">Ethiopia</option>
+												<option value="eu">European Union</option>
+												<option value="fk">Falkland Islands</option>
+												<option value="fo">Faroe Islands</option>
+												<option value="fj">Fiji</option>
+												<option value="fi">Finland</option>
+												<option value="fr">France</option>
+												<option value="gf">French Guiana</option>
+												<option value="pf">French Polynesia</option>
+												<option value="tf">French Territories</option>
+												<option value="ga">Gabon</option>
+												<option value="gm">Gambia</option>
+												<option value="ge">Georgia</option>
+												<option value="de">Germany</option>
+												<option value="gh">Ghana</option>
+												<option value="gi">Gibraltar</option>
+												<option value="gr">Greece</option>
+												<option value="gl">Greenland</option>
+												<option value="gd">Grenada</option>
+												<option value="gp">Guadeloupe</option>
+												<option value="gu">Guam</option>
+												<option value="gt">Guatemala</option>
+												<option value="gw">Guinea-Bissau</option>
+												<option value="gn">Guinea</option>
+												<option value="gy">Guyana</option>
+												<option value="ht">Haiti</option>
+												<option value="hm">Heard Island</option>
+												<option value="hn">Honduras</option>
+												<option value="hk">Hong Kong</option>
+												<option value="hu">Hungary</option>
+												<option value="is">Iceland</option>
+												<option value="in">India</option>
+												<option value="io">Indian Ocean Territory</option>
+												<option value="id">Indonesia</option>
+												<option value="ir">Iran</option>
+												<option value="iq">Iraq</option>
+												<option value="ie">Ireland</option>
+												<option value="il">Israel</option>
+												<option value="it">Italy</option>
+												<option value="jm">Jamaica</option>
+												<option value="jp">Japan</option>
+												<option value="jo">Jordan</option>
+												<option value="kz">Kazakhstan</option>
+												<option value="ke">Kenya</option>
+												<option value="ki">Kiribati</option>
+												<option value="kw">Kuwait</option>
+												<option value="kg">Kyrgyzstan</option>
+												<option value="la">Laos</option>
+												<option value="lv">Latvia</option>
+												<option value="lb">Lebanon</option>
+												<option value="ls">Lesotho</option>
+												<option value="lr">Liberia</option>
+												<option value="ly">Libya</option>
+												<option value="li">Liechtenstein</option>
+												<option value="lt">Lithuania</option>
+												<option value="lu">Luxembourg</option>
+												<option value="mo">Macau</option>
+												<option value="mk">Macedonia</option>
+												<option value="mg">Madagascar</option>
+												<option value="mw">Malawi</option>
+												<option value="my">Malaysia</option>
+												<option value="mv">Maldives</option>
+												<option value="ml">Mali</option>
+												<option value="mt">Malta</option>
+												<option value="mh">Marshall Islands</option>
+												<option value="mq">Martinique</option>
+												<option value="mr">Mauritania</option>
+												<option value="mu">Mauritius</option>
+												<option value="yt">Mayotte</option>
+												<option value="mx">Mexico</option>
+												<option value="fm">Micronesia</option>
+												<option value="md">Moldova</option>
+												<option value="mc">Monaco</option>
+												<option value="mn">Mongolia</option>
+												<option value="me">Montenegro</option>
+												<option value="ms">Montserrat</option>
+												<option value="ma">Morocco</option>
+												<option value="mz">Mozambique</option>
+												<option value="na">Namibia</option>
+												<option value="nr">Nauru</option>
+												<option value="np">Nepal</option>
+												<option value="an">Netherlands Antilles</option>
+												<option value="nl">Netherlands</option>
+												<option value="nc">New Caledonia</option>
+												<option value="pg">New Guinea</option>
+												<option value="nz">New Zealand</option>
+												<option value="ni">Nicaragua</option>
+												<option value="ne">Niger</option>
+												<option value="ng">Nigeria</option>
+												<option value="nu">Niue</option>
+												<option value="nf">Norfolk Island</option>
+												<option value="kp">North Korea</option>
+												<option value="mp">Northern Mariana Islands</option>
+												<option value="no">Norway</option>
+												<option value="om">Oman</option>
+												<option value="pk">Pakistan</option>
+												<option value="pw">Palau</option>
+												<option value="ps">Palestine</option>
+												<option value="pa">Panama</option>
+												<option value="py">Paraguay</option>
+												<option value="pe">Peru</option>
+												<option value="ph">Philippines</option>
+												<option value="pn">Pitcairn Islands</option>
+												<option value="pl">Poland</option>
+												<option value="pt">Portugal</option>
+												<option value="pr">Puerto Rico</option>
+												<option value="qa">Qatar</option>
+												<option value="re">Reunion</option>
+												<option value="ro">Romania</option>
+												<option value="ru">Russia</option>
+												<option value="rw">Rwanda</option>
+												<option value="sh">Saint Helena</option>
+												<option value="kn">Saint Kitts and Nevis</option>
+												<option value="lc">Saint Lucia</option>
+												<option value="pm">Saint Pierre</option>
+												<option value="vc">Saint Vincent</option>
+												<option value="ws">Samoa</option>
+												<option value="sm">San Marino</option>
+												<option value="gs">Sandwich Islands</option>
+												<option value="st">Sao Tome</option>
+												<option value="sa">Saudi Arabia</option>
+												<option value="sn">Senegal</option>
+												<option value="cs">Serbia</option>
+												<option value="rs">Serbia</option>
+												<option value="sc">Seychelles</option>
+												<option value="sl">Sierra Leone</option>
+												<option value="sg">Singapore</option>
+												<option value="sk">Slovakia</option>
+												<option value="si">Slovenia</option>
+												<option value="sb">Solomon Islands</option>
+												<option value="so">Somalia</option>
+												<option value="za">South Africa</option>
+												<option value="kr">South Korea</option>
+												<option value="es">Spain</option>
+												<option value="lk">Sri Lanka</option>
+												<option value="sd">Sudan</option>
+												<option value="sr">Suriname</option>
+												<option value="sj">Svalbard</option>
+												<option value="sz">Swaziland</option>
+												<option value="se">Sweden</option>
+												<option value="ch">Switzerland</option>
+												<option value="sy">Syria</option>
+												<option value="tw">Taiwan</option>
+												<option value="tj">Tajikistan</option>
+												<option value="tz">Tanzania</option>
+												<option value="th">Thailand</option>
+												<option value="tl">Timorleste</option>
+												<option value="tg">Togo</option>
+												<option value="tk">Tokelau</option>
+												<option value="to">Tonga</option>
+												<option value="tt">Trinidad</option>
+												<option value="tn">Tunisia</option>
+												<option value="tr">Turkey</option>
+												<option value="tm">Turkmenistan</option>
+												<option value="tv">Tuvalu</option>
+												<option value="ug">Uganda</option>
+												<option value="ua">Ukraine</option>
+												<option value="ae">United Arab Emirates</option>
+												<option value="us">United States</option>
+												<option value="uy">Uruguay</option>
+												<option value="um">Us Minor Islands</option>
+												<option value="vi">Us Virgin Islands</option>
+												<option value="uz">Uzbekistan</option>
+												<option value="vu">Vanuatu</option>
+												<option value="va">Vatican City</option>
+												<option value="ve">Venezuela</option>
+												<option value="vn">Vietnam</option>
+												<option value="wf">Wallis and Futuna</option>
+												<option value="eh">Western Sahara</option>
+												<option value="ye">Yemen</option>
+												<option value="zm">Zambia</option>
+												<option value="zw">Zimbabwe</option>
+											</select>
+										</div>
+									</div>
+								</fieldset>
+								<fieldset>
+									<legend>Billing Information</legend>
+									<div class="field">
+										<label>Card Type</label>
+										<select>
+											<option value="visa">Visa</option>
+											<option value="amex">American Express</option>
+											<option value="discover">Discover</option>
+										</select>
+									</div>
+									<div class="fields">
+										<div class="5-width field">
+											<label>Card Number</label>
+											<input type="text" name="card[number]" maxlength="16" placeholder="Card #">
+										</div>
+										<div class="3-width field">
+											<label>CVC</label>
+											<input type="text" name="card[cvc]" maxlength="3" placeholder="CVC">
+										</div>
+										<div class="4-width field">
+											<label>Expiration</label>
+											<div class="2-fields">
+												<div class="field">
+													<select name="card[expire-month]">
+														<option value="">Month</option>
+														<option value="1">January</option>
+														<option value="2">February</option>
+														<option value="3">March</option>
+														<option value="4">April</option>
+														<option value="5">May</option>
+														<option value="6">June</option>
+														<option value="7">July</option>
+														<option value="8">August</option>
+														<option value="9">September</option>
+														<option value="10">October</option>
+														<option value="11">November</option>
+														<option value="12">December</option>
+													</select>
+												</div>
+												<div class="field">
+													<input type="text" name="card[expire-year]" maxlength="4" placeholder="Year">
+												</div>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+								
+								<fieldset>
+									<legend>Receipt</legend>
+									<div class="field">
+										<label>Send Receipt To:</label>
+										<select>
+											<option value="jenny">Jenny Hess</option>
+											<option value="elliot">Elliot Fu</option>
+											<option value="stevie">Stevie Feliciano</option>
+											<option value="christian">Christian</option>
+											<option value="matt">Matt</option>
+											<option value="justen">Justen Kitsune</option>
+										</select>
+									</div>
+									<div class="padded panel">
+										<div class="field">
+											<div class="switch">
+												<input type="checkbox" name="gift">
+												<label class="lever">Do not include a receipt in the package</label>
+											</div>
+										</div>
+									</div>
+									<div class="ui button" tabindex="0">Submit Order</div>
+								</fieldset>
+							</form>
+						</section>
+					</section>
+				</div>
+			</div>
+		</article>
+	</body>
+	</html>
+<html>                                                                                                        </html> 

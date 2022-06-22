@@ -1,0 +1,629 @@
+/* --- GLOBAL --- */
+
+
+// heading
+.heading {
+	display: block;
+	font-weight: $bold-weight;
+
+	& + * { margin-top: 0 !important; }
+
+	&:not(h1):not(h2):not(h3):not(h4):not(h4):not(h5):not(h6), &.auto {
+		font-size: $heading-size*1em;
+		line-height: 1;
+		margin: 0.5em 0em 0.5em;
+
+		&.sub {font-size: 1em;}
+	}
+
+	&.dividing {
+		padding-bottom: .2rem;
+		border-bottom: 1px solid $neutral-bd;
+	}
+}
+
+// auxiliary colored text
+
+.auxiliary,
+.aux {
+	color: rgba(0,0,0,0.45) !important;
+}
+
+// Element Width
+
+.fluid {
+	width: 100% !important;
+}
+
+// Reponsive Width and Height
+
+.responsive-width {
+	max-width: 100%;
+	height: auto;
+}
+
+.responsive-height {
+	max-height: 100%;
+	width: auto;
+}
+
+// Text styling
+
+.nowrap-text {
+	white-space: nowrap !important;
+}
+
+// Text alignment
+
+.l-aligned {
+	text-align: left !important;
+}
+
+.r-aligned {
+	text-align: right !important;
+}
+
+.centered {
+	text-align: center !important;
+}
+
+.justified {
+	text-align: justify !important;
+}
+
+// Vertical alignment
+
+.top {
+	vertical-align: top !important;
+}
+
+.middle {
+	vertical-align: middle !important;
+}
+
+.bottom {
+	vertical-align: bottom !important;
+}
+
+// Aligner: it enables you to vertically align content of a box
+
+.aligner::before {
+	content: "";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+// Element Float Property
+
+.r-floated {
+	float: right !important;
+}
+.l-floated {
+	float: left !important;
+}
+.not-floated {
+	float: none !important;
+}
+
+// Clearfix
+
+.clearfix, .wrapper {
+	&::before {
+		content: "";
+		display: table-cell;
+	}
+
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+// Element margin
+
+.margined {
+	margin: 1em !important;
+}
+
+.t-margined {
+	margin-top: 1em !important;
+}
+
+.b-margined {
+	margin-bottom: 1em !important;
+}
+
+.l-margined {
+	margin-left: 1em !important;
+}
+
+.r-margined {
+	margin-right: 1em !important;
+}
+
+.h-margined {
+	margin-left: 1em !important;
+	margin-right: 1em !important;
+}
+
+.v-margined {
+	margin-top: 1em !important;
+	margin-bottom: 1em !important;
+}
+
+.auto-margined {
+	margin: auto !important;
+}
+
+.auto-t-margined {
+	margin-top: auto !important;
+}
+
+.auto-b-margined {
+	margin-bottom: auto !important;
+}
+
+.auto-l-margined {
+	margin-left: auto !important;
+}
+
+.auto-r-margined {
+	margin-right: auto !important;
+}
+
+.auto-h-margined {
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+.auto-v-margined {
+	margin-top: auto !important;
+	margin-bottom: auto !important;
+}
+
+.\30-margined {
+	margin: 0 !important;
+}
+
+.\30-t-margined {
+	margin-top: 0 !important;
+}
+
+.\30-b-margined {
+	margin-bottom: 0 !important;
+}
+
+.\30-l-margined {
+	margin-left: 0 !important;
+}
+
+.\30-r-margined {
+	margin-right: 0 !important;
+}
+
+.\30-h-margined {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+
+.\30-v-margined {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+
+// positioning
+
+.static {
+	position: static !important;
+}
+
+.relative {
+	position: relative !important;
+}
+
+.absolute {
+	position: absolute !important;
+}
+
+.fixed {
+	position: fixed !important;
+}
+
+// auto fixed positioning
+
+.t-fixed, .b-fixed {
+	@extend .fixed;
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+
+.l-fixed, .b-fixed {
+	@extend .fixed;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+
+.t-fixed {
+	top: -1px !important;
+	border-top-left-radius: 0em !important;
+	border-top-right-radius: 0em !important;
+}
+
+.b-fixed {
+	bottom: -1px !important;
+	border-bottom-left-radius: 0em !important;
+	border-bottom-right-radius: 0em !important;
+}
+
+.l-fixed {
+	left: -1px !important;
+	border-top-left-radius: 0em !important;
+	border-bottom-left-radius: 0em !important;
+}
+
+.r-fixed {
+	right: -1px !important;
+	border-top-right-radius: 0em !important;
+	border-bottom-right-radius: 0em !important;
+}
+
+// Element display property
+
+.d-inline {display: inline !important;}
+.d-block {display: block !important;}
+.d-iblock {display: inline-block !important;}
+.d-flex {display: flex !important;}
+.d-iflex {display: inline-flex !important;}
+.d-table {display: table !important;}
+.d-itable {display: inline-table !important;}
+
+// Flex Helper
+
+.flex-middle {justify-content: center; align-items: center;}
+.flex-l-aligned {justify-content: flex-start;}
+.flex-centered {justify-content: center;}
+.flex-r-aligned {justify-content: flex-end;}
+.flex-t-aligned {align-items: flex-start;}
+.flex-vcentered {align-items: center;}
+.flex-b-aligned {align-items: flex-end;}
+.flex-row {flex-direction: row;}
+.flex-column {flex-direction: column;}
+.flex-rreverse {flex-direction: row-reverse;}
+.flex-creverse {flex-direction: column-reverse;}
+.flex-wrap {flex-wrap: wrap;}
+.flex-rwrap {flex-wrap: wrap-reverse;}
+.flex-no-wrap {flex-wrap: nowrap;}
+
+// Transform Classes
+
+.flipped, .v-flipped {transform: scaleY(-1);}
+.h-flipped {transform: scaleX(-1);}
+
+.rotated-45 {transform: rotateZ(45deg);}
+.rotated-90 {transform: rotateZ(90deg);}
+.rotated-135 {transform: rotateZ(135deg);}
+.rotated-180 {transform: rotateZ(180deg);}
+.rotated-225 {transform: rotateZ(225deg);}
+.rotated-270 {transform: rotateZ(270deg);}
+.rotated-315 {transform: rotateZ(315deg);}
+
+// truncating text
+
+.truncate {
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+// Element sizing
+
+.mini {font-size: $mini*1rem !important;}
+.small {font-size: $small*1rem !important;}
+.big {font-size: $big*1rem !important;}
+.huge {font-size: $huge*1rem !important;}
+
+// rem element sizing
+
+.#{$emd} {
+	&.mini {font-size: $mini*1em !important;}
+	&.small {font-size: $small*1em !important;}
+	&.big {font-size: $big*1em !important;}
+	&.huge {font-size: $huge*1em !important;}
+}
+
+.\.5x {font-size: 0.5em !important;}
+.\31x {font-size: 1em !important;}
+.\32x {font-size: 2em !important;}
+
+// absolute sizing
+
+.x16 {font-size: 16px !important;}
+.x24 {font-size: 24px !important;}
+.x32 {font-size: 32px !important;}
+.x48 {font-size: 48px !important;}
+.x64 {font-size: 64px !important;}
+
+// Text Formating
+
+.bold {font-weight: $bold-weight !important;}
+.semibold {font-weight: $semibold-weight !important;}
+.normal-weight {font-weight: $normal-weight !important;}
+
+.italic {font-style: italic !important;}
+.normal {font-style: normal !important;}
+
+// Text transform
+
+.lowercased {text-transform: lowercase !important;}
+.uppercased {text-transform: uppercase !important;}
+.capitalized {text-transform: capitalize !important;}
+
+// Element border Width
+
+.thin-bordered {border-width: $bd-thin !important;}
+.medium-bordered {border-width: $bd-medium !important;}
+.thick-bordered {border-width: $bd-thick !important;}
+
+.auto-bordered {border: 1px solid $neutral-bd;}
+.auto-t-bordered, .auto-v-bordered {border-top: 1px solid $neutral-bd;}
+.auto-b-bordered, .auto-v-bordered {border-bottom: 1px solid $neutral-bd;}
+.auto-l-bordered, .auto-h-bordered {border-left: 1px solid $neutral-bd;}
+.auto-r-bordered, .auto-h-bordered {border-right: 1px solid $neutral-bd;}
+
+// Rounded Classes
+
+.rounded {border-radius: $round-radius;}
+.sm-rounded {border-radius: $radius-sm !important;}
+.md-rounded {border-radius: $radius-md !important;}
+.lg-rounded {border-radius: $radius-lg !important;}
+.fully-rounded {border-radius: $radius-full !important;}
+.not-rounded {border-radius: 0px !important;}
+
+// Hidden Element
+
+.hidden,
+.filtered {
+	display: none !important;
+}
+@media #{$small-and-down} {
+	.sm-and-down-hidden {display: none !important;}
+}
+@media #{$medium-and-down} {
+	.md-and-down-hidden {display: none !important;}
+}
+@media #{$large-and-down} {
+	.lg-and-down-hidden {display: none !important;}
+}
+@media #{$xlarge-and-down} {
+	.xl-and-down-hidden {display: none !important;}
+}
+@media #{$small-and-up} {
+	.sm-and-up-hidden {display: none !important;}
+}
+@media #{$medium-and-up} {
+	.md-and-up-hidden {display: none !important;}
+}
+@media #{$large-and-up} {
+	.lg-and-up-hidden {display: none !important;}
+}
+@media #{$xlarge-and-up} {
+	.xl-and-up-hidden {display: none !important;}
+}
+@media print {
+	.print-hidden {display: none !important;}
+}
+
+// Visibility
+
+.visible {display: block !important;}
+
+@media print {
+	.block-at-print {display: block !important;}
+	.iblock-at-print {display: inline-block !important;}
+	.inline-at-print {display: inline !important;}
+	.table-at-print {display: table !important;}
+	.itable-at-print {display: inline-table !important;}
+	.flex-at-print {display: flex !important;}
+	.iflex-at-print {display: inline-flex !important;}
+}
+
+// Element overflow
+
+.auto-overflow {overflow: auto !important;}
+.visible-overflow {overflow: visible !important;}
+.scroll-overflow {overflow: scroll !important;}
+.hidden-overflow {overflow: hidden !important;}
+
+// Pagination
+
+.pagination {
+	margin: 0;
+	margin-bottom: $margin-default;
+
+	li {
+		font-size: 1rem;
+		padding: 0.25em 0.75em;
+		margin-right: 0.25em;
+		border-radius: inherit;
+		display: none;
+
+		&:hover {
+			background-color: #eaeaea;
+			box-shadow: inset -2px 0px 1px solid rgba(0, 0, 0, 0.2);
+		}
+	}
+
+	li:last-child,
+	li:first-child {
+		display: inline-block;
+	}
+
+	@media screen and (min-width: 40em) {
+		li {
+			display: inline-block;
+		}
+	}
+
+	a,
+	a:hover,
+	a:focus,
+	button,
+	button:hover,
+	button:focus {
+		color: inherit;
+		text-decoration: inherit;
+	}
+
+	.active {
+		background: #2199e8;
+		color: #fefefe;
+		cursor: default;
+	}
+
+	.disabled {
+		opacity: 0.6;
+		cursor: not-allowed;
+	}
+
+	.disabled:hover {
+		background: transparent;
+	}
+
+	.ellipsis::after {
+		content: '\2026';
+		padding: 0.1875rem 0.625rem;
+		color: #0a0a0a;
+	}
+}
+
+.pagination-previous a::before,
+.pagination-previous.disabled::before {
+	content: '\00ab';
+	display: inline-block;
+	margin-right: 0.5rem;
+}
+.pagination-next a::after,
+.pagination-next.disabled::after {
+	content: '\00bb';
+	display: inline-block;
+	margin-left: 0.5rem;
+}
+
+// TABS
+
+.tab:not(.active) {
+	display: none;
+}
+
+// miscellaneous
+
+// padding
+
+.padded {padding: 1em;}
+.t-padded {padding-top: 1em;}
+.b-padded {padding-bottom: 1em;}
+.l-padded {padding-left: 1em;}
+.r-padded {padding-right: 1em;}
+.v-padded {padding-top: 1em; padding-bottom: 1em;}
+.h-padded {padding-left: 1em; padding-right: 1em;}
+
+// spacing
+
+.spaced {@extend .l-spaced; @extend .r-spaced;}
+.l-spaced {margin-left: 0.5em !important;}
+.r-spaced {margin-right: 0.5em !important;}
+
+// parent active view (aview element can only be visible when its parent has active class and the nview element is visble when its parent does not have active class.)
+
+*:not(.active) > .aview { display: none !important; }
+*.active > .nview { display: none !important; }
+
+.hoverer {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+// mark styling and different colours for mark
+
+mark,
+.mark {
+	&, &[data-paint=green] { background: #fff7b1; }
+	&[data-paint=green] { background: #c4fb98; }
+	&[data-paint=blue] { background: #bee9fc; }
+	&[data-paint=purple] { background: #ecc7ff; }
+	&[data-paint=pink] { background: #fad2e0; }
+	&[data-paint=orange] { background: #ffd7a9; }
+}
+
+[data-thumbnails] .thumbnail,
+.thumbnail {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	padding: 2px;
+	margin: 8px;
+	width: auto;
+	height: 200px;
+	max-height: 100%;
+	transition: transform 0.35s cubic-bezier(0, 0, 0.25, 1) 0s, opacity 0.35s cubic-bezier(0, 0, 0.25, 1) 0s !important;
+
+	&.active { 
+		border: 2px solid white;
+		box-shadow: 0px 0px 5px 1px #000;
+		transform: scale(1.1);
+	}
+
+	& * {
+		display: block;
+		margin: 0px;
+		width: auto;
+		height: auto;
+		max-height: 100%;
+		max-width: 100%;
+	}
+}
+[data-thumbnails=pico] .thumbnail,
+.thumbnail.pico {
+		height: 75px;
+	}
+
+[data-thumbnails=nano] .thumbnail,
+.thumbnail.nano {
+	height: 100px;
+}
+
+[data-thumbnails=micro] .thumbnail,
+.thumbnail.micro {
+	height: 125px;
+}
+
+[data-thumbnails=mini] .thumbnail,
+.thumbnail.mini {
+	height: 150px;
+}
+
+[data-thumbnails=big] .thumbnail,
+.thumbnail.big {
+	height: 300px;
+}
+
+[data-thumbnails=large] .thumbnail,
+.thumbnail.large {
+	height: 400px;
+}
+
+[data-thumbnails=mega] .thumbnail,
+.thumbnail.mega {
+	height: 500px;
+}

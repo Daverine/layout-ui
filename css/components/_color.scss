@@ -1,0 +1,44 @@
+/* --- COLORS --- */
+
+@each $class, $color in  $color-list {
+	.#{$class} {
+		background-color: $color !important;
+		color: #fff !important;
+		border-color: $color !important;
+
+		&.button:hover,
+		&.button:focus,
+		&.action:hover,
+		&.action:focus { background: lighten($color, 10%) !important; }
+
+		&.active { background: darken($color, 10%) !important; }
+	}
+
+	.#{$class}-bg {background-color: $color !important;}
+	.#{$class}-text {color: $color !important;}
+}
+
+.white {
+	background-color: #fff !important;
+	color: #000 !important;
+	border-color: #fff !important;
+
+	&.button:hover,
+	&.button:focus,
+	&.action:hover,
+	&.action:focus { background-color: darken(#fff, 2%) !important; }
+
+	&.button:active,
+	&.action:active,
+	&.active { background-color: darken(#fff, 5%) !important; }
+}
+
+.white-bg {background-color: #fff;}
+.white-text {color: #fff;}
+
+.transparent-bg {background-color: transparent !important;}
+.dark-clue {background-color: $dark-clue !important;}
+.light-clue {background-color: $light-clue !important;}
+
+.negative-text {color: #e81123;}
+.positive-text {color: #43a047;}

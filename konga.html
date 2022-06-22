@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Konga Mega Menu with lui</title>
+	<link rel="stylesheet" href="css/layout-ui.css" />
+	<style>
+		html {
+			font-family: Helvetica Neue,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,sans-serif;
+			font-size: 16px;
+		}
+		body {
+			font-size: .8125rem;
+		}
+		.menu {
+			margin: 0;
+			max-width: 100%;
+			font-size: 1em;
+		}
+		#menu1 img {
+			max-height: 1.125rem;
+			max-width: 6.25rem;
+		}
+		#menu2 {
+			height: 3.75rem;
+		}
+		#menu2 > .item {
+			padding: .9375rem 1rem;
+		}
+		#menu2 > .item:not(.adaptable) {
+			flex: 0 1 auto;
+			overflow-wrap: break-word;
+			word-break: break-all;
+			word-wrap: break-word;
+		}
+		#menu2 .logo {
+			max-height: 2.1875rem;
+		}
+	</style>
+	<script src="js/require/jquery-2.1.4.min.js"></script>
+	<script src="js/layout-ui.js"></script>
+</head>
+
+<body>
+	<nav>
+		<section id="menu1" class="compact centered menu">
+			<a href="#" class="item">
+				<img data-expand="100" alt="konga travel." src="konga/k_travels2.png">
+			</a>
+			<a href="#" class="item">
+				<img data-expand="100" alt="konga food." src="konga/kongafood.png">
+			</a>
+			<a href="#" class="item">
+				<img data-expand="100" alt="kongaPay." src="konga/konga_pay.png">
+			</a>
+			<a href="#" class="item">
+				<img data-expand="100" alt="konga drinks." src="konga/new_konga_drinks.png">
+			</a>
+			<a href="#" class="item">
+				<img data-expand="100" alt="medical direct." src="konga/konga_health.png">
+			</a>
+			<a href="#" class="item">
+				<img data-expand="100" alt="kxpress logistics." src="konga/k_express2.png">
+			</a>
+			<a href="#" class="item">
+				<img data-expand="100" alt="konga groceries." src="konga/new_konga_groceries.png">
+			</a>
+		</section>
+		<section id="menu2" class="yellow-bg loose menu">
+			<div class="xhover item">
+				<img data-expand="100" class="logo" src="konga/logo.png">
+			</div>
+			<div class="item">
+				Store Locator
+			</div>
+			<div class="item">
+				Sell on Konga
+			</div>
+			<div class="xhover adaptable item">
+				<div class="fluid expandable input-box">
+					<input class="subject" placeholder="Search for products, brands and categories...">
+					<div class="addon icon button">
+						<i class="icon i-magnify"></i>
+					</div>
+				</div>
+			</div>
+			<div class="item dropdown">
+				Help
+				<div class="drop menu">
+					<div class="item">FAQs</div>
+					<div class="item">Contact us</div>
+					<div class="item">Track my order</div>
+				</div>
+			</div>
+			<div class="item">
+				Login/Signup
+			</div>
+			<div class="item">
+				<div class="button">My cart</div>
+			</div>
+		</section>
+		<section id="menu3" class="pink-bg inverted compact menu">
+			<div class="item">All Categories</div>
+			<div class="item">Computer and Accessories</div>
+			<div class="item">Phones and Tablets</div>
+			<div class="item">Electronics</div>
+			<div class="item">Konga Fashion</div>
+			<div class="item">Home and Kitchen</div>
+			<div class="item">Baby, Kids and Toys</div>
+			<div class="item">Other Categories</div>
+		</section>
+		<section id="board1" class="panel grid">
+			<div class="col manual-width" style="width: 20%;">
+				<div class="vertical menu">
+					<div class="item">Computer and Accessories</div>
+					<div class="item">Phones and Tablets</div>
+					<div class="item">Electronics</div>
+					<div class="item">Konga Fashion</div>
+					<div class="item">Home and Kitchen</div>
+					<div class="item">Baby, Kids and Toys</div>
+					<div class="item">Other Categories</div>
+				</div>
+			</div>
+			<div class="padded grid col">
+				<div id="cat1" class="grid">
+					<div class="col grid 4-cols">
+						<div class="col">
+							<div class="heading">Laptops</div>
+							<div class="vertical text menu">
+								<div class="item">Mini Laptops and Netbooks</div>
+								<div class="item">Notebooks</div>
+								<div class="item">Ultrabooks</div>
+								<div class="item">Hybrid PCs</div>
+								<div class="item">Macbooks</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="heading">Desktop and Monitors</div>
+							<div class="vertical text menu">
+								<div class="item">CPUs</div>
+								<div class="item">All In Ones</div>
+								<div class="item">Monitors</div>
+								<div class="item">UPS</div>
+								<div class="item">Servers</div>
+								<div class="item">Desktop Bundles</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="heading">Computing Accessories</div>
+							<div class="vertical text menu">
+								<div class="item">Computer Peripherals</div>
+								<div class="item">Bags, Cases, Covers & Sleeves</div>
+								<div class="item">Laptop & Desktop Accessories</div>
+								<div class="item">Storage Devices</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="heading">Printers, Scanners & Accessories</div>
+							<div class="vertical text menu">
+								<div class="item">Printers</div>
+								<div class="item">Scanners</div>
+								<div class="item">Inks, Toners & Cartridges</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="heading">Wifi & Networking</div>
+							<div class="vertical text menu">
+								<div class="item">Switches</div>
+								<div class="item">Routers</div>
+								<div class="item">Modems</div>
+								<div class="item">Networking Peripherals</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="heading">PC Gaming</div>
+							<div class="vertical text menu">
+								<div class="item">PC Games</div>
+								<div class="item">PC Gaming Accessories</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="heading">Software</div>
+							<div class="vertical text menu">
+								<div class="item">Office & Business</div>
+								<div class="item">Operating Systems</div>
+								<div class="item">Security & Utilities</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="heading">Projectors</div>
+						</div>
+					</div>
+					<div class="col manual-width" style="width: 20%;">
+						<img src="konga/comp21.webp" alt="Picture for Computer and accessories" class="image" />
+					</div>
+				</div>
+			</div>
+		</section>
+	</nav>
+</body>
+</html>

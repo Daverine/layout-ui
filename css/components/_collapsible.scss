@@ -1,0 +1,19 @@
+/* --- COLLAPSIBLE --- */
+
+.collapsible {
+	& .c-toggler {
+		cursor: pointer;
+	}
+
+	&.pointer .c-toggler > .indicator::before {
+		transition: all linear 0.2s;
+	}
+
+	&.pointer .c-toggler:not(.active) > .indicator::before {
+		transform: rotateZ(-90deg);
+	}
+
+	&.c-item {
+		display: none;
+	}
+}

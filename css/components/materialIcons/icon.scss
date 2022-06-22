@@ -1,0 +1,48 @@
+$font-path: "../fonts/materialIcons" !default;
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('#{$font-path}/MaterialIcons-Regular.eot');
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url('#{$font-path}/MaterialIcons-Regular.woff2') format('woff2'),
+       url('#{$font-path}/MaterialIcons-Regular.woff') format('woff'),
+       url('#{$font-path}/MaterialIcons-Regular.ttf') format('truetype');
+}
+
+i.icon {
+  font-family: 'Material Icons';
+  display: inline-block;
+  font-size: inherit;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 0.65em !important;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  &::before {
+    content: attr(data-icon);
+    display: inline-block;
+    font-size: 1.3em;
+    line-height: 0.65em;
+    text-decoration: none !important;
+    text-align: center;
+    white-space: normal;
+    direction: ltr;
+    vertical-align: middle;
+    border-radius: inherit;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'liga';
+  }
+  &.r45::before { transform: rotateZ(45deg) }
+  &.r90::before { transform: rotateZ(90deg) }
+  &.r135::before { transform: rotateZ(135deg) }
+  &.r180::before { transform: rotateZ(180deg) }
+  &.r225::before { transform: rotateZ(225deg) }
+  &.r270::before { transform: rotateZ(270deg) }
+  &.r315::before { transform: rotateZ(315deg) }
+}

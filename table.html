@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Table - Layout UI</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/layout-ui.css" type="text/css">
+		<script src="js/layout-ui.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<div class="container" data-level="1">
+				<div class="heading">Table</div>
+				<p class="big">Easily organize data in tables with nice looking views and styles.</p>
+			</div>
+			<hr />
+		</header>
+
+		<article>
+			<div class="no-gutter row container">
+				<div id="mainContent" class="padded 12-width md-10-width col">
+					<section data-level="3">
+						<div class="heading">Introduction</div>
+						<p>Tables are a nice way to organize a lot of data in rows and columns. We provide a few utility classes to help you style your table as easy as possible.</p>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Typical Table</div>
+						<p>Browsers provide a default syle for table. We dont tamper with the browser's default style. Rather we create a class to diffentiate our table default from the browser's table default. Add the <code>table</code> class to a table to see how our typical table looks like. See example below.</p>
+
+						<div class="preview-box">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th>Item Name</th>
+										<th>Item Price</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td>Alvin</td>
+										<td>Eclair</td>
+										<td>$0.87</td>
+									</tr>
+									<tr>
+										<td>Alan</td>
+										<td>Jellybean</td>
+										<td>$3.76</td>
+									</tr>
+									<tr>
+										<td>Jonathan</td>
+										<td>Lollipop</td>
+										<td>$7.00</td>
+									</tr>
+									<tr>
+										<td>Shannon</td>
+										<td>KitKat</td>
+										<td>$9.99</td>
+									</tr>
+								</tbody>
+								<tfoot>
+									<tr>
+										<th>Name</th>
+										<th>Item Name</th>
+										<th>Item Price</th>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Table Styles</div>
+						<p>We provide different styles for formating a table. Each style will be listed and explained with examples in the following.</p>
+
+						<section data-level="4">
+							<div class="heading">Basic Table</div>
+							<p>A basic style of a table shows the most important borders of the table and makes it appear simple. Add the <code>basic</code> class to a typical table to utilize it. See example below.</p>
+							<div class="preview-box">
+								<table class="basic table">
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Item Name</th>
+											<th>Item Price</th>
+										</tr>
+									</thead>
+
+									<tbody>
+										<tr>
+											<td>Alvin</td>
+											<td>Eclair</td>
+											<td>$0.87</td>
+										</tr>
+										<tr>
+											<td>Alan</td>
+											<td>Jellybean</td>
+											<td>$3.76</td>
+										</tr>
+										<tr>
+											<td>Jonathan</td>
+											<td>Lollipop</td>
+											<td>$7.00</td>
+										</tr>
+										<tr>
+											<td>Shannon</td>
+											<td>KitKat</td>
+											<td>$9.99</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<th>Name</th>
+											<th>Item Name</th>
+											<th>Item Price</th>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+						</section>
+
+						<section data-level="4">
+							<div class="heading">Simply Table</div>
+							<p>A simple style of a table makes the table appear more simpler than the basic style and that the table has an outer border. Add the <code>simple</code> class to a typical table to utilize it. See example below.</p>
+							<div class="preview-box">
+								<table class="simple table">
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Item Name</th>
+											<th>Item Price</th>
+										</tr>
+									</thead>
+
+									<tbody>
+										<tr>
+											<td>Alvin</td>
+											<td>Eclair</td>
+											<td>$0.87</td>
+										</tr>
+										<tr>
+											<td>Alan</td>
+											<td>Jellybean</td>
+											<td>$3.76</td>
+										</tr>
+										<tr>
+											<td>Jonathan</td>
+											<td>Lollipop</td>
+											<td>$7.00</td>
+										</tr>
+										<tr>
+											<td>Shannon</td>
+											<td>KitKat</td>
+											<td>$9.99</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<th>Name</th>
+											<th>Item Name</th>
+											<th>Item Price</th>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+						</section>
+
+						<section data-level="4">
+							<div class="heading">Clear Table</div>
+							<p>A clear style of a table makes the table appear more simpler than the simple style in that it does not have the table outer border. Add the <code>clear</code> class to a typical table to utilize it. See example below.</p>
+							<div class="preview-box">
+								<table class="clear table">
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Item Name</th>
+											<th>Item Price</th>
+										</tr>
+									</thead>
+
+									<tbody>
+										<tr>
+											<td>Alvin</td>
+											<td>Eclair</td>
+											<td>$0.87</td>
+										</tr>
+										<tr>
+											<td>Alan</td>
+											<td>Jellybean</td>
+											<td>$3.76</td>
+										</tr>
+										<tr>
+											<td>Jonathan</td>
+											<td>Lollipop</td>
+											<td>$7.00</td>
+										</tr>
+										<tr>
+											<td>Shannon</td>
+											<td>KitKat</td>
+											<td>$9.99</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<th>Name</th>
+											<th>Item Name</th>
+											<th>Item Price</th>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+						</section>
+
+						<section data-level="4">
+							<div class="heading">List Table</div>
+							<p>A list style of a table makes the table appear more simpler than the clear style in that it has no border order than a border separating the <code>thead</code> from <code>tbody</code> and a border separating the <code>tbody</code> from the <code>tfoot</code>. Add the <code>list</code> class to a typical table to utilize it. See example below.</p>
+							<div class="preview-box">
+								<table class="list table">
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Item Name</th>
+											<th>Item Price</th>
+										</tr>
+									</thead>
+
+									<tbody>
+										<tr>
+											<td>Alvin</td>
+											<td>Eclair</td>
+											<td>$0.87</td>
+										</tr>
+										<tr>
+											<td>Alan</td>
+											<td>Jellybean</td>
+											<td>$3.76</td>
+										</tr>
+										<tr>
+											<td>Jonathan</td>
+											<td>Lollipop</td>
+											<td>$7.00</td>
+										</tr>
+										<tr>
+											<td>Shannon</td>
+											<td>KitKat</td>
+											<td>$9.99</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<th>Name</th>
+											<th>Item Name</th>
+											<th>Item Price</th>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+						</section>
+
+						<section data-level="4">
+							<div class="heading">Definition Table</div>
+							<p>A definition style of a table is more-or-less like a typical table just that the first cell of each row in the <code>tbody</code> is highlighed and has a bold view while the <code>thead</code> and the <code>tfoot</code> appears the same way in that the first cell in their row has no border and it content appears faint and that is if not given the <code>full-width</code> class. Add the <code>definition</code> class to a typical table to utilize it. See example below.</p>
+							
+							<div class="info note">In the example below, the tfoot will be given the <code>full-width</code> class to show how either the <code>thead</code> or the <code>tfoot</code> will look like when given the <code>full-width</code> class.</div>
+
+							<div class="preview-box">
+								<table class="definition table">
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Item Name</th>
+											<th>Item Price</th>
+										</tr>
+									</thead>
+
+									<tbody>
+										<tr>
+											<td>Alvin</td>
+											<td>Eclair</td>
+											<td>$0.87</td>
+										</tr>
+										<tr>
+											<td>Alan</td>
+											<td>Jellybean</td>
+											<td>$3.76</td>
+										</tr>
+										<tr>
+											<td>Jonathan</td>
+											<td>Lollipop</td>
+											<td>$7.00</td>
+										</tr>
+										<tr>
+											<td>Shannon</td>
+											<td>KitKat</td>
+											<td>$9.99</td>
+										</tr>
+									</tbody>
+									<tfoot class="full-width">
+										<tr>
+											<th>Name <br>*tfoot has full-width class</th>
+											<th>Item Name</th>
+											<th>Item Price</th>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+						</section>
+
+						<div class="info callout">
+							<div class="heading">General Style Notice</div>
+							<ul>
+								<li>Note that two or more different syle that we provide can be used on a table to attain more complex design.</li>
+								<li>You can simply remove all the borders of a table by giving it the <code>borderless</code> class.</li>
+							</ul>
+						</div>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Other designs</div>
+						<p>We also provide you with some classes that you can use to beautify a table or make it more easy to read. Those classes are mentioned and explained below.</p>
+
+						<section data-level="4">
+							<div class="heading">Round Edge</div>
+							<p>We provide the <code>rounded</code> class to give a table a round edge. See example below.</p>
+
+							<div class="info note">To achieve a round edge table, the <code>border-collapse: separate</code> is used on the table style. However this can cause some cell borders to appear missing with complex layouts that uses rowspan or colspan and rows with varying column count.<br>
+
+							The round edge is not suitable for complex table structure as explained above. So ensure you preview the table before you publish your page.</div>
+
+							<div class="positive note">You can give the table a border-radius style manually. The table will retain all fix we did to it.</div>
+
+							<div class="preview-box">
+								<table class="rounded table">
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Item Name</th>
+											<th>Item Price</th>
+										</tr>
+									</thead>
+
+									<tbody>
+										<tr>
+											<td>Alvin</td>
+											<td>Eclair</td>
+											<td>$0.87</td>
+										</tr>
+										<tr>
+											<td>Alan</td>
+											<td>Jellybean</td>
+											<td>$3.76</td>
+										</tr>
+										<tr>
+											<td>Jonathan</td>
+											<td>Lollipop</td>
+											<td>$7.00</td>
+										</tr>
+										<tr>
+											<td>Shannon</td>
+											<td>KitKat</td>
+											<td>$9.99</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<th>Name</th>
+											<th>Item Name</th>
+											<th>Item Price</th>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+						</section>
+
+						<section data-level="4">
+							<div class="heading">Striped table</div>
+							<p>We provide the <code>striped</code> class to show a strip table by give in the even rows an invert background. See example below.</p>
+
+							<div class="preview-box">
+								<table class="striped table">
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Item Name</th>
+											<th>Item Price</th>
+										</tr>
+									</thead>
+
+									<tbody>
+										<tr>
+											<td>Alvin</td>
+											<td>Eclair</td>
+											<td>$0.87</td>
+										</tr>
+										<tr>
+											<td>Alan</td>
+											<td>Jellybean</td>
+											<td>$3.76</td>
+										</tr>
+										<tr>
+											<td>Jonathan</td>
+											<td>Lollipop</td>
+											<td>$7.00</td>
+										</tr>
+										<tr>
+											<td>Shannon</td>
+											<td>KitKat</td>
+											<td>$9.99</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<th>Name</th>
+											<th>Item Name</th>
+											<th>Item Price</th>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+						</section>
+
+						<section data-level="4">
+							<div class="heading">Highlighting table contents</div>
+							<p>We provide some classes to highlight the table-bodys, table-rows and table-cells as want may demand. That shows that the provided highlight class can be used on <code>tbody</code>, <code>tr</code> and <code>td</code>. See in example below the classes provided in a shaded background and how it highlight components.</p>
+
+							<div class="preview-box">
+								<table class="table">
+									<thead>
+										<tr>
+											<th>table header</th>
+											<th>table header</th>
+											<th>table header</th>
+											<th>table header</th>
+										</tr>
+									</thead>
+
+									<tbody>
+										<tr class="active">
+											<td><code>active</code> row</td>
+											<td><code>active</code> row</td>
+											<td><code>active</code> row</td>
+											<td><code>active</code> row</td>
+										</tr>
+										<tr class="positive">
+											<td><code>positive</code> row</td>
+											<td><code>positive</code> row</td>
+											<td><code>positive</code> row</td>
+											<td><code>positive</code> row</td>
+										</tr>
+										<tr class="caution">
+											<td><code>caution</code> row</td>
+											<td><code>caution</code> row</td>
+											<td><code>caution</code> row</td>
+											<td><code>caution</code> row</td>
+										</tr>
+										<tr class="negative">
+											<td><code>negative</code> row</td>
+											<td><code>negative</code> row</td>
+											<td><code>negative</code> row</td>
+											<td><code>negative</code> row</td>
+										</tr>
+										<tr>
+											<td class="active"><code>active</code> cell</td>
+											<td class="positive"><code>positive</code> cell</td>
+											<td class="caution"><code>caution</code> cell</td>
+											<td class="negative"><code>negative</code> cell</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<th>table header</th>
+											<th>table header</th>
+											<th>table header</th>
+											<th>table header</th>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+							
+							<section>
+								<div class="heading">Disabled Cells</div>
+								<p>A table-cells can be formated inactive or disabled. We already provided the <code>disabled</code> class to be used on <code>td</code>, <code>tr</code> and <code>tbody</code>. See example below.</p>
+
+								<div class="preview-box">
+									<table class="table">
+										<thead>
+											<tr>
+												<th>Name</th>
+												<th>Item Name</th>
+												<th>Item Price</th>
+											</tr>
+										</thead>
+
+										<tbody>
+											<tr class="disabled">
+												<td>Alvin</td>
+												<td>Eclair</td>
+												<td>$0.87</td>
+											</tr>
+											<tr>
+												<td>Alan</td>
+												<td class="disabled">Jellybean</td>
+												<td>$3.76</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</section>
+						</section>
+
+						<section data-level="4">
+							<div class="heading">Selectable Table</div>
+							<p>
+								A table can be selectable in that it gives a row or a cell an hover background when mouse is moved on them. <br>
+								The <code>selectable</code> class is provided to be used on <code>table</code>, <code>tbody</code>, <code>tr</code> and <code>td</code> and it select a row when the mouse is moved over it. <br>
+								The <code>i-selectable</code> class is also provided to select cells (<code>td</code>) when mouse is over it. And the class can only be used on the <code>table</code>, <code>tbody</code> and <code>tr</code>. <br>
+								See in example below on how the selectable table works.
+							</p>
+
+							<div class="info note">
+								<ul>
+									<li>The selectable table will retain the highlight background of a cell (if highlighted) when the selectable function is performed on it.</li>
+									<li>Note that the provided selectable classes will only work on <code>tr</code> and <code>td</code> that has a <code>tbody</code> parent as grand-parent.</li>
+								</ul>
+							</div>
+							
+							<div class="note">Using an <code>a</code> element inside a cell that has the <code>link</code> class will automatically make the hit box the entire cell area. By default links will inherit their cell colour.</div>
+
+							<div class="preview-box">
+								<h6>selectable table</h6>
+								<table class="selectable table">
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Item Name</th>
+											<th>Item Price</th>
+										</tr>
+									</thead>
+
+									<tbody>
+										<tr>
+											<td class="link"><a href="#"><strong>Link</strong></a></td>
+											<td>Eclair</td>
+											<td>$0.87</td>
+										</tr>
+										<tr class="positive">
+											<td>Alan</td>
+											<td>Jellybean</td>
+											<td>$3.76</td>
+										</tr>
+										<tr class="negative">
+											<td>Jonathan</td>
+											<td>Lollipop</td>
+											<td>$7.00</td>
+										</tr>
+										<tr>
+											<td>Shannon</td>
+											<td class="caution">KitKat</td>
+											<td>$9.99</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<th>Name</th>
+											<th>Item Name</th>
+											<th>Item Price</th>
+										</tr>
+									</tfoot>
+								</table>
+
+								<h6>i-selectable table</h6>
+
+								<table class="i-selectable table">
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Item Name</th>
+											<th>Item Price</th>
+										</tr>
+									</thead>
+
+									<tbody>
+										<tr>
+											<td>Alvin</td>
+											<td>Eclair</td>
+											<td>$0.87</td>
+										</tr>
+										<tr class="active">
+											<td>Alan</td>
+											<td>Jellybean</td>
+											<td>$3.76</td>
+										</tr>
+										<tr class="caution">
+											<td>Jonathan</td>
+											<td>Lollipop</td>
+											<td class="link"><a href="#"><strong>Link</strong></a></td>
+										</tr>
+										<tr>
+											<td class="positive">Shannon</td>
+											<td class="caution">KitKat</td>
+											<td class="negative">$9.99</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<th>Name</th>
+											<th>Item Name</th>
+											<th>Item Price</th>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+						</section>
+
+						<section data-level="4">
+							<div class="heading">Fixed Layout Table</div>
+							<p>A table can have it layout fixed ie. all columns will have equal width and not based their width on the cell with the largest content in the column. The <code>fixed-layout</code> class is provided to do this. See example below.</p>
+
+							<div class="preview-box">
+								<table class="fixed-layout table">
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Status</th>
+											<th>Description</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>John</td>
+											<td>Approved</td>
+											<td>John is an interesting boy but sometimes you don't really have enough room to describe everything you'd like</td>
+										</tr>
+										<tr>
+											<td>Jamie</td>
+											<td>Approved</td>
+											<td>Jamie is a kind girl but sometimes you don't really have enough room to describe everything you'd like</td>
+										</tr>
+										<tr>
+											<td>Jill</td>
+											<td>Denied</td>
+											<td>Jill is an alright girl but sometimes you don't really have enough room to describe everything you'd like</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</section>
+
+						<section data-level="4">
+							<div class="heading">Compact Table</div>
+							<p>A table may sometimes need to be more compact to make more rows visible at a time. We already provided the <code>compact</code> class to be used on the <code>table</code> to reduce the spacing around each cells in the table and make the table look fit. See example below.</p>
+
+							<div class="preview-box">
+								<table class="compact table">
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Status</th>
+											<th>Notes</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>John</td>
+											<td>Approved</td>
+											<td>None</td>
+										</tr>
+										<tr>
+											<td>Jamie</td>
+											<td>Approved</td>
+											<td>Requires call</td>
+										</tr>
+										<tr>
+											<td>John</td>
+											<td>Approved</td>
+											<td>None</td>
+										</tr>
+										<tr>
+											<td>Jamie</td>
+											<td>Approved</td>
+											<td>Requires call</td>
+										</tr>
+										<tr>
+											<td>John</td>
+											<td>Approved</td>
+											<td>None</td>
+										</tr>
+										<tr>
+											<td>Jamie</td>
+											<td>Approved</td>
+											<td>Requires call</td>
+										</tr>
+										<tr>
+											<td>John</td>
+											<td>Approved</td>
+											<td>None</td>
+										</tr>
+										<tr>
+											<td>Jamie</td>
+											<td>Approved</td>
+											<td>Requires call</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</section>
+
+						<section data-level="4">
+							<div class="heading">Loose Table</div>
+							<p>A table may sometimes need to be paddded for legibility. The <code>loose</code> class is already provided to cater that when used on a <code>table</code>. See example below.</p>
+
+							<div class="preview-box">
+								<table class="loose table">
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Status</th>
+											<th>Notes</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>John</td>
+											<td>Approved</td>
+											<td>He is a very nice guy and I enjoyed talking to him on the telephone. I hope we get to talk again.</td>
+										</tr>
+										<tr>
+											<td>Jamie</td>
+											<td>Approved</td>
+											<td>Jamie was not interested in purchasing our product.</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</section>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Inverted Table</div>
+						<p>A table can have it background, text and border color inverted. Just add the <code>inverted</code> class to a table to attain one. See example below.</p>
+
+						<div class="info note">You can specify a different background for the inverted table from the <a href="#">colour classes</a> we provided.</div>
+						
+						<div class="preview-box">
+							<table class="inverted table">
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th>Item Name</th>
+										<th>Item Price</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td>Alvin</td>
+										<td>Eclair</td>
+										<td>$0.87</td>
+									</tr>
+									<tr>
+										<td>Alan</td>
+										<td>Jellybean</td>
+										<td>$3.76</td>
+									</tr>
+									<tr>
+										<td>Jonathan</td>
+										<td>Lollipop</td>
+										<td>$7.00</td>
+									</tr>
+									<tr>
+										<td>Shannon</td>
+										<td>KitKat</td>
+										<td>$9.99</td>
+									</tr>
+								</tbody>
+								<tfoot>
+									<tr>
+										<th>Name</th>
+										<th>Item Name</th>
+										<th>Item Price</th>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+					</section>	
+
+					<section data-level="3">
+						<div class="heading">Cell Width Fixer</div>
+						<div class="negative note">The width of a column in a typical table cannot be absolutely determined. The table will consider the table's width, the number of columns in the table and the content of each cell to determine the width of each column in the table (ie. column that contain a cell with more content will have more width). But a column automatically set to have it min-width to be equals to the width of the longest word in all the cells in that column. So if you give a cell a size that is more than the size the table can provide, the cell size will be equal to the available size provided by the table. Even if the table is given a <code>width:auto</code>, the table prefers to set its max-width to its parent width.</div>
+
+						<p>We provide the <code>w-fix</code> class to be added to a table to increase the width of a cell to a desired size. Not that you will not be able to decrease the size of a cell with this fix just that the table will determine the minimum size of each cell. See example below.</p>
+						
+						<div class="caution note">Note that the total width of a cell given a size with the fix provided will be equal to given width + cell padding-left + cell padding-right.</div>
+
+						<div class="info note">Note that the size given to a cell affect its column. The w-fix class set the table width to auto. But if the table is given a specified width and the sum of width given to all columns in the table is not up to 100% width of the table, spaces will be added automatically to those columns.</div>
+
+						<div class="preview-box">
+							<table class="w-fix table">
+								<thead>
+									<tr>
+										<th style="width:300px">300px column</th>
+										<th style="width:150px">150px column</th>
+										<th style="width:250px">250px column</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>John</td>
+										<td>Approved</td>
+										<td>He is a very nice guy and I enjoyed talking to him on the telephone. I hope we get to talk again.</td>
+									</tr>
+									<tr>
+										<td>Jamie</td>
+										<td>Approved</td>
+										<td>Jamie was not interested in purchasing our product.</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<section>
+							<div class="heading">Predefined Cell sizes</div>
+							<p>We provide some predefined size that can be used to size cells. Those sizes and how to use them is shown in the table below.</p>
+
+							<table class="table">
+								<thead>
+									<tr>
+										<th>Class for table</th>
+										<th>Class for cell</th>
+										<th>Width</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><code>mini-cells</code></td>
+										<td><code>mini-cell</code></td>
+										<td>100px</td>
+									</tr>
+									<tr>
+										<td><code>small-cells</code></td>
+										<td><code>small-cell</code></td>
+										<td>200px</td>
+									</tr>
+									<tr>
+										<td><code>medium-cells</code></td>
+										<td><code>medium-cell</code></td>
+										<td>350px</td>
+									</tr>
+									<tr>
+										<td><code>big-cells</code></td>
+										<td><code>big-cell</code></td>
+										<td>500px</td>
+									</tr>
+									<tr>
+										<td><code>huge-cells</code></td>
+										<td><code>huge-cell</code></td>
+										<td>600px</td>
+									</tr>
+								</tbody>
+								<tfoot>
+									<tr>
+										<th>Class for table</th>
+										<th>Class for cell</th>
+										<th>Width</th>
+									</tr>
+								</tfoot>
+							</table>
+
+							<div class="note"><ul>
+								<li>Don't forget to use the <code>w-fix</code> class when specifying size for a cell or all cells in a table</li>
+								<li>Don't forget that a cell width will affect its column. So if two or more cells in a column is given different sizes, the column size will be the bigest cell size.</li>
+								<li>If you use the predefined classes to size a 'table-cells on table, the size will be given to all cells in the table.</li>
+							</ul></div>
+
+							<div class="caution note">Specifying width for cells may affect view of the page on small screen (i.e. make the page have a side-to-side scroll and that may affect the natural way a page should flow. See how to fix that with <a href="#">scroll table</a> and <a href="#">responsive table</a> below.</div>
+						</section>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Scroll Table</div>
+						<p>If your table happens to be wider than its container or would eventually get too wide on a specific screen size maybe due to the many columns used or cell size specified, don't worry. We already provide a fix for that. Just wrap the table inside a <code>div</code> element and add the <code>table-scroll</code> class to the <code>div</code>. This creates a container that provides a horizontal scrollbar whenever the table inside it are wider than the container itself.</p>
+
+						<div class="preview-box">
+							<div class="table-scroll">
+								<table class="w-fix medium-cells table">
+									<thead>
+										<tr>
+											<th>Table Heading</th>
+											<th>Table Heading</th>
+											<th>Table Heading</th>
+											<th>Table Heading</th>
+											<th>Table Heading</th>
+											<th>Table Heading</th>
+											<th>Table Heading</th>
+											<th>Table Heading</th>
+										</tr>
+									</thead>
+									<tfoot>
+										<tr>
+											<td>Table Footer</td>
+											<td>Table Footer</td>
+											<td>Table Footer</td>
+											<td>Table Footer</td>
+											<td>Table Footer</td>
+											<td>Table Footer</td>
+											<td>Table Footer</td>
+											<td>Table Footer</td>
+										</tr>
+									</tfoot>
+									<tbody>
+										<tr>
+											<td>Table Data</td>
+											<td>Table Data</td>
+											<td>Table Data</td>
+											<td>Table Data</td>
+											<td>Table Data</td>
+											<td>Table Data</td>
+											<td>Table Data</td>
+											<td>Table Data</td>
+										</tr>
+										<tr>
+											<td>Table Data</td>
+											<td>Table Data</td>
+											<td>Table Data</td>
+											<td>Table Data</td>
+											<td>Table Data</td>
+											<td>Table Data</td>
+											<td>Table Data</td>
+											<td>Table Data</td>
+										</tr>
+										<tr>
+											<td>Table Data</td>
+											<td>Table Data</td>
+											<td>Table Data</td>
+											<td>Table Data</td>
+											<td>Table Data</td>
+											<td>Table Data</td>
+											<td>Table Data</td>
+											<td>Table Data</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</section>
+
+					<section data-level="3">
+						<div class="heading">Repsonsive Table</div>
+						<p>You can also make your table responsive to a considerable viewport or screen size. We provide the <code>responsive</code> class to be used on table that may deform the page flow on a tablet screen and below or on a screen of 720px maximum and below. See example of how it works below. <strong>Try viewing this page on a screen not more than 720px width to see the responsiveness.</strong></p>
+
+						<div class="info note">Note that the responsive class will rotate the table to the left by 90deg (without affecting it contents) so that the rows will display as columns and the table body will be horizontally scrollable if the screen size does not contain it.</div>
+
+						<div class="caution note">Also note that the responsive class will might affect the table style. So if you did not like the way it views your table, you can use the <a href="#">scroll table</a> rather.</div>
+
+						<div class="negative note">The <code>tfoot</code> will not be displayed at all when table is responsive. We expect to have the same content in the <code>thead</code> as in <code>tfoot</code>.</div>
+
+						<div class="preview-box">
+							<table class="responsive table">
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th>Status</th>
+										<th>Edit</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>John</td>
+										<td>No Action</td>
+										<td>Edit</td>
+									</tr>
+									<tr>
+										<td>Jamie</td>
+										<td>Approved</td>
+										<td>Edit</td>
+									</tr>
+									<tr>
+										<td>Jill</td>
+										<td>Denied</td>
+										<td>Edit</td>
+									</tr>
+									<tr>
+										<td>John</td>
+										<td>No Action</td>
+										<td>Requires change</td>
+									</tr>
+									<tr>
+										<td>Jamie</td>
+										<td>Approved</td>
+										<td>Approve</td>
+									</tr>
+									<tr>
+										<td>Jill</td>
+										<td>Denied</td>
+										<td>Remove</td>
+									</tr>
+								</tbody>
+								<tfoot>
+									<tr>
+										<th>Name</th>
+										<th>Status</th>
+										<th>Edit</th>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+					</section>
+				</div>
+			</div>
+		</article>
+	</body>
+</html>
